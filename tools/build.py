@@ -5,11 +5,11 @@
     python3 -I tools/build.py --release  # 公開用。【要記入】【確認事項】が1つでも残っていたら作らずに止める
 
 原稿:
-    利用規約・プライバシーポリシー … ../oshikatsu/legal の下書き（原稿はそちらだけに置き、ここには写さない）
-    サポート                       … src/support.md
-    運営者名・問い合わせ先・制定日 … site.json（原稿の【要記入】をこの値で置き換える）
-出力: index.html（サポート）・terms/index.html・privacy/index.html
-    公開用は dist/、下書きは draft/ に作る（下書きを公開してしまわないよう、置き場所を分ける）
+    利用規約・プライバシーポリシー … ../../oshikatsu/legal の下書き（原稿はそちらだけに置き、ここには写さない）
+    サポート・特定商取引法の表記   … src/support.md・src/tokushoho.md
+    運営者名・問い合わせ先・制定日 … site.json（原稿の【要記入】をこの値で置き換える。copyright はページの下に出す）
+出力: index.html（サポート）・terms/・privacy/・tokushoho/ の index.html
+    公開用は docs/（GitHub Pages が公開するフォルダ）、下書きは draft/ に作る（下書きを公開してしまわないよう、置き場所を分ける）
 """
 import html
 import json
@@ -25,6 +25,7 @@ PAGES = [
     ("index.html", ROOT / "src" / "support.md", "サポート"),
     ("terms/index.html", LEGAL / "terms_of_service_draft_20261009.md", "利用規約"),
     ("privacy/index.html", LEGAL / "privacy_policy_draft_20261009.md", "プライバシーポリシー"),
+    ("tokushoho/index.html", ROOT / "src" / "tokushoho.md", "特定商取引法に基づく表記"),
 ]
 
 # site.json のキー → 原稿の【要記入】
@@ -136,7 +137,7 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 """
 
 
-def page(title: str, body: str, depth: int, draft: bool) -> str:
+def page(title: str, body: str, depth: int, draft: bool, copyright: str) -> str:
     up = "../" * depth or "./"
     banner = '<div class="draft">下書き：公開前に黄色の箇所を埋めてください</div>' if draft else ""
     robots = '<meta name="robots" content="noindex">' if draft else ""
@@ -153,12 +154,12 @@ def page(title: str, body: str, depth: int, draft: bool) -> str:
 </head>
 <body>
 {banner}
-<header><nav><a href="{up}">沼ろく</a><span class="links"><a href="{up}">サポート</a><a href="{up}terms/">利用規約</a><a href="{up}privacy/">プライバシーポリシー</a></span></nav></header>
+<header><nav><a href="{up}">沼ろく</a><span class="links"><a href="{up}">サポート</a><a href="{up}terms/">利用規約</a><a href="{up}privacy/">プライバシーポリシー</a><a href="{up}tokushoho/">特定商取引法に基づく表記</a></span></nav></header>
 <main>
 <h1>{html.escape(title)}</h1>
 {body}
 </main>
-<footer>沼ろく — 推し活の支出記録</footer>
+<footer>沼ろく — 推し活の支出記録<br>{html.escape(copyright)}</footer>
 </body>
 </html>
 """
@@ -166,7 +167,7 @@ def page(title: str, body: str, depth: int, draft: bool) -> str:
 
 def main() -> int:
     release = "--release" in sys.argv[1:]
-    dist = ROOT / ("dist" if release else "draft")
+    dist = ROOT / ("docs" if release else "draft")
     values = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
     problems = []
     for target, source, fallback in PAGES:
@@ -182,7 +183,7 @@ def main() -> int:
         title = title.removeprefix("沼ろく ").strip() or fallback
         out = dist / target
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(page(title, body, target.count("/"), draft=bool(left)), encoding="utf-8")
+        out.write_text(page(title, body, target.count("/"), draft=bool(left), copyright=values.get("copyright", "")), encoding="utf-8")
     for item in problems:
         print(f"未記入: {item}")
     if release and problems:

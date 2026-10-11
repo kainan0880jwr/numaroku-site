@@ -30,3 +30,4 @@ App Store での購入の返金は、Apple が受け付けています（https:/
 ## 規約とポリシー
 - [利用規約](terms/)
 - [プライバシーポリシー](privacy/)
+- [特定商取引法に基づく表記](tokushoho/)

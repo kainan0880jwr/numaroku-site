@@ -36,12 +36,23 @@ FIELDS = {
 }
 
 PENDING = re.compile(r"【(要記入|確認事項)[^】]*】")
+# 公開用で1つでも残っていたら止める印（【要記入】【確認事項】のほか、【メモ】など【】で書いた運営者向けの書き込みすべて）
+UNRESOLVED = re.compile(r"【[^】]*】|TODO|要確認")
+# リンク先として許すもの（https・メール・同じサイトの中の相対パス）
+SAFE_HREF = re.compile(r"^(https://|mailto:|(?![a-zA-Z][a-zA-Z0-9+.-]*:)[\w./#-]*$)")
 
 
-def public_body(text: str) -> str:
-    """法務の下書きは、最初の --- と最後の --- の間だけが公開する本文（前後は運営者向けのメモ）"""
+class BuildError(Exception):
+    """公開してはいけない状態。ページを作らずに止める"""
+
+
+def public_body(text: str, name: str) -> str:
+    """法務の下書きは、1つ目と2つ目の --- の間だけが公開する本文（前後は運営者向けのメモ）。
+    区切りがちょうど2つでなければ止める（区切りを消したり本文に --- を足したりしたときに、メモまで公開しないため）"""
     parts = re.split(r"^---\s*$", text, flags=re.M)
-    return parts[1] if len(parts) >= 3 else text
+    if len(parts) != 3:
+        raise BuildError(f"{name}: 公開する本文の区切り（--- の行）がちょうど2つではありません（{len(parts) - 1} 個）")
+    return parts[1]
 
 
 def fill(text: str, values: dict) -> str:
@@ -62,7 +73,13 @@ def inline(text: str) -> str:
         links.append(anchor)
         return f"\0{len(links) - 1}\0"
 
-    text = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: keep(f'<a href="{m.group(2)}">{m.group(1)}</a>'), text)
+    def link(m: re.Match) -> str:
+        href = html.unescape(m.group(2))
+        if not SAFE_HREF.match(href):
+            raise BuildError(f"許していないリンク先です: {href}")
+        return keep(f'<a href="{html.escape(href, quote=True)}">{m.group(1)}</a>')
+
+    text = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, text)
     text = re.sub(r"https://[^\s）)<]+", lambda m: keep(f'<a href="{m.group(0)}">{m.group(0)}</a>'), text)
     text = re.sub(r"[\w.+-]+@[\w-]+(\.[\w-]+)+", lambda m: keep(f'<a href="mailto:{m.group(0)}">{m.group(0)}</a>'), text)
     text = PENDING.sub(lambda m: f"<mark>{m.group(0)}</mark>", text)
@@ -123,7 +140,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 -apple-system
 header{background:linear-gradient(135deg,#2a1f4f,#121628);color:#fff;padding:20px 16px}
 header a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
 nav{max-width:720px;margin:0 auto;display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
-nav .links{display:flex;gap:14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
+nav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
 main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
 h1{font-size:26px;line-height:1.4;margin:0 0 20px}
 h2{font-size:19px;margin:32px 0 8px;padding-top:16px;border-top:1px solid var(--line)}
@@ -146,7 +163,7 @@ def page(title: str, body: str, depth: int, draft: bool, copyright: str) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 {robots}
 <title>{html.escape(title)}｜沼ろく</title>
@@ -169,26 +186,35 @@ def main() -> int:
     release = "--release" in sys.argv[1:]
     dist = ROOT / ("docs" if release else "draft")
     values = json.loads((ROOT / "site.json").read_text(encoding="utf-8"))
+    pages: dict[str, str] = {}
     problems = []
-    for target, source, fallback in PAGES:
-        text = source.read_text(encoding="utf-8")
-        text = fill(public_body(text) if source.parent == LEGAL else text, values)
-        left = sorted({m.group(0) for m in PENDING.finditer(text)})
-        problems += [f"{target}: {item}" for item in left]
-        if release and left:
-            continue
-        # 【確認事項】は運営者向けのメモなので、下書きでも本文としては出さない（残っていることは黄色の帯で分かる）
-        text = "\n".join(line for line in text.splitlines() if not line.startswith("【確認事項】"))
-        title, body = render(text)
-        title = title.removeprefix("沼ろく ").strip() or fallback
+    try:
+        for target, source, fallback in PAGES:
+            text = source.read_text(encoding="utf-8")
+            text = fill(public_body(text, source.name) if source.parent == LEGAL else text, values)
+            pattern = UNRESOLVED if release else PENDING
+            left = sorted({m.group(0) for m in pattern.finditer(text)})
+            problems += [f"{target}: {item}" for item in left]
+            # 【確認事項】は運営者向けのメモなので、下書きでも本文としては出さない（残っていることは黄色の帯で分かる）
+            text = "\n".join(line for line in text.splitlines() if not line.startswith("【確認事項】"))
+            title, body = render(text)
+            title = title.removeprefix("沼ろく ").strip() or fallback
+            pages[target] = page(title, body, target.count("/"), draft=bool(left), copyright=values.get("copyright", ""))
+    except BuildError as error:
+        print(f"止めました: {error}")
+        return 1
+    for item in problems:
+        print(f"未解決: {item}")
+    if release and problems:
+        # 公開用は、全ページが問題なしの時だけ書く（一部のページだけ新しくなるのを防ぐ）
+        print("公開用のページは作っていません。上の箇所を直してから、もう一度実行してください。")
+        return 1
+    for target, content in pages.items():
         out = dist / target
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(page(title, body, target.count("/"), draft=bool(left), copyright=values.get("copyright", "")), encoding="utf-8")
-    for item in problems:
-        print(f"未記入: {item}")
-    if release and problems:
-        print("公開用のページは作っていません。上の箇所を埋めてから、もう一度実行してください。")
-        return 1
+        out.write_text(content, encoding="utf-8")
+    # GitHub Pages の Jekyll の変換を通さず、そのまま配信させる
+    (dist / ".nojekyll").write_text("", encoding="utf-8")
     print(f"{'公開用' if release else '下書き'}のページを {dist} に作りました")
     return 0
 

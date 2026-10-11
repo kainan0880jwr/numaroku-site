@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 
 <title>プライバシーポリシー｜沼ろく</title>
@@ -15,7 +15,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 -apple-system
 header{background:linear-gradient(135deg,#2a1f4f,#121628);color:#fff;padding:20px 16px}
 header a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
 nav{max-width:720px;margin:0 auto;display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
-nav .links{display:flex;gap:14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
+nav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
 main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
 h1{font-size:26px;line-height:1.4;margin:0 0 20px}
 h2{font-size:19px;margin:32px 0 8px;padding-top:16px;border-top:1px solid var(--line)}
@@ -33,7 +33,7 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 <header><nav><a href="../">沼ろく</a><span class="links"><a href="../">サポート</a><a href="../terms/">利用規約</a><a href="../privacy/">プライバシーポリシー</a><a href="../tokushoho/">特定商取引法に基づく表記</a></span></nav></header>
 <main>
 <h1>プライバシーポリシー</h1>
-<p>制定日：2026年10月11日</p>
+<p>制定日：2026年10月11日／最終改定日：2026年10月12日</p>
 <p>池端大輝（以下「運営者」といいます）は、iPhone 向けアプリ「沼ろく」（以下「本アプリ」といいます）での利用者の情報の扱いを、次のとおり定めます。</p>
 <h2>1. 基本の考え方</h2>
 <p>本アプリは、<strong>運営者のサーバーを持たない</strong>設計です。利用者が本アプリに記録した情報は、利用者の iPhone と、利用者自身の iCloud にだけ保存されます。<strong>運営者がその情報を受け取ったり、見たりすることはありません。</strong></p>
@@ -51,9 +51,9 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 <p>写真は、取り込むときに縮小し、撮影場所などの付加情報（メタデータ）を取り除いてから保存します。</p>
 <h2>3. iCloud による同期とバックアップ</h2>
 <p>利用者が iPhone で iCloud にサインインしている場合、2 の情報は Apple の iCloud（利用者自身のアカウントのプライベートな領域）に保存され、同じ Apple アカウントを使う別の端末と同期されます。この情報は運営者からは見えません。iCloud での情報の扱いは、Apple のプライバシーポリシー（<a href="https://www.apple.com/jp/legal/privacy/">https://www.apple.com/jp/legal/privacy/</a>）に従います。</p>
-<p>本アプリは、データの消失に備えて、端末内と、利用者の iCloud Drive の本アプリ用フォルダに、自動でバックアップを作ります。iCloud Drive への保存は、本アプリの設定（「バックアップとデータ」）で止められます。利用者が CSV ファイルを書き出した場合、その保存先と共有先は利用者が選びます。</p>
+<p>本アプリは、データの消失に備えて、端末内と、利用者の iCloud Drive の本アプリ用フォルダに、自動でバックアップを作ります。iCloud Drive への保存は、本アプリの設定（「バックアップとデータ」）で止められます。止めても、すでに iCloud Drive にあるバックアップは自動では消えません。同じ画面の「iCloud Drive のバックアップを削除」から削除できます。利用者が CSV ファイルを書き出した場合、その保存先と共有先は利用者が選びます。</p>
 <h2>4. 運営者が取得する情報</h2>
-<p>運営者は、本アプリを通じて利用者の個人情報を取得しません。具体的には、次のことを行いません。</p>
+<p>運営者は、本アプリの機能を通じて利用者の個人情報を取得しません。ただし、利用者がメールでお問い合わせをされた場合は、12章のとおり取り扱います。本アプリの機能について、具体的には、次のことを行いません。</p>
 <ul><li>
 利用者のアカウント登録（メールアドレス・電話番号・パスワードなど）
 </li><li>
@@ -61,9 +61,10 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 </li><li>
 利用状況の解析ツールや、外部のサービスへの情報の送信
 </li></ul>
-<p>ただし、次の情報は Apple を通じて運営者に届くことがあります。どの情報も、利用者個人を特定できる形では届きません。</p>
+<p>本アプリは、利用者の情報を運営者や広告・解析の事業者に送る仕組みを含んでいません。本アプリの通信は、Apple の App Store（購入の確認）と、利用者自身の iCloud（同期とバックアップ）とのものに限られます。</p>
+<p>なお、次の情報は Apple を通じて運営者に届くことがあります。</p>
 <ul><li>
-<strong>クラッシュレポートと利用状況の統計</strong>：利用者が iPhone の設定（「プライバシーとセキュリティ」→「解析と改善」→「App デベロッパと共有」）で許可している場合に、Apple が集計して運営者に提供します。本アプリの不具合の修正にだけ使います
+<strong>クラッシュレポートと利用状況の統計</strong>：利用者が iPhone の設定（「プライバシーとセキュリティ」→「解析と改善」→「App デベロッパと共有」）で許可している場合に限り、Apple から運営者に提供されます。端末の機種・OS のバージョン・不具合が起きたときの動作の記録などが含まれ、Apple の説明では、利用者の名前や Apple アカウントなど個人を直接特定する情報は含まれません。本アプリの不具合の修正にだけ使います
 </li><li>
 <strong>購入に関する集計情報</strong>：App Store での売上・解約などの件数（Apple が集計したもの）
 </li></ul>
@@ -78,7 +79,7 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 <h2>7. アプリ内課金</h2>
 <p>プレミアムプランの購入・支払い・解約は Apple の App Store で行われます。運営者は、利用者のクレジットカード番号などの支払い情報を受け取りません。本アプリは、購入が有効かどうかを Apple の仕組みを使って iPhone の中で確認します。</p>
 <h2>8. 第三者への提供</h2>
-<p>運営者は利用者の個人情報を取得しないため、第三者に提供することはありません。</p>
+<p>運営者は、法令に基づく場合を除き、利用者の個人情報を本人の同意なく第三者に提供しません。</p>
 <h2>9. データの削除</h2>
 <ul><li>
 本アプリの中から、推し・支出・写真をいつでも削除できます
@@ -91,8 +92,21 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 <p>本アプリは、子どもから運営者が情報を取得することはありません。未成年の方がプレミアムプランを購入する場合は、保護者の同意を得てください。</p>
 <h2>11. このポリシーの変更</h2>
 <p>運営者は、必要に応じてこのポリシーを変更することがあります。重要な変更（特に、情報の取得や外部への送信を始める場合）は、本アプリ内またはこのページでお知らせし、変更後の内容をこのページに掲載します。</p>
-<h2>12. お問い合わせ</h2>
-<p><a href="mailto:kainan0880jwr@gmail.com">kainan0880jwr@gmail.com</a></p>
+<h2>12. お問い合わせと、お問い合わせで受け取る情報</h2>
+<p>お問い合わせ先：<a href="mailto:kainan0880jwr@gmail.com">kainan0880jwr@gmail.com</a></p>
+<ol><li>
+運営者は、お問い合わせのメールにより、メールアドレス、お名前（表示名）、お問い合わせの内容、添付されたファイルを受け取ります。これらは、お問い合わせへの回答と、本アプリの不具合の調査・改善のためにだけ利用し、法令に基づく場合を除き、本人の同意なく第三者に提供しません
+</li><li>
+受け取ったメールは、Google LLC（米国）が提供するメールサービスに保存します。米国の個人情報の保護に関する制度は、個人情報保護委員会のウェブサイトでご確認いただけます。運営者は、メールのアカウントに二段階認証を設定し、閲覧できる者を運営者本人に限るなどの安全管理の措置を講じています
+</li><li>
+対応が終わったお問い合わせのメールは、1年を目安に削除します
+</li><li>
+保有個人データの利用目的の通知、開示、訂正・追加・削除、利用の停止・消去、第三者への提供の停止、第三者提供の記録の開示のご請求、および苦情は、上記のお問い合わせ先で受け付けます。ご本人であることを確認したうえで、法令に従い遅滞なく対応します。運営者の住所は、ご請求があれば遅滞なくお知らせします
+</li></ol>
+<h2>改定履歴</h2>
+<ul><li>
+2026年10月12日：3章（iCloud Drive のバックアップの削除）、4章（外部送信の仕組みがないこと・クラッシュレポートの説明）、8章、12章（お問い合わせで受け取る情報）を改めました
+</li></ul>
 </main>
 <footer>沼ろく — 推し活の支出記録<br>© 2026 Daiki Ikebata</footer>
 </body>

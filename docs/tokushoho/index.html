@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 
 <title>特定商取引法に基づく表記｜沼ろく</title>
@@ -15,7 +15,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 -apple-system
 header{background:linear-gradient(135deg,#2a1f4f,#121628);color:#fff;padding:20px 16px}
 header a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
 nav{max-width:720px;margin:0 auto;display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
-nav .links{display:flex;gap:14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
+nav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
 main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
 h1{font-size:26px;line-height:1.4;margin:0 0 20px}
 h2{font-size:19px;margin:32px 0 8px;padding-top:16px;border-top:1px solid var(--line)}
@@ -36,16 +36,16 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 <h3>販売事業者</h3>
 <p>池端大輝（個人事業主）</p>
 <h3>住所・電話番号</h3>
-<p>個人事業主のため、お問い合わせ先メールアドレスへご請求をいただいた場合、遅滞なく（通常2営業日以内に）電磁的方法で開示します。</p>
+<p>ご請求をいただいた場合、遅滞なく（通常2営業日以内に）電子メールで開示します。</p>
 <h3>連絡先</h3>
 <p><a href="mailto:kainan0880jwr@gmail.com">kainan0880jwr@gmail.com</a></p>
 <h3>販売価格（税込み）</h3>
 <ul><li>
-年額プラン：2,800円／年
+年額プラン：2,800円（1年ごとに自動更新）
 </li><li>
-月額プラン：380円／月
+月額プラン：380円（1か月ごとに自動更新）
 </li><li>
-買い切りプラン：6,800円（1回のお支払い）
+買い切りプラン：6,800円（1回のお支払い・自動更新なし）
 </li></ul>
 <p>価格は App Store での改定により変わることがあります。最新の価格は、本アプリの購入画面に表示されます。</p>
 <h3>商品代金以外の必要料金</h3>
@@ -66,8 +66,8 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 </li></ul>
 <h3>解約の方法</h3>
 <p>iPhone の「設定」→ ご自分の名前 →「サブスクリプション」→「沼ろく」→「サブスクリプションをキャンセルする」。解約しても、すでに支払った期間の終わりまでご利用いただけます。</p>
-<h3>返品・キャンセル</h3>
-<p>デジタルコンテンツの性質上、購入の完了後の返金は原則お受けできません。返金は App Store の定める手順と基準に従います（<a href="https://reportaproblem.apple.com/">https://reportaproblem.apple.com/</a>）。</p>
+<h3>申込みの撤回・解約・返金</h3>
+<p>デジタルコンテンツ・サービスの性質上、購入の完了後の申込みの撤回はできません。サブスクリプションは、いつでも上記の方法で解約でき、解約後は次回以降の更新と請求が止まります。すでにお支払いいただいた料金の返金は、App Store の定める手順と基準によります（<a href="https://reportaproblem.apple.com/">https://reportaproblem.apple.com/</a>）。</p>
 <h3>提供するサービスの内容</h3>
 <p>沼ろくプレミアムの主な機能：</p>
 <ul><li>
@@ -84,6 +84,8 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 まとめ画像の透かしなし
 </li></ul>
 <p>記録・合計・バックアップ・ロックは、無料版でもすべて使えます。</p>
+<h3>買い切りプランの提供期間</h3>
+<p>本アプリが提供されている間（提供を終える場合の扱いは、利用規約の7章をご覧ください）</p>
 <h3>動作環境</h3>
 <p>iOS 26 以降の iPhone</p>
 </main>

@@ -1,0 +1,10 @@
+draft/
+__pycache__/
+.DS_Store
+# 秘密情報・署名の鍵（このリポジトリでは使わないが、誤って入れないため。全案件共通の検査が求める）
+.env
+.env.*
+*.p12
+*.p8
+*.mobileprovision
+xcuserdata/

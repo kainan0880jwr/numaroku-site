@@ -2,5 +2,19 @@
   "operator": "池端大輝",
   "contact": "kainan0880jwr@gmail.com",
   "published": "2026年10月11日",
-  "copyright": "© 2026 Daiki Ikebata"
+  "copyright": "© 2026 Daiki Ikebata",
+  "base_url": "https://kainan0880jwr.github.io/numaroku-site/",
+  "app_store_id": "",
+  "price_yearly": "2,800円",
+  "price_monthly": "380円",
+  "price_lifetime": "6,800円",
+  "price_as_of": "2026年10月",
+  "trial_days": "7日間",
+  "landing_faq": [
+    "運営者に私の記録は見えますか？",
+    "機種変更したら、記録は引き継げますか？",
+    "無料体験はいつ請求されますか？",
+    "プレミアムプランを解約したい",
+    "写真は同期・バックアップされますか？"
+  ]
 }

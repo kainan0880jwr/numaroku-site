@@ -24,7 +24,8 @@ PAGES = [
     # (出力先, 原稿, ページの題名)
     ("index.html", ROOT / "src" / "support.md", "サポート"),
     ("terms/index.html", LEGAL / "terms_of_service_draft_20261009.md", "利用規約"),
-    ("privacy/index.html", LEGAL / "privacy_policy_draft_20261009.md", "プライバシーポリシー"),
+    # main は公開中の 1.0 版に固定する（下書きはすでに 1.1 の内容。1.1 の公開時に release-1.1 ブランチで下書きへ戻す）
+    ("privacy/index.html", LEGAL / "privacy_policy_v1.0_20261013.md", "プライバシーポリシー"),
     ("tokushoho/index.html", ROOT / "src" / "tokushoho.md", "特定商取引法に基づく表記"),
 ]
 

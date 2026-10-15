@@ -114,7 +114,8 @@ p,li{overflow-wrap:anywhere}
 .premium{display:inline-block;margin-left:6px;padding:0 8px;border-radius:6px;background:#2a1f4f;color:#fff;font-size:13px;font-weight:700;line-height:1.7;vertical-align:1px}
 @media (prefers-color-scheme:dark){.premium{background:#ff8fbd;color:#1d1b26}}
 @media (min-width:860px){.feature{grid-template-columns:300px 1fr;gap:56px}.feature:nth-of-type(even){grid-template-columns:1fr 300px}.feature-shot{order:0}.feature:nth-of-type(even) .feature-shot{order:2}}
-.swatches{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:8px 0 0;padding:0;font-size:13px}
+.mini-features{margin:24px 0 40px}.mini-feature h3{font-size:20px}.mini-feature>p:not(.feature-label){margin:0 0 12px}.mini-feature .points{font-size:15px}
+.swatches{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;padding:0;font-size:13px}
 .swatches li{display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
 .swatches li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--c)}
 /* 安心 */
@@ -201,9 +202,9 @@ p,li{overflow-wrap:anywhere}
         </ul>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <div class="phone phone-back phone-left only-wide"><img src="assets/screen-entry-320.jpg" srcset="assets/screen-entry-320.jpg 320w, assets/screen-entry-640.jpg 640w" sizes="220px" width="320" height="696" alt="" decoding="async"></div>
-        <div class="phone phone-back phone-right only-wide"><img src="assets/screen-monthly-recap-320.jpg" srcset="assets/screen-monthly-recap-320.jpg 320w, assets/screen-monthly-recap-640.jpg 640w" sizes="220px" width="320" height="696" alt="" decoding="async"></div>
-        <div class="phone phone-front"><img src="assets/screen-home-320.jpg" srcset="assets/screen-home-320.jpg 320w, assets/screen-home-640.jpg 640w" sizes="(min-width: 900px) 270px, min(68vw, 270px)" width="320" height="696" alt="" fetchpriority="high"></div>
+        <div class="phone phone-back phone-left only-wide"><img src="assets/screen-entry-320.jpg" srcset="assets/screen-entry-320.jpg 320w, assets/screen-entry-640.jpg 640w" sizes="220px" width="320" height="695" alt="" decoding="async"></div>
+        <div class="phone phone-back phone-right only-wide"><img src="assets/screen-monthly-recap-320.jpg" srcset="assets/screen-monthly-recap-320.jpg 320w, assets/screen-monthly-recap-640.jpg 640w" sizes="220px" width="320" height="695" alt="" decoding="async"></div>
+        <div class="phone phone-front"><img src="assets/screen-home-320.jpg" srcset="assets/screen-home-320.jpg 320w, assets/screen-home-640.jpg 640w" sizes="(min-width: 900px) 270px, min(68vw, 270px)" width="320" height="695" alt="" fetchpriority="high"></div>
       </div>
     </div>
   </section>
@@ -229,7 +230,7 @@ p,li{overflow-wrap:anywhere}
       <h2 id="features-title" class="section-title">沼ろくでできること</h2>
       <p class="section-lead">「プレミアム」の印がある項目は、沼ろくプレミアム（有料）の機能です。印のない項目は無料で使えます。</p>
       <article class="feature" id="feature-record">
-<div class="feature-shot"><img src="assets/screen-entry-320.jpg" srcset="assets/screen-entry-320.jpg 320w, assets/screen-entry-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="696" alt="支出を記録する画面。金額5,500円、推しは「あおい」、カテゴリは「チケット」、日付と写真を追加する欄がある" loading="lazy" decoding="async"></div>
+<div class="feature-shot"><img src="assets/screen-entry-320.jpg" srcset="assets/screen-entry-320.jpg 320w, assets/screen-entry-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="695" alt="支出を記録する画面。金額5,500円、推しは「あおい」、カテゴリは「チケット」、日付と写真を追加する欄がある" loading="lazy" decoding="async"></div>
 <div class="feature-copy">
 <p class="feature-label">記録</p>
 <h3>開いてすぐ、サッと記録。</h3>
@@ -237,8 +238,17 @@ p,li{overflow-wrap:anywhere}
 <ul class="points"><li>前回の推しとカテゴリを覚えているので、続けての記録もかんたん</li><li>複数の推しにまたがる買い物は、均等割りか金額指定で分けて記録</li><li>毎月のファンクラブ会費などは、定期支出として自動で記録</li></ul>
 </div>
 </article>
+<article class="feature" id="feature-events">
+<div class="feature-shot"><img src="assets/screen-events-320.jpg" srcset="assets/screen-events-320.jpg 320w, assets/screen-events-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="695" alt="イベントの画面。次のイベントまで12日（冬ツアー 横浜公演）、チケットの当落待ちのバースデーライブ、これからのリリースイベント" loading="lazy" decoding="async"></div>
+<div class="feature-copy">
+<p class="feature-label">イベント</p>
+<h3>次のイベントまで、あと何日？</h3>
+<p class="feature-lead">ライブや舞台などの日を登録すると、ホームとウィジェットに「次のイベントまで◯日」を表示。チケットの当落や支払い期限も、忘れずに管理できます。</p>
+<ul class="points"><li>申込中 → 当落 → 支払いまで、チケットの状況を記録</li><li>当落の発表日、支払い期限の前日と当日、イベントの当日の朝9時にお知らせ</li><li>「支払った」を押すと、チケット代をそのまま支出に記録</li></ul>
+</div>
+</article>
 <article class="feature" id="feature-recap">
-<div class="feature-shot"><img src="assets/screen-monthly-recap-320.jpg" srcset="assets/screen-monthly-recap-320.jpg 320w, assets/screen-monthly-recap-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="696" alt="9月のまとめ画像。合計43,000円、推しのランキング1位ひかる、カテゴリ1位は遠征交通費、いちばん大きな推し活は遠征交通費14,200円" loading="lazy" decoding="async"></div>
+<div class="feature-shot"><img src="assets/screen-monthly-recap-320.jpg" srcset="assets/screen-monthly-recap-320.jpg 320w, assets/screen-monthly-recap-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="695" alt="9月のまとめ画像。合計43,000円、推しのランキング1位ひかる、カテゴリ1位は遠征交通費、いちばん大きな推し活は遠征交通費14,200円" loading="lazy" decoding="async"></div>
 <div class="feature-copy">
 <p class="feature-label">ふり返り</p>
 <h3>今月の推し活を、1枚の画像に。</h3>
@@ -247,7 +257,7 @@ p,li{overflow-wrap:anywhere}
 </div>
 </article>
 <article class="feature" id="feature-summary">
-<div class="feature-shot"><img src="assets/screen-home-320.jpg" srcset="assets/screen-home-320.jpg 320w, assets/screen-home-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="696" alt="ホーム画面。10月に推しに使った金額は23,020円。推しごとの内訳はあおい12,000円、ひかる8,050円、みお2,970円" loading="lazy" decoding="async"></div>
+<div class="feature-shot"><img src="assets/screen-home-320.jpg" srcset="assets/screen-home-320.jpg 320w, assets/screen-home-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="695" alt="ホーム画面。10月に推しに使った金額は23,020円。推しごとの内訳はあおい12,000円、ひかる8,050円、みお2,970円" loading="lazy" decoding="async"></div>
 <div class="feature-copy">
 <p class="feature-label">合計と内訳</p>
 <h3>推し全員の合計が、ひと目で。</h3>
@@ -256,17 +266,26 @@ p,li{overflow-wrap:anywhere}
 </div>
 </article>
 <article class="feature" id="feature-color">
-<div class="feature-shot"><img src="assets/screen-summary-320.jpg" srcset="assets/screen-summary-320.jpg 320w, assets/screen-summary-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="696" alt="まとめの画面。2026年10月の合計23,020円、5件。推しごとの割合を表すドーナツ型のグラフ" loading="lazy" decoding="async"></div>
+<div class="feature-shot"><img src="assets/screen-summary-320.jpg" srcset="assets/screen-summary-320.jpg 320w, assets/screen-summary-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="695" alt="まとめの画面。2026年10月の合計23,020円、5件。推しごとの割合を表すドーナツ型のグラフ" loading="lazy" decoding="async"></div>
 <div class="feature-copy">
 <p class="feature-label">推し色</p>
 <h3>アプリが、推し色に染まる。</h3>
 <p class="feature-lead">推しを登録するときに選んだ推し色が、アプリのアクセント色になります。チケットやグッズの写真も、支出と一緒に残せます。</p>
-<ul class="points"><li>推しの登録は無制限。何人でも登録できます</li><li>写真は支出1件に1枚まで無料<span class="premium">複数枚はプレミアム</span></li></ul>
+<ul class="points"><li>推しの登録は無制限。何人でも登録できます</li><li>写真は支出1件に1枚まで無料<span class="premium">複数枚はプレミアム</span></li><li>アプリのアイコンも、ペンライトの8色から選べます<span class="premium">ピンク以外の7色はプレミアム</span></li></ul>
+<ul class="swatches" aria-label="選べる推し色（12色）の一部"><li style="--c:#FF6FA3">ピンク</li><li style="--c:#4A90E2">ブルー</li><li style="--c:#FFC93C">イエロー</li><li style="--c:#7ED321">グリーン</li><li style="--c:#9B59B6">パープル</li><li style="--c:#FF8C42">オレンジ</li></ul>
 </div>
 </article>
-      <ul class="swatches" aria-label="選べる推し色（12色）の一部">
-        <li style="--c:#FF6FA3">ピンク</li><li style="--c:#4A90E2">ブルー</li><li style="--c:#FFC93C">イエロー</li><li style="--c:#7ED321">グリーン</li><li style="--c:#9B59B6">パープル</li><li style="--c:#FF8C42">オレンジ</li>
-      </ul>
+<ul class="cards two mini-features"><li class="card mini-feature" id="feature-lockscreen">
+<p class="feature-label">ロック画面</p>
+<h3>イベントの日は、ロック画面から記録。</h3>
+<p>イベントの当日にアプリを開くと、ロック画面と Dynamic Island に「今日はイベントの日」を表示。グッズやチケット代を、その場ですぐ記録できます。</p>
+<ul class="points"><li>ロック画面には、公演名・会場・推しの名前を出しません</li><li>ロック画面のウィジェット「推して◯日」「次のイベントまで◯日」<span class="premium">金額の表示はプレミアム</span></li><li>コントロールセンター、アクションボタン、Siri からも「支出を記録」</li></ul>
+</li><li class="card mini-feature" id="feature-notify">
+<p class="feature-label">お知らせ</p>
+<h3>推しの記念日も、忘れない。</h3>
+<p>推しの誕生日や、推し始めて100日・1,000日・◯周年の日にお知らせ。1年前の今日の記録があれば、その日にもお知らせします。</p>
+<ul class="points"><li>記念日と「1年前の今日」のお知らせは、設定でオンにした人だけ</li><li>「1年前の今日」は、多くても週に1回</li><li>お知らせに、推しの名前や金額は出しません</li></ul>
+</li></ul>
     </div>
   </section>
 
@@ -290,7 +309,7 @@ p,li{overflow-wrap:anywhere}
         <p>推しの登録、支出の記録、合計と内訳、バックアップ、ロックは、無料で使えます。推しの登録は無制限、広告もありません。</p>
       </div>
       <h3 class="plans-title">沼ろくプレミアム</h3>
-      <p class="section-lead">推し×カテゴリの集計・前年比・月平均、推しごとの予算、年間まとめの全カード、支出1件に写真を複数枚、「今月の支出」ウィジェット、まとめ画像の透かしなし。</p>
+      <p class="section-lead">推し×カテゴリの集計・前年比・月平均、推しごとの予算、年間まとめの全カード、支出1件に写真を複数枚、「今月の支出」ウィジェット、推し色のアプリアイコン（7色）、まとめ画像の透かしなし。</p>
       <ul class="plans">
         <li class="plan">
           <p class="plan-name">月額プラン</p>
@@ -329,9 +348,9 @@ p,li{overflow-wrap:anywhere}
       <h2 id="faq-title" class="section-title">よくある質問</h2>
       <details open><summary>運営者に私の記録は見えますか？</summary><div class="answer"><p>見えません。本アプリには運営者のサーバーがなく、記録は運営者に送られません。詳しくはプライバシーポリシーをご覧ください。</p></div></details>
 <details><summary>機種変更したら、記録は引き継げますか？</summary><div class="answer"><p>同じ Apple アカウントで iCloud にサインインしていれば、新しい iPhone に自動で同期されます。iCloud を使っていない場合は、前の iPhone で「設定」→「バックアップとデータ」の「CSVで書き出す」でファイルを書き出し、新しい iPhone の同じ画面の「CSVを読み込む」で読み込んでください（写真は CSV に含まれません）。</p></div></details>
+<details><summary>イベント（ライブ・舞台など）もバックアップされますか？</summary><div class="answer"><p>はい。バージョン 1.1 以降の自動バックアップと CSV の書き出しには、イベントとチケットの情報も含まれます。1.1 より前に作ったバックアップから戻した場合、イベントは戻す前のまま残ります。</p></div></details>
 <details><summary>無料体験はいつ請求されますか？</summary><div class="answer"><p>年額プランの7日間の無料体験は、終わる24時間前までに解約しなければ、無料体験の終了時に年額プランの代金が請求されます。無料体験の対象は、沼ろくプレミアムの年額・月額プランをこれまでに利用したことがない Apple アカウントで、1回限りです。無料体験中に解約すると、その時点でプレミアムの機能が使えなくなる場合があります。解約の方法は「プレミアムプランを解約したい」をご覧ください。</p></div></details>
 <details><summary>プレミアムプランを解約したい</summary><div class="answer"><p>iPhone の「設定」→ ご自分の名前 →「サブスクリプション」から解約できます。本アプリを削除しても解約にはなりません。買い切りプランは自動で更新されないため、解約の手続きはありません。</p></div></details>
-<details><summary>写真は同期・バックアップされますか？</summary><div class="answer"><p>写真は iCloud で同期されます。自動バックアップと CSV の書き出しには、写真は含まれません。</p></div></details>
       <p class="more"><a href="support/">ほかの質問はサポートへ <span aria-hidden="true">→</span></a></p>
     </div>
   </section>

@@ -266,7 +266,8 @@ p,li{overflow-wrap:anywhere}
 .premium{display:inline-block;margin-left:6px;padding:0 8px;border-radius:6px;background:#2a1f4f;color:#fff;font-size:13px;font-weight:700;line-height:1.7;vertical-align:1px}
 @media (prefers-color-scheme:dark){.premium{background:#ff8fbd;color:#1d1b26}}
 @media (min-width:860px){.feature{grid-template-columns:300px 1fr;gap:56px}.feature:nth-of-type(even){grid-template-columns:1fr 300px}.feature-shot{order:0}.feature:nth-of-type(even) .feature-shot{order:2}}
-.swatches{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:8px 0 0;padding:0;font-size:13px}
+.mini-features{margin:24px 0 40px}.mini-feature h3{font-size:20px}.mini-feature>p:not(.feature-label){margin:0 0 12px}.mini-feature .points{font-size:15px}
+.swatches{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;padding:0;font-size:13px}
 .swatches li{display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
 .swatches li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--c)}
 /* 安心 */
@@ -397,23 +398,46 @@ def fill_template(template: str, text_values: dict, html_values: dict) -> str:
 
 
 def features_html(features: list) -> str:
-    out = []
+    """画像のある機能は左右交互の大きな並び、画像のない機能（image が空）は最後にカードとして並べる"""
+    out, cards = [], []
     for f in features:
         points = []
         for p in f["points"]:
             label = f'<span class="premium">{html.escape(p["premium"])}</span>' if p.get("premium") else ""
             points.append(f"<li>{html.escape(p['text'])}{label}</li>")
+        if not f.get("image"):
+            cards.append(f"""<li class="card mini-feature" id="feature-{html.escape(f['id'], quote=True)}">
+<p class="feature-label">{html.escape(f['eyebrow'])}</p>
+<h3>{html.escape(f['title'])}</h3>
+<p>{html.escape(f['lead'])}</p>
+<ul class="points">{''.join(points)}</ul>
+</li>""")
+            continue
         image = html.escape(f["image"], quote=True)
         out.append(f"""<article class="feature" id="feature-{html.escape(f['id'], quote=True)}">
-<div class="feature-shot"><img src="assets/screen-{image}-320.jpg" srcset="assets/screen-{image}-320.jpg 320w, assets/screen-{image}-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="696" alt="{html.escape(f['alt'], quote=True)}" loading="lazy" decoding="async"></div>
+<div class="feature-shot"><img src="assets/screen-{image}-320.jpg" srcset="assets/screen-{image}-320.jpg 320w, assets/screen-{image}-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="695" alt="{html.escape(f['alt'], quote=True)}" loading="lazy" decoding="async"></div>
 <div class="feature-copy">
 <p class="feature-label">{html.escape(f['eyebrow'])}</p>
 <h3>{html.escape(f['title'])}</h3>
 <p class="feature-lead">{html.escape(f['lead'])}</p>
-<ul class="points">{''.join(points)}</ul>
+<ul class="points">{''.join(points)}</ul>{swatches_html(f.get("swatches"))}
 </div>
 </article>""")
+    if cards:
+        out.append(f'<ul class="cards two mini-features">{"".join(cards)}</ul>')
     return "\n".join(out)
+
+
+def swatches_html(swatches) -> str:
+    """推し色の見本（色の値は #RRGGBB だけを許す）"""
+    if not swatches:
+        return ""
+    items = []
+    for name, color in swatches:
+        if not re.match(r"^#[0-9A-Fa-f]{6}$", color):
+            raise BuildError(f"推し色の見本の色の形が正しくありません: {color}")
+        items.append(f'<li style="--c:{color}">{html.escape(name)}</li>')
+    return f'\n<ul class="swatches" aria-label="選べる推し色（12色）の一部">{"".join(items)}</ul>'
 
 
 def faq_html(questions: list, support_text: str) -> str:

@@ -4,13 +4,13 @@
 #
 # 元の画像（アプリのリポジトリ oshikatsu）:
 #   アイコン      … App/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png
-#   画面          … screenshots/iPhone 17 Pro/（2026-10-12 に 1.0 で撮った、見出しなしの画面。架空のデータだけ）
-# ★ 1.1 の画面（イベント・ロック画面など）を使わないこと。1.1 の紹介は 1.1 の公開と同時に release-1.1 ブランチで足す
+#   画面          … screenshots/iPhone 17 Pro Max/（2026-10-15 に 1.1 で撮った、見出しなしの画面。架空のデータだけ）
+# ★ release-1.1 ブランチ用（1.1 の画面）。main（1.0 公開中）は screenshots/iPhone 17 Pro/ の 1.0 の画面を使う。1.1 の公開と同時に main へ取り込む
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 APP="$ROOT/../oshikatsu"
 ICON="$APP/App/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png"
-SHOTS="$APP/screenshots/iPhone 17 Pro"
+SHOTS="$APP/screenshots/iPhone 17 Pro Max"
 OUT="$ROOT/src/assets"
 SRGB="/System/Library/ColorSync/Profiles/sRGB Profile.icc"
 mkdir -p "$OUT"
@@ -21,7 +21,7 @@ for size in 32 180 192 512; do
 done
 
 # 画面（JPEG・sRGB・幅 320/640）。紹介ページで使う4枚だけ
-for name in 1_entry 2_home 3_summary 4_monthly_recap; do
+for name in 1_entry 2_home 2b_events 3_summary 4_monthly_recap; do
   out="${name#*_}"; out="${out//_/-}"   # 4_monthly_recap → monthly-recap
   for width in 320 640; do
     sips -s format jpeg -s formatOptions 80 --matchTo "$SRGB" --resampleWidth "$width" \

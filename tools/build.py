@@ -440,7 +440,7 @@ def store_cta(values: dict) -> str:
         raise BuildError(f"site.json の app_store_id の形が正しくありません: {app_id}")
     if not (ASSETS / "app-store-badge.png").exists():
         raise BuildError("Apple 公式の App Store バッジ（src/assets/app-store-badge.png）がありません")
-    return f'<a class="store-badge" href="{url}"><img src="assets/app-store-badge.png" width="150" height="48" alt="App Store からダウンロード"></a>'
+    return f'<a class="store-badge" href="{url}"><img src="assets/app-store-badge.png" width="131" height="48" alt="App Store からダウンロード"></a>'
 
 
 def landing(values: dict, support_text: str, draft: bool) -> str:

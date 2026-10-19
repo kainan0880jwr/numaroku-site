@@ -37,6 +37,14 @@ PAGES = [
     ("privacy/index.html", LEGAL / "privacy_policy_draft_20261009.md", "プライバシーポリシー"),
     ("tokushoho/index.html", ROOT / "src" / "tokushoho.md", "特定商取引法に基づく表記"),
 ]
+# 英語のページ（1.3 多言語版）。アプリは日本語以外の言語で /en/ の規約・ポリシー・サポートを開く。
+# 規約・ポリシーは日本語版が正本で、英語版はその訳（原稿は ../../oshikatsu/legal の *_en_*.md）
+PAGES_EN = [
+    ("en/index.html", ROOT / "src" / "en" / "index.md", "Numaroku"),
+    ("en/support/index.html", ROOT / "src" / "en" / "support.md", "Support"),
+    ("en/terms/index.html", LEGAL / "terms_of_service_en_20261019.md", "Terms of Use"),
+    ("en/privacy/index.html", LEGAL / "privacy_policy_en_20261019.md", "Privacy Policy"),
+]
 
 # すべてのページに同じものを入れる（--release で一字一句同じかを確かめる）
 CSP = "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'"
@@ -50,6 +58,8 @@ FIELDS = {
     "operator": "【要記入：運営者の名前または屋号】",
     "contact": "【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】",
     "published": "【要記入：公開日】",
+    "operator_en": "【要記入：運営者の名前（英語）】",
+    "published_en": "【要記入：公開日（英語）】",
 }
 
 PENDING = re.compile(r"【(要記入|確認事項)[^】]*】")
@@ -57,7 +67,7 @@ PENDING = re.compile(r"【(要記入|確認事項)[^】]*】")
 UNRESOLVED = re.compile(r"【[^】]*】|TODO|要確認")
 # リンク先として許すもの（https・メール・同じサイトの中の相対パス）
 SAFE_HREF = re.compile(r"^(https://|mailto:|(?![a-zA-Z][a-zA-Z0-9+.-]*:)[\w./#-]*$)")
-APP_STORE_URL = re.compile(r"^https://apps\.apple\.com/jp/app/id[0-9]+$")
+APP_STORE_URL = re.compile(r"^https://apps\.apple\.com/(jp/)?app/id[0-9]+$")
 EMAIL = re.compile(r"^[\w.+-]+@[\w-]+(\.[\w-]+)+$")
 
 
@@ -318,11 +328,11 @@ p,li{overflow-wrap:anywhere}
 """
 
 
-def head(title: str, depth: int, draft: bool, style: str, extra: str = "") -> str:
+def head(title: str, depth: int, draft: bool, style: str, extra: str = "", lang: str = "ja") -> str:
     robots = '<meta name="robots" content="noindex">' if draft else ""
     up = "../" * depth
     return f"""<!doctype html>
-<html lang="ja">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -349,6 +359,7 @@ def footer_html(up: str, values: dict) -> str:
 <li><a href="{up}terms/">利用規約</a></li>
 <li><a href="{up}privacy/">プライバシーポリシー</a></li>
 <li><a href="{up}tokushoho/">特定商取引法に基づく表記</a></li>
+<li><a href="{up}en/" lang="en">English</a></li>
 </ul>
 <p>Apple、Apple のロゴ、App Store、iPhone、iCloud、Face ID、Touch ID は、米国およびその他の国で登録された Apple Inc. の商標です。App Store は Apple Inc. のサービスマークです。iPhone の商標は、アイホン株式会社のライセンスにもとづき使用されています。</p>
 <p>{html.escape(values.get("copyright", ""))}</p>
@@ -356,18 +367,29 @@ def footer_html(up: str, values: dict) -> str:
 </footer>"""
 
 
-def page(title: str, body: str, depth: int, draft: bool, values: dict) -> str:
-    """サポート・規約などの、文章のページ"""
+def page(title: str, body: str, depth: int, draft: bool, values: dict, lang: str = "ja") -> str:
+    """サポート・規約などの、文章のページ。lang="en" は英語のページ（/en/ の下。見出し・案内・フッターも英語）"""
     up = "../" * depth or "./"
     banner = '<div class="draft">下書き：公開前に黄色の箇所を埋めてください</div>' if draft else ""
-    return head(f"{title}｜沼ろく", depth, draft, STYLE) + f"""<body>
+    if lang == "en":
+        nav = (f'<a href="{up}en/">Numaroku</a><span class="links"><a href="{up}en/support/">Support</a>'
+               f'<a href="{up}en/terms/">Terms of Use</a><a href="{up}en/privacy/">Privacy Policy</a><a href="{up}" lang="ja">日本語</a></span>')
+        footer = f"Numaroku — Oshi spending log<br>{html.escape(values.get('copyright', ''))}"
+        page_title = title if title == "Numaroku" else f"{title} | Numaroku"
+    else:
+        nav = (f'<a href="{up}">沼ろく</a><span class="links"><a href="{up}support/">サポート</a><a href="{up}terms/">利用規約</a>'
+               f'<a href="{up}privacy/">プライバシーポリシー</a><a href="{up}tokushoho/">特定商取引法に基づく表記</a>'
+               f'<a href="{up}en/" lang="en">English</a></span>')
+        footer = f"沼ろく — 推し活の支出記録<br>{html.escape(values.get('copyright', ''))}"
+        page_title = f"{title}｜沼ろく"
+    return head(page_title, depth, draft, STYLE, lang=lang) + f"""<body>
 {banner}
-<header><nav><a href="{up}">沼ろく</a><span class="links"><a href="{up}support/">サポート</a><a href="{up}terms/">利用規約</a><a href="{up}privacy/">プライバシーポリシー</a><a href="{up}tokushoho/">特定商取引法に基づく表記</a></span></nav></header>
+<header><nav>{nav}</nav></header>
 <main>
 <h1>{html.escape(title)}</h1>
 {body}
 </main>
-<footer>沼ろく — 推し活の支出記録<br>{html.escape(values.get("copyright", ""))}</footer>
+<footer>{footer}</footer>
 </body>
 </html>
 """
@@ -693,6 +715,10 @@ def audit(outputs: dict[str, bytes | str], values: dict):
     # 1.0 のアプリはトップをサポートとして開くので、トップからサポートと問い合わせ先にすぐ行けること
     if 'href="support/"' not in landing_page or f'href="mailto:{values["contact"]}"' not in landing_page:
         raise BuildError("index.html: トップにサポートへのリンクと問い合わせ先がありません")
+    # 1.3 のアプリは日本語以外の言語で /en/ をサポートとして開くので、英語のトップも同じにする
+    english_top = outputs["en/index.html"]
+    if 'href="../en/support/"' not in english_top or f'href="mailto:{values["contact"]}"' not in english_top:
+        raise BuildError("en/index.html: 英語のトップにサポートへのリンクと問い合わせ先がありません")
 
 
 def main() -> int:
@@ -704,7 +730,7 @@ def main() -> int:
     try:
         support_text = ""
         tokushoho_text = ""
-        for target, source, fallback in PAGES:
+        for target, source, fallback in PAGES + PAGES_EN:
             text = source.read_text(encoding="utf-8")
             text = fill(public_body(text, source.name) if source.parent == LEGAL else text, values)
             pattern = UNRESOLVED if release else PENDING
@@ -718,8 +744,12 @@ def main() -> int:
                 tokushoho_text = text
             depth = target.count("/")
             title, body = render(text, up="../" * depth)
-            title = title.removeprefix("沼ろく ").strip() or fallback
-            outputs[target] = page(title, body, depth, draft=bool(left), values=values)
+            lang = "en" if target.startswith("en/") else "ja"
+            if lang == "en":
+                title = title.removeprefix("Numaroku ").strip() or fallback
+            else:
+                title = title.removeprefix("沼ろく ").strip() or fallback
+            outputs[target] = page(title, body, depth, draft=bool(left), values=values, lang=lang)
         check_prices(values, tokushoho_text)
         outputs["index.html"] = landing(values, support_text, draft=bool(problems))
         outputs.update(assets())

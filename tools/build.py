@@ -33,8 +33,8 @@ ASSETS = ROOT / "src" / "assets"
 PAGES = [
     # (出力先, 原稿, ページの題名)。紹介ページ（index.html）は別に作る
     ("support/index.html", ROOT / "src" / "support.md", "サポート"),
-    ("terms/index.html", LEGAL / "terms_of_service_draft_20261009.md", "利用規約"),
-    ("privacy/index.html", LEGAL / "privacy_policy_draft_20261009.md", "プライバシーポリシー"),
+    ("terms/index.html", LEGAL / "terms_of_service_ja_v1.3_20261019.md", "利用規約"),
+    ("privacy/index.html", LEGAL / "privacy_policy_ja_v1.3_20261019.md", "プライバシーポリシー"),
     ("tokushoho/index.html", ROOT / "src" / "tokushoho.md", "特定商取引法に基づく表記"),
 ]
 # 英語のページ（1.3 多言語版）。アプリは日本語以外の言語で /en/ の規約・ポリシー・サポートを開く。

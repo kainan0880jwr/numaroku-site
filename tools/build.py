@@ -37,14 +37,40 @@ PAGES = [
     ("privacy/index.html", LEGAL / "privacy_policy_ja_v1.3_20261019.md", "プライバシーポリシー"),
     ("tokushoho/index.html", ROOT / "src" / "tokushoho.md", "特定商取引法に基づく表記"),
 ]
-# 英語のページ（1.3 多言語版）。アプリは日本語以外の言語で /en/ の規約・ポリシー・サポートを開く。
-# 規約・ポリシーは日本語版が正本で、英語版はその訳（原稿は ../../oshikatsu/legal の *_en_*.md）
-PAGES_EN = [
-    ("en/index.html", ROOT / "src" / "en" / "index.md", "Numaroku"),
-    ("en/support/index.html", ROOT / "src" / "en" / "support.md", "Support"),
-    ("en/terms/index.html", LEGAL / "terms_of_service_en_20261019.md", "Terms of Use"),
-    ("en/privacy/index.html", LEGAL / "privacy_policy_en_20261019.md", "Privacy Policy"),
-]
+# 日本語以外のページ（1.3 多言語版）。アプリはその言語の /<dir>/ の規約・ポリシー・サポートを開く（アプリの LegalLinks と同じ dir）。
+# 規約・ポリシーは日本語版が正本で、ほかの言語はその訳（原稿は ../../oshikatsu/legal の *_<言語>_20261019.md）
+LANGS = {
+    "en": {"dir": "en", "name": "English", "tagline": "Oshi spending log",
+           "support": "Support", "terms": "Terms of Use", "privacy": "Privacy Policy"},
+    "de": {"dir": "de", "name": "Deutsch", "tagline": "Oshi-Ausgabenbuch",
+           "support": "Support", "terms": "Nutzungsbedingungen", "privacy": "Datenschutzerklärung"},
+    "es": {"dir": "es", "name": "Español", "tagline": "Registro de gastos de oshi",
+           "support": "Soporte", "terms": "Términos de uso", "privacy": "Política de privacidad"},
+    "fr": {"dir": "fr", "name": "Français", "tagline": "Carnet de dépenses d'oshi",
+           "support": "Assistance", "terms": "Conditions d'utilisation", "privacy": "Politique de confidentialité"},
+    "it": {"dir": "it", "name": "Italiano", "tagline": "Diario delle spese per gli oshi",
+           "support": "Supporto", "terms": "Termini di utilizzo", "privacy": "Informativa sulla privacy"},
+    "pt-BR": {"dir": "pt-br", "name": "Português (Brasil)", "tagline": "Registro de gastos com oshi",
+              "support": "Suporte", "terms": "Termos de Uso", "privacy": "Política de Privacidade"},
+    "tr": {"dir": "tr", "name": "Türkçe", "tagline": "Oshi harcama kaydı",
+           "support": "Destek", "terms": "Kullanım Koşulları", "privacy": "Gizlilik Politikası"},
+    "hi": {"dir": "hi", "name": "हिन्दी", "tagline": "ओशी खर्च रिकॉर्ड",
+           "support": "सहायता", "terms": "उपयोग की शर्तें", "privacy": "गोपनीयता नीति"},
+    "vi": {"dir": "vi", "name": "Tiếng Việt", "tagline": "Sổ chi tiêu cho oshi",
+           "support": "Hỗ trợ", "terms": "Điều khoản sử dụng", "privacy": "Chính sách quyền riêng tư"},
+    "id": {"dir": "id", "name": "Bahasa Indonesia", "tagline": "Catatan belanja oshi",
+           "support": "Bantuan", "terms": "Ketentuan Penggunaan", "privacy": "Kebijakan Privasi"},
+}
+PAGES_INTL = []
+for _code, _lang in LANGS.items():
+    _dir = _lang["dir"]
+    PAGES_INTL += [
+        (f"{_dir}/index.html", ROOT / "src" / _dir / "index.md", "Numaroku"),
+        (f"{_dir}/support/index.html", ROOT / "src" / _dir / "support.md", _lang["support"]),
+        (f"{_dir}/terms/index.html", LEGAL / f"terms_of_service_{_code}_20261019.md", _lang["terms"]),
+        (f"{_dir}/privacy/index.html", LEGAL / f"privacy_policy_{_code}_20261019.md", _lang["privacy"]),
+    ]
+LANG_OF_DIR = {lang["dir"]: code for code, lang in LANGS.items()}
 
 # すべてのページに同じものを入れる（--release で一字一句同じかを確かめる）
 CSP = "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'"
@@ -61,6 +87,8 @@ FIELDS = {
     "operator_en": "【要記入：運営者の名前（英語）】",
     "published_en": "【要記入：公開日（英語）】",
 }
+# ほかの言語の公開日（運営者の名前は英語と同じ表記を使う）
+FIELDS.update({f"published_{code}": f"【要記入：公開日（{code}）】" for code in LANGS if code != "en"})
 
 PENDING = re.compile(r"【(要記入|確認事項)[^】]*】")
 # 公開用で1つでも残っていたら止める印（【要記入】【確認事項】のほか、【メモ】など【】で書いた運営者向けの書き込みすべて）
@@ -184,6 +212,7 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius
 mark{background:var(--mark);color:inherit;padding:0 2px}
 .draft{background:#fff1a8;color:#3d3300;padding:10px 16px;text-align:center;font-weight:700;font-size:14px}
 footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font-size:13px}
+.langs{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0 0 12px;padding:0;list-style:none}
 """
 
 LANDING_STYLE = """
@@ -359,28 +388,39 @@ def footer_html(up: str, values: dict) -> str:
 <li><a href="{up}terms/">利用規約</a></li>
 <li><a href="{up}privacy/">プライバシーポリシー</a></li>
 <li><a href="{up}tokushoho/">特定商取引法に基づく表記</a></li>
-<li><a href="{up}en/" lang="en">English</a></li>
 </ul>
+<ul class="footer-links">{language_links(up)}</ul>
 <p>Apple、Apple のロゴ、App Store、iPhone、iCloud、Face ID、Touch ID は、米国およびその他の国で登録された Apple Inc. の商標です。App Store は Apple Inc. のサービスマークです。iPhone の商標は、アイホン株式会社のライセンスにもとづき使用されています。</p>
 <p>{html.escape(values.get("copyright", ""))}</p>
 </div>
 </footer>"""
 
 
+def language_links(up: str) -> str:
+    """すべての言語のトップへのリンク（各ページのフッター）"""
+    items = [f'<li><a href="{up}" lang="ja">日本語</a></li>']
+    items += [f'<li><a href="{up}{lang["dir"]}/" lang="{code}">{html.escape(lang["name"])}</a></li>' for code, lang in LANGS.items()]
+    return "".join(items)
+
+
 def page(title: str, body: str, depth: int, draft: bool, values: dict, lang: str = "ja") -> str:
-    """サポート・規約などの、文章のページ。lang="en" は英語のページ（/en/ の下。見出し・案内・フッターも英語）"""
+    """サポート・規約などの、文章のページ。lang が ja 以外なら、その言語のページ（/<dir>/ の下。見出し・案内・フッターもその言語）"""
     up = "../" * depth or "./"
     banner = '<div class="draft">下書き：公開前に黄色の箇所を埋めてください</div>' if draft else ""
-    if lang == "en":
-        nav = (f'<a href="{up}en/">Numaroku</a><span class="links"><a href="{up}en/support/">Support</a>'
-               f'<a href="{up}en/terms/">Terms of Use</a><a href="{up}en/privacy/">Privacy Policy</a><a href="{up}" lang="ja">日本語</a></span>')
-        footer = f"Numaroku — Oshi spending log<br>{html.escape(values.get('copyright', ''))}"
+    if lang != "ja":
+        names = LANGS[lang]
+        base = f"{up}{names['dir']}/"
+        nav = (f'<a href="{base}">Numaroku</a><span class="links"><a href="{base}support/">{html.escape(names["support"])}</a>'
+               f'<a href="{base}terms/">{html.escape(names["terms"])}</a><a href="{base}privacy/">{html.escape(names["privacy"])}</a>'
+               f'<a href="{up}" lang="ja">日本語</a></span>')
+        footer = (f'<ul class="langs">{language_links(up)}</ul>'
+                  f"Numaroku — {html.escape(names['tagline'])}<br>{html.escape(values.get('copyright', ''))}")
         page_title = title if title == "Numaroku" else f"{title} | Numaroku"
     else:
         nav = (f'<a href="{up}">沼ろく</a><span class="links"><a href="{up}support/">サポート</a><a href="{up}terms/">利用規約</a>'
                f'<a href="{up}privacy/">プライバシーポリシー</a><a href="{up}tokushoho/">特定商取引法に基づく表記</a>'
                f'<a href="{up}en/" lang="en">English</a></span>')
-        footer = f"沼ろく — 推し活の支出記録<br>{html.escape(values.get('copyright', ''))}"
+        footer = f'<ul class="langs">{language_links(up)}</ul>沼ろく — 推し活の支出記録<br>{html.escape(values.get("copyright", ""))}'
         page_title = f"{title}｜沼ろく"
     return head(page_title, depth, draft, STYLE, lang=lang) + f"""<body>
 {banner}
@@ -715,10 +755,11 @@ def audit(outputs: dict[str, bytes | str], values: dict):
     # 1.0 のアプリはトップをサポートとして開くので、トップからサポートと問い合わせ先にすぐ行けること
     if 'href="support/"' not in landing_page or f'href="mailto:{values["contact"]}"' not in landing_page:
         raise BuildError("index.html: トップにサポートへのリンクと問い合わせ先がありません")
-    # 1.3 のアプリは日本語以外の言語で /en/ をサポートとして開くので、英語のトップも同じにする
-    english_top = outputs["en/index.html"]
-    if 'href="../en/support/"' not in english_top or f'href="mailto:{values["contact"]}"' not in english_top:
-        raise BuildError("en/index.html: 英語のトップにサポートへのリンクと問い合わせ先がありません")
+    # 1.3 のアプリは日本語以外の言語で /<dir>/ をサポートとして開くので、各言語のトップも同じにする
+    for lang in LANGS.values():
+        top = outputs[f"{lang['dir']}/index.html"]
+        if f'href="../{lang["dir"]}/support/"' not in top or f'href="mailto:{values["contact"]}"' not in top:
+            raise BuildError(f"{lang['dir']}/index.html: トップにサポートへのリンクと問い合わせ先がありません")
 
 
 def main() -> int:
@@ -730,7 +771,7 @@ def main() -> int:
     try:
         support_text = ""
         tokushoho_text = ""
-        for target, source, fallback in PAGES + PAGES_EN:
+        for target, source, fallback in PAGES + PAGES_INTL:
             text = source.read_text(encoding="utf-8")
             text = fill(public_body(text, source.name) if source.parent == LEGAL else text, values)
             pattern = UNRESOLVED if release else PENDING
@@ -744,9 +785,10 @@ def main() -> int:
                 tokushoho_text = text
             depth = target.count("/")
             title, body = render(text, up="../" * depth)
-            lang = "en" if target.startswith("en/") else "ja"
-            if lang == "en":
-                title = title.removeprefix("Numaroku ").strip() or fallback
+            lang = LANG_OF_DIR.get(target.split("/")[0], "ja")
+            if lang != "ja":
+                # 見出しの語順は言語ごとに違うので、ページの題名は決まった名前にする（トップは Numaroku）
+                title = fallback
             else:
                 title = title.removeprefix("沼ろく ").strip() or fallback
             outputs[target] = page(title, body, depth, draft=bool(left), values=values, lang=lang)

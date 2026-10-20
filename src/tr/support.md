@@ -32,7 +32,7 @@ Tek seferlik satın alma, yıllık veya aylık planını iptal etmez. Planı iPh
 Kilit, iPhone'unun Face ID, Touch ID veya parolasını kullanır. iPhone'da parola ayarlı değilse kilit açılamaz. Ayarlar → Face ID ve Parola'dan bir parola ayarla ve tekrar dene.
 
 ### Nasıl widget eklerim?
-Ana ekranda boş bir alana dokunup basılı tut, sol üstteki "Düzenle" → "Widget Ekle"ye dokun ve "Numaroku"yu seç. "Bu Ayın Harcaması" widget'ı bir Premium özelliğidir. Kilitli ekrana eklemek için kilitli ekrana dokunup basılı tut, "Özelleştir" → "Kilitli Ekran"a dokun, ardından widget alanına dokunup "Numaroku"yu seç. Uygulamanın kilidi açıkken widget'lar tutarları ve etkinlik adlarını göstermez.
+Ana ekranda boş bir alana dokunup basılı tut, sol üstteki "Düzenle" → "Widget Ekle"ye dokun ve "Numaroku"yu seç. "Bu Ayın Harcaması" widget'ı bir Premium özelliğidir. Kilitli ekrana eklemek için kilitli ekrana dokunup basılı tut, "Özelleştir" → "Kilitli Ekran"a dokun, ardından widget alanına dokunup "Numaroku"yu seç. Uygulama kilidi etkinken widget'lar tutarları ve etkinlik adlarını göstermez.
 
 ### Uygulamayı silersem verilerime ne olur?
 iPhone'undaki veriler silinir. iCloud'a giriş yaptıysan iCloud'da saklanan kayıtlar kalır ve yeniden yüklediğinde geri gelir. Her şeyi silmek için uygulamada oshilerini ve kayıtlarını sil veya iPhone'daki Ayarlar uygulaması → adın → iCloud → Hesap Saklama Alanını Yönet'ten uygulamanın verilerini sil. iCloud Drive yedekleri uygulamanın Ayarlar → Yedek ve Veriler bölümünden silinebilir.

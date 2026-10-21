@@ -17,13 +17,13 @@ In der iPhone-App „Einstellungen“ → dein Name → Abos. Das Löschen der A
 Tippe in der App im Premium-Bildschirm (Einstellungen → Premium) auf „Käufe wiederherstellen“. Jahres-, Monats- und Einmalkäufe werden alle wiederhergestellt. Du musst mit demselben Apple Account angemeldet sein, mit dem du gekauft hast.
 
 ### Ich möchte eine Rückerstattung
-Rückerstattungen für Käufe im App Store werden von Apple bearbeitet (https://reportaproblem.apple.com/). Der Entwickler kann keine Rückerstattungsanträge annehmen.
+Rückerstattungen für Käufe im App Store werden von Apple bearbeitet (https://reportaproblem.apple.com/). Der Entwickler kann keine Rückerstattungsanträge annehmen. Wo dir das Gesetz ein Recht auf Rückerstattung gibt (zum Beispiel in Australien), gilt dieses Recht.
 
 ### Meine Einträge erscheinen nicht auf meinem zweiten iPhone, oder die Synchronisierung hat aufgehört
 Prüfe auf beiden iPhones, ob du mit demselben Apple Account bei iCloud angemeldet bist, ob iCloud Drive aktiviert ist (Einstellungen → dein Name → iCloud) und ob noch iCloud-Speicher frei ist. Unter „iCloud-Synchronisierung“ in den Einstellungen der App siehst du den Zeitpunkt der letzten Synchronisierung und eventuelle Probleme. Bei vielen Fotos kann die erste Synchronisierung eine Weile dauern.
 
 ### Wann wird mir die kostenlose Testphase berechnet?
-Wenn du die 7-tägige Testphase des Jahresabos nicht mindestens 24 Stunden vor ihrem Ende kündigst, wird dir nach Ende der Testphase das Jahresabo berechnet. Die Testphase gibt es einmal, für Apple Accounts, die das Jahres- oder Monatsabo von Numaroku Premium noch nie genutzt haben. Wenn du während der Testphase kündigst, können die Premium-Funktionen sofort enden. Wie du kündigst, steht unter „Wie kündige ich Premium?“.
+Wenn du die 7-tägige Testphase des Jahresabos nicht mindestens 24 Stunden vor ihrem Ende kündigst, wird dir nach Ende der Testphase das Jahresabo berechnet. Die Testphase gibt es einmal, für Apple Accounts, die das Jahres- oder Monatsabo von Numaroku Premium noch nie genutzt haben. Aufgrund der Vorgaben von Apple gilt: Wenn du während der Testphase kündigst, können die Premium-Funktionen sofort enden. Wie du kündigst, steht unter „Wie kündige ich Premium?“.
 
 ### Ich habe ein Abo und den Einmalkauf gekauft
 Der Einmalkauf kündigt dein Jahres- oder Monatsabo nicht. Kündige es in der iPhone-App „Einstellungen“ → dein Name → Abos. Für die Rückerstattung bereits berechneter Beträge wende dich bitte an Apple (https://reportaproblem.apple.com/).

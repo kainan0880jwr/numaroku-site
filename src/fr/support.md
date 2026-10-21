@@ -17,13 +17,13 @@ Dans l'app Réglages de l'iPhone → ton nom → Abonnements. Supprimer l'app ne
 Touche « Restaurer les achats » sur l'écran Premium (Réglages → Premium) de l'app. Les achats annuels, mensuels et uniques sont tous restaurés. Tu dois être connecté avec le même compte Apple que celui utilisé pour l'achat.
 
 ### Je voudrais un remboursement
-Les remboursements des achats sur l'App Store sont gérés par Apple (https://reportaproblem.apple.com/). Le développeur ne peut pas accepter de demandes de remboursement.
+Les remboursements des achats sur l'App Store sont gérés par Apple (https://reportaproblem.apple.com/). Le développeur ne peut pas accepter de demandes de remboursement. Là où la loi te donne droit à un remboursement (par exemple en Australie), ce droit s'applique.
 
 ### Mes entrées n'apparaissent pas sur mon deuxième iPhone, ou la synchronisation s'est arrêtée
 Sur les deux iPhone, vérifie que tu es connecté à iCloud avec le même compte Apple, qu'iCloud Drive est activé (Réglages → ton nom → iCloud) et qu'il te reste de l'espace iCloud. « Synchronisation iCloud » dans les Réglages de l'app indique la dernière synchronisation et les éventuels problèmes. Avec beaucoup de photos, la première synchronisation peut prendre un moment.
 
 ### Quand l'essai gratuit est-il facturé ?
-Si tu ne résilies pas l'essai gratuit de 7 jours de la formule annuelle au moins 24 heures avant sa fin, la formule annuelle te sera facturée à la fin de l'essai. L'essai gratuit est proposé une seule fois, aux comptes Apple qui n'ont jamais utilisé la formule annuelle ou mensuelle de Numaroku Premium. Si tu résilies pendant l'essai, les fonctions Premium peuvent s'arrêter immédiatement. Pour résilier, vois « Comment résilier Premium ? ».
+Si tu ne résilies pas l'essai gratuit de 7 jours de la formule annuelle au moins 24 heures avant sa fin, la formule annuelle te sera facturée à la fin de l'essai. L'essai gratuit est proposé une seule fois, aux comptes Apple qui n'ont jamais utilisé la formule annuelle ou mensuelle de Numaroku Premium. En raison du fonctionnement des essais chez Apple, si tu résilies pendant l'essai, les fonctions Premium peuvent s'arrêter immédiatement. Pour résilier, vois « Comment résilier Premium ? ».
 
 ### J'ai acheté un abonnement et l'achat unique
 L'achat unique ne résilie pas ta formule annuelle ou mensuelle. Résilie-la dans l'app Réglages de l'iPhone → ton nom → Abonnements. Pour le remboursement de montants déjà facturés, contacte Apple (https://reportaproblem.apple.com/).

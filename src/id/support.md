@@ -17,13 +17,13 @@ Di aplikasi Pengaturan iPhone → nama kamu → Langganan. Menghapus aplikasi ti
 Ketuk "Pulihkan pembelian" di layar Premium (Pengaturan → Premium) di aplikasi. Pembelian tahunan, bulanan, dan sekali bayar semuanya dipulihkan. Kamu harus masuk dengan Akun Apple yang sama dengan yang dipakai saat membeli.
 
 ### Saya ingin pengembalian dana
-Pengembalian dana untuk pembelian di App Store ditangani oleh Apple (https://reportaproblem.apple.com/). Pengembang tidak dapat menerima permintaan pengembalian dana.
+Pengembalian dana untuk pembelian di App Store ditangani oleh Apple (https://reportaproblem.apple.com/). Pengembang tidak dapat menerima permintaan pengembalian dana. Jika hukum memberimu hak atas pengembalian dana (misalnya di Australia), hak itu berlaku.
 
 ### Catatan tidak muncul di iPhone kedua, atau sinkronisasi berhenti
 Di kedua iPhone, pastikan kamu masuk ke iCloud dengan Akun Apple yang sama, iCloud Drive aktif (Pengaturan → nama kamu → iCloud), dan masih ada ruang kosong di iCloud. "Sinkronisasi iCloud" di Pengaturan aplikasi menampilkan waktu sinkronisasi terakhir dan masalah jika ada. Jika fotomu banyak, sinkronisasi pertama bisa memakan waktu.
 
 ### Kapan uji coba gratis mulai ditagih?
-Jika kamu tidak membatalkan uji coba gratis 7 hari paket tahunan setidaknya 24 jam sebelum berakhir, paket tahunan akan ditagih saat uji coba berakhir. Uji coba gratis tersedia satu kali, untuk Akun Apple yang belum pernah memakai paket tahunan atau bulanan Numaroku Premium. Jika kamu membatalkan selama uji coba, fitur Premium bisa langsung berhenti. Lihat "Bagaimana cara membatalkan Premium?" untuk cara membatalkan.
+Jika kamu tidak membatalkan uji coba gratis 7 hari paket tahunan setidaknya 24 jam sebelum berakhir, paket tahunan akan ditagih saat uji coba berakhir. Uji coba gratis tersedia satu kali, untuk Akun Apple yang belum pernah memakai paket tahunan atau bulanan Numaroku Premium. Karena cara Apple menangani uji coba, jika kamu membatalkan selama uji coba, fitur Premium bisa langsung berhenti. Lihat "Bagaimana cara membatalkan Premium?" untuk cara membatalkan.
 
 ### Saya membeli langganan sekaligus pembelian sekali bayar
 Pembelian sekali bayar tidak membatalkan paket tahunan atau bulanan. Batalkan di aplikasi Pengaturan iPhone → nama kamu → Langganan. Untuk pengembalian dana atas jumlah yang sudah ditagih, hubungi Apple (https://reportaproblem.apple.com/).

@@ -17,13 +17,13 @@ iPhone'daki Ayarlar uygulaması → adın → Abonelikler'den iptal edebilirsin.
 Uygulamadaki Premium ekranında (Ayarlar → Premium) "Satın alımları geri yükle"ye dokun. Yıllık, aylık ve tek seferlik satın almaların hepsi geri yüklenir. Satın alırken kullandığın Apple Hesabı ile giriş yapmış olman gerekir.
 
 ### Para iadesi istiyorum
-App Store satın almalarının iadeleri Apple tarafından yapılır (https://reportaproblem.apple.com/). Geliştirici iade taleplerini kabul edemez.
+App Store satın almalarının iadeleri Apple tarafından yapılır (https://reportaproblem.apple.com/). Geliştirici iade taleplerini kabul edemez. Yasanın sana iade hakkı tanıdığı yerlerde (örneğin Avustralya'da) bu hak geçerlidir.
 
 ### Kayıtlarım ikinci iPhone'umda görünmüyor veya eşzamanlama durdu
 İki iPhone'da da aynı Apple Hesabı ile iCloud'a giriş yaptığını, iCloud Drive'ın açık olduğunu (Ayarlar → adın → iCloud) ve iCloud'da boş alan olduğunu kontrol et. Uygulamanın Ayarlar'ındaki "iCloud Eşzamanlama" son eşzamanlama zamanını ve varsa sorunları gösterir. Çok fotoğrafın varsa ilk eşzamanlama biraz sürebilir.
 
 ### Ücretsiz deneme ne zaman ücretlendirilir?
-Yıllık planın 7 günlük ücretsiz denemesini bitmeden en az 24 saat önce iptal etmezsen, deneme bitince yıllık plan ücretlendirilir. Ücretsiz deneme, Numaroku Premium'un yıllık veya aylık planını hiç kullanmamış Apple Hesapları için bir kez sunulur. Deneme sırasında iptal edersen Premium özellikleri hemen durabilir. İptal için "Premium'u nasıl iptal ederim?" sorusuna bak.
+Yıllık planın 7 günlük ücretsiz denemesini bitmeden en az 24 saat önce iptal etmezsen, deneme bitince yıllık plan ücretlendirilir. Ücretsiz deneme, Numaroku Premium'un yıllık veya aylık planını hiç kullanmamış Apple Hesapları için bir kez sunulur. Apple'ın deneme sürelerini işleme biçimi nedeniyle, deneme sırasında iptal edersen Premium özellikleri hemen durabilir. İptal için "Premium'u nasıl iptal ederim?" sorusuna bak.
 
 ### Hem abonelik hem tek seferlik satın alma yaptım
 Tek seferlik satın alma, yıllık veya aylık planını iptal etmez. Planı iPhone'daki Ayarlar uygulaması → adın → Abonelikler'den iptal et. Önceden ücretlendirilmiş tutarların iadesi için Apple ile iletişime geç (https://reportaproblem.apple.com/).

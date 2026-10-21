@@ -17,13 +17,13 @@ You can cancel in the iPhone Settings app → your name → Subscriptions. Delet
 Tap "Restore Purchases" on the Premium screen (Settings → Premium) in the app. Yearly, monthly, and one-time purchases are all restored. You need to be signed in with the same Apple Account you used to purchase.
 
 ### I'd like a refund
-Refunds for App Store purchases are handled by Apple (https://reportaproblem.apple.com/). The developer cannot accept refund requests.
+Refunds for App Store purchases are handled by Apple (https://reportaproblem.apple.com/). The developer cannot accept refund requests. Where the law gives you a right to a refund (for example, in Australia), that right applies.
 
 ### My records don't appear on my second iPhone, or sync has stopped
 On both iPhones, make sure you are signed in to iCloud with the same Apple Account, that iCloud Drive is on (Settings → your name → iCloud), and that you have free iCloud storage. "iCloud Sync" in the app's Settings shows the last sync time and any problems. If you have many photos, the first sync can take a while.
 
 ### When am I charged for the free trial?
-If you don't cancel the 7-day free trial of the yearly plan at least 24 hours before it ends, you will be charged for the yearly plan when the trial ends. The free trial is available once, for Apple Accounts that have never used Numaroku Premium's yearly or monthly plan. If you cancel during the trial, Premium features may stop working right away. See "How do I cancel Premium?" for how to cancel.
+If you don't cancel the 7-day free trial of the yearly plan at least 24 hours before it ends, you will be charged for the yearly plan when the trial ends. The free trial is available once, for Apple Accounts that have never used Numaroku Premium's yearly or monthly plan. Because of how Apple handles trials, if you cancel during the trial, Premium features may stop working right away. See "How do I cancel Premium?" for how to cancel.
 
 ### I bought both a subscription and the one-time purchase
 Buying the one-time purchase does not cancel your yearly or monthly plan. Cancel it in the iPhone Settings app → your name → Subscriptions. For refunds of amounts already charged, please contact Apple (https://reportaproblem.apple.com/).

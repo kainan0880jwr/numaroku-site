@@ -17,13 +17,13 @@ Nell'app Impostazioni dell'iPhone → il tuo nome → Abbonamenti. Eliminare l'a
 Tocca «Ripristina acquisti» nella schermata Premium (Impostazioni → Premium) dell'app. Vengono ripristinati gli acquisti annuali, mensili e unici. Devi aver effettuato l'accesso con lo stesso Apple Account usato per l'acquisto.
 
 ### Vorrei un rimborso
-I rimborsi degli acquisti nell'App Store sono gestiti da Apple (https://reportaproblem.apple.com/). Lo sviluppatore non può accettare richieste di rimborso.
+I rimborsi degli acquisti nell'App Store sono gestiti da Apple (https://reportaproblem.apple.com/). Lo sviluppatore non può accettare richieste di rimborso. Dove la legge ti riconosce un diritto al rimborso (ad esempio in Australia), quel diritto si applica.
 
 ### Le mie voci non compaiono sul secondo iPhone, o la sincronizzazione si è fermata
 Su entrambi gli iPhone, verifica di aver effettuato l'accesso a iCloud con lo stesso Apple Account, che iCloud Drive sia attivo (Impostazioni → il tuo nome → iCloud) e che ci sia spazio libero su iCloud. «Sincronizzazione iCloud» nelle Impostazioni dell'app mostra l'ultima sincronizzazione ed eventuali problemi. Con molte foto, la prima sincronizzazione può richiedere un po' di tempo.
 
 ### Quando mi viene addebitata la prova gratuita?
-Se non disdici la prova gratuita di 7 giorni del piano annuale almeno 24 ore prima della fine, il piano annuale ti viene addebitato al termine della prova. La prova gratuita è disponibile una sola volta, per gli Apple Account che non hanno mai usato il piano annuale o mensile di Numaroku Premium. Se disdici durante la prova, le funzioni Premium possono smettere subito di funzionare. Per disdire, vedi «Come disdico Premium?».
+Se non disdici la prova gratuita di 7 giorni del piano annuale almeno 24 ore prima della fine, il piano annuale ti viene addebitato al termine della prova. La prova gratuita è disponibile una sola volta, per gli Apple Account che non hanno mai usato il piano annuale o mensile di Numaroku Premium. Per come Apple gestisce le prove, se disdici durante la prova, le funzioni Premium possono smettere subito di funzionare. Per disdire, vedi «Come disdico Premium?».
 
 ### Ho acquistato un abbonamento e anche l'acquisto unico
 L'acquisto unico non disdice il piano annuale o mensile. Disdicilo nell'app Impostazioni dell'iPhone → il tuo nome → Abbonamenti. Per il rimborso di importi già addebitati, contatta Apple (https://reportaproblem.apple.com/).

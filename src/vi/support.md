@@ -17,13 +17,13 @@ Trong ứng dụng Cài đặt của iPhone → tên của bạn → Đăng ký.
 Chạm vào "Khôi phục giao dịch mua" trên màn hình Premium (Cài đặt → Premium) trong ứng dụng. Các giao dịch theo năm, theo tháng và mua một lần đều được khôi phục. Bạn cần đăng nhập bằng đúng Tài khoản Apple đã dùng để mua.
 
 ### Tôi muốn được hoàn tiền
-Việc hoàn tiền cho giao dịch trên App Store do Apple xử lý (https://reportaproblem.apple.com/). Nhà phát triển không thể nhận yêu cầu hoàn tiền.
+Việc hoàn tiền cho giao dịch trên App Store do Apple xử lý (https://reportaproblem.apple.com/). Nhà phát triển không thể nhận yêu cầu hoàn tiền. Ở nơi pháp luật cho bạn quyền được hoàn tiền (ví dụ ở Úc), quyền đó được áp dụng.
 
 ### Dữ liệu không hiện trên iPhone thứ hai, hoặc đồng bộ bị dừng
 Trên cả hai iPhone, hãy kiểm tra rằng bạn đăng nhập iCloud bằng cùng một Tài khoản Apple, iCloud Drive đang bật (Cài đặt → tên của bạn → iCloud) và iCloud còn dung lượng trống. "Đồng bộ iCloud" trong phần Cài đặt của ứng dụng cho biết thời điểm đồng bộ gần nhất và các sự cố nếu có. Nếu bạn có nhiều ảnh, lần đồng bộ đầu tiên có thể mất một lúc.
 
 ### Khi nào tôi bị tính phí dùng thử miễn phí?
-Nếu bạn không hủy bản dùng thử miễn phí 7 ngày của gói năm ít nhất 24 giờ trước khi kết thúc, bạn sẽ bị tính phí gói năm khi bản dùng thử kết thúc. Bản dùng thử miễn phí chỉ có một lần, dành cho Tài khoản Apple chưa từng dùng gói năm hoặc gói tháng của Numaroku Premium. Nếu bạn hủy trong thời gian dùng thử, các tính năng Premium có thể ngừng hoạt động ngay. Cách hủy xem tại "Làm sao để hủy Premium?".
+Nếu bạn không hủy bản dùng thử miễn phí 7 ngày của gói năm ít nhất 24 giờ trước khi kết thúc, bạn sẽ bị tính phí gói năm khi bản dùng thử kết thúc. Bản dùng thử miễn phí chỉ có một lần, dành cho Tài khoản Apple chưa từng dùng gói năm hoặc gói tháng của Numaroku Premium. Do cách Apple xử lý thời gian dùng thử, nếu bạn hủy trong thời gian dùng thử, các tính năng Premium có thể ngừng hoạt động ngay. Cách hủy xem tại "Làm sao để hủy Premium?".
 
 ### Tôi đã mua cả gói đăng ký lẫn gói mua một lần
 Mua gói một lần không hủy gói năm hoặc gói tháng. Hãy hủy trong ứng dụng Cài đặt của iPhone → tên của bạn → Đăng ký. Để được hoàn số tiền đã bị tính, vui lòng liên hệ Apple (https://reportaproblem.apple.com/).

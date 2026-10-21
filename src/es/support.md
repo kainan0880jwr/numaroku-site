@@ -17,13 +17,13 @@ En la app Ajustes del iPhone → tu nombre → Suscripciones. Eliminar la app no
 Toca «Restaurar compras» en la pantalla de Premium (Ajustes → Premium) de la app. Se restauran las compras anuales, mensuales y únicas. Debes haber iniciado sesión con el mismo Apple Account con el que compraste.
 
 ### Quiero un reembolso
-Los reembolsos de compras en el App Store los gestiona Apple (https://reportaproblem.apple.com/). El desarrollador no puede aceptar solicitudes de reembolso.
+Los reembolsos de compras en el App Store los gestiona Apple (https://reportaproblem.apple.com/). El desarrollador no puede aceptar solicitudes de reembolso. Donde la ley te da derecho a un reembolso (por ejemplo, en Australia), ese derecho se aplica.
 
 ### Mis registros no aparecen en mi segundo iPhone o la sincronización se detuvo
 En ambos iPhone, comprueba que has iniciado sesión en iCloud con el mismo Apple Account, que iCloud Drive está activado (Ajustes → tu nombre → iCloud) y que tienes espacio libre en iCloud. «Sincronización con iCloud» en los Ajustes de la app muestra la última sincronización y cualquier problema. Si tienes muchas fotos, la primera sincronización puede tardar un poco.
 
 ### ¿Cuándo se me cobra la prueba gratuita?
-Si no cancelas la prueba gratuita de 7 días del plan anual al menos 24 horas antes de que termine, se te cobrará el plan anual cuando termine la prueba. La prueba gratuita está disponible una vez, para Apple Accounts que nunca hayan usado el plan anual o mensual de Numaroku Premium. Si cancelas durante la prueba, las funciones Premium pueden dejar de funcionar de inmediato. Consulta «¿Cómo cancelo Premium?» para saber cómo cancelar.
+Si no cancelas la prueba gratuita de 7 días del plan anual al menos 24 horas antes de que termine, se te cobrará el plan anual cuando termine la prueba. La prueba gratuita está disponible una vez, para Apple Accounts que nunca hayan usado el plan anual o mensual de Numaroku Premium. Por cómo gestiona Apple las pruebas, si cancelas durante la prueba, las funciones Premium pueden dejar de funcionar de inmediato. Consulta «¿Cómo cancelo Premium?» para saber cómo cancelar.
 
 ### Compré una suscripción y también la compra única
 Comprar la compra única no cancela tu plan anual o mensual. Cancélalo en la app Ajustes del iPhone → tu nombre → Suscripciones. Para reembolsos de importes ya cobrados, contacta con Apple (https://reportaproblem.apple.com/).

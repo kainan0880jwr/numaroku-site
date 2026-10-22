@@ -17,7 +17,10 @@ iPhone'daki Ayarlar uygulaması → adın → Abonelikler'den iptal edebilirsin.
 Uygulamadaki Premium ekranında (Ayarlar → Premium) "Satın alımları geri yükle"ye dokun. Yıllık, aylık ve tek seferlik satın almaların hepsi geri yüklenir. Satın alırken kullandığın Apple Hesabı ile giriş yapmış olman gerekir.
 
 ### Para iadesi istiyorum
-App Store satın almalarının iadeleri Apple tarafından yapılır (https://reportaproblem.apple.com/). Geliştirici iade taleplerini kabul edemez. Yasanın sana iade hakkı tanıdığı yerlerde (örneğin Avustralya'da) bu hak geçerlidir.
+App Store satın alımlarının iadeleri Apple tarafından yapılır (https://reportaproblem.apple.com/). Ödemenizi doğrudan almadığımız için kendimiz iade edemeyiz. Kanunla tanınan bir hakkınızı kullanmak isterseniz veya Apple sorununuzu çözmezse, aşağıdaki "İletişim" bölümünden bize yazın. Apple'a başvuru konusunda yol göstermek de dahil olmak üzere yardımcı oluruz. Bir dönemin ortasında iptal ederseniz, kalan süre için orantılı iade yapılmaz (kanunda aksi öngörülmedikçe).
+
+### Ailem Premium'u kullanabilir mi? (Aile Paylaşımı)
+Premium, Aile Paylaşımı kapsamında değildir. Yalnızca satın alma işlemini yapan Apple Hesabı ile kullanılabilir.
 
 ### Kayıtlarım ikinci iPhone'umda görünmüyor veya eşzamanlama durdu
 İki iPhone'da da aynı Apple Hesabı ile iCloud'a giriş yaptığını, iCloud Drive'ın açık olduğunu (Ayarlar → adın → iCloud) ve iCloud'da boş alan olduğunu kontrol et. Uygulamanın Ayarlar'ındaki "iCloud Eşzamanlama" son eşzamanlama zamanını ve varsa sorunları gösterir. Çok fotoğrafın varsa ilk eşzamanlama biraz sürebilir.

@@ -17,7 +17,10 @@ Di aplikasi Pengaturan iPhone → nama kamu → Langganan. Menghapus aplikasi ti
 Ketuk "Pulihkan pembelian" di layar Premium (Pengaturan → Premium) di aplikasi. Pembelian tahunan, bulanan, dan sekali bayar semuanya dipulihkan. Kamu harus masuk dengan Akun Apple yang sama dengan yang dipakai saat membeli.
 
 ### Saya ingin pengembalian dana
-Pengembalian dana untuk pembelian di App Store ditangani oleh Apple (https://reportaproblem.apple.com/). Pengembang tidak dapat menerima permintaan pengembalian dana. Jika hukum memberimu hak atas pengembalian dana (misalnya di Australia), hak itu berlaku.
+Pengembalian dana untuk pembelian di App Store ditangani oleh Apple (https://reportaproblem.apple.com/). Karena kami tidak menerima pembayaran Anda secara langsung, kami tidak dapat mengembalikannya sendiri. Jika Anda ingin menggunakan hak yang diberikan oleh hukum, atau jika Apple tidak menyelesaikan masalah Anda, hubungi kami melalui "Kontak" di bawah. Kami akan membantu, termasuk memandu Anda mengajukan permintaan ke Apple. Jika Anda membatalkan di tengah periode, sisa periode tidak dikembalikan secara prorata (kecuali ditentukan lain oleh hukum).
+
+### Apakah keluarga saya bisa memakai Premium? (Berbagi Keluarga)
+Premium tidak termasuk dalam Berbagi Keluarga. Premium hanya dapat digunakan dengan Akun Apple yang melakukan pembelian.
 
 ### Catatan tidak muncul di iPhone kedua, atau sinkronisasi berhenti
 Di kedua iPhone, pastikan kamu masuk ke iCloud dengan Akun Apple yang sama, iCloud Drive aktif (Pengaturan → nama kamu → iCloud), dan masih ada ruang kosong di iCloud. "Sinkronisasi iCloud" di Pengaturan aplikasi menampilkan waktu sinkronisasi terakhir dan masalah jika ada. Jika fotomu banyak, sinkronisasi pertama bisa memakan waktu.

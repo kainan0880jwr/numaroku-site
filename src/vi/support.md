@@ -17,7 +17,10 @@ Trong ứng dụng Cài đặt của iPhone → tên của bạn → Đăng ký.
 Chạm vào "Khôi phục giao dịch mua" trên màn hình Premium (Cài đặt → Premium) trong ứng dụng. Các giao dịch theo năm, theo tháng và mua một lần đều được khôi phục. Bạn cần đăng nhập bằng đúng Tài khoản Apple đã dùng để mua.
 
 ### Tôi muốn được hoàn tiền
-Việc hoàn tiền cho giao dịch trên App Store do Apple xử lý (https://reportaproblem.apple.com/). Nhà phát triển không thể nhận yêu cầu hoàn tiền. Ở nơi pháp luật cho bạn quyền được hoàn tiền (ví dụ ở Úc), quyền đó được áp dụng.
+Việc hoàn tiền cho giao dịch mua trên App Store do Apple xử lý (https://reportaproblem.apple.com/). Vì chúng tôi không trực tiếp nhận khoản thanh toán của bạn nên không thể tự hoàn lại. Nếu bạn muốn thực hiện quyền do pháp luật quy định, hoặc Apple không giải quyết được vấn đề của bạn, hãy liên hệ với chúng tôi qua mục "Liên hệ" bên dưới. Chúng tôi sẽ hỗ trợ, kể cả hướng dẫn cách gửi yêu cầu đến Apple. Nếu bạn hủy giữa chừng một kỳ, phần thời gian còn lại sẽ không được hoàn tiền theo tỷ lệ (trừ khi pháp luật có quy định khác).
+
+### Gia đình tôi có dùng được Premium không? (Chia sẻ trong gia đình)
+Premium không áp dụng cho Chia sẻ trong gia đình. Chỉ dùng được với Tài khoản Apple đã thực hiện giao dịch mua.
 
 ### Dữ liệu không hiện trên iPhone thứ hai, hoặc đồng bộ bị dừng
 Trên cả hai iPhone, hãy kiểm tra rằng bạn đăng nhập iCloud bằng cùng một Tài khoản Apple, iCloud Drive đang bật (Cài đặt → tên của bạn → iCloud) và iCloud còn dung lượng trống. "Đồng bộ iCloud" trong phần Cài đặt của ứng dụng cho biết thời điểm đồng bộ gần nhất và các sự cố nếu có. Nếu bạn có nhiều ảnh, lần đồng bộ đầu tiên có thể mất một lúc.

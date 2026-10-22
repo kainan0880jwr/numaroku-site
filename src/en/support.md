@@ -17,7 +17,10 @@ You can cancel in the iPhone Settings app → your name → Subscriptions. Delet
 Tap "Restore Purchases" on the Premium screen (Settings → Premium) in the app. Yearly, monthly, and one-time purchases are all restored. You need to be signed in with the same Apple Account you used to purchase.
 
 ### I'd like a refund
-Refunds for App Store purchases are handled by Apple (https://reportaproblem.apple.com/). The developer cannot accept refund requests. Where the law gives you a right to a refund (for example, in Australia), that right applies.
+Refunds for App Store purchases are handled by Apple (https://reportaproblem.apple.com/). Because we don't receive your payment directly, we can't return it ourselves. If you wish to exercise a right granted by law (for example, under Australian Consumer Law), or if Apple doesn't resolve your issue, please reach us via "Contact" below. We'll help, including by guiding you through Apple's request process. If you cancel partway through a period, the remaining portion is not refunded on a pro-rata basis (except as required by law).
+
+### Can my family use Premium? (Family Sharing)
+Premium is not eligible for Family Sharing. It can be used only with the Apple Account that made the purchase.
 
 ### My records don't appear on my second iPhone, or sync has stopped
 On both iPhones, make sure you are signed in to iCloud with the same Apple Account, that iCloud Drive is on (Settings → your name → iCloud), and that you have free iCloud storage. "iCloud Sync" in the app's Settings shows the last sync time and any problems. If you have many photos, the first sync can take a while.

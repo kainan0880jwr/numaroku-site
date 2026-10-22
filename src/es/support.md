@@ -17,7 +17,10 @@ En la app Ajustes del iPhone → tu nombre → Suscripciones. Eliminar la app no
 Toca «Restaurar compras» en la pantalla de Premium (Ajustes → Premium) de la app. Se restauran las compras anuales, mensuales y únicas. Debes haber iniciado sesión con el mismo Apple Account con el que compraste.
 
 ### Quiero un reembolso
-Los reembolsos de compras en el App Store los gestiona Apple (https://reportaproblem.apple.com/). El desarrollador no puede aceptar solicitudes de reembolso. Donde la ley te da derecho a un reembolso (por ejemplo, en Australia), ese derecho se aplica.
+Los reembolsos de las compras en el App Store los gestiona Apple (https://reportaproblem.apple.com/). Como no recibimos su pago directamente, no podemos devolverlo nosotros. Si desea ejercer un derecho que le reconoce la ley (por ejemplo, la Ley del Consumidor de Australia), o si Apple no resuelve su caso, escríbanos desde «Contacto» más abajo. Le ayudaremos, incluso indicándole cómo hacer la solicitud a Apple. Si cancela a mitad de un período, la parte restante no se reembolsa de forma prorrateada (salvo que la ley disponga otra cosa).
+
+### ¿Puede usar Premium mi familia? (En familia)
+Premium no está disponible para En familia. Solo puede usarse con la cuenta de Apple con la que se realizó la compra.
 
 ### Mis registros no aparecen en mi segundo iPhone o la sincronización se detuvo
 En ambos iPhone, comprueba que has iniciado sesión en iCloud con el mismo Apple Account, que iCloud Drive está activado (Ajustes → tu nombre → iCloud) y que tienes espacio libre en iCloud. «Sincronización con iCloud» en los Ajustes de la app muestra la última sincronización y cualquier problema. Si tienes muchas fotos, la primera sincronización puede tardar un poco.

@@ -17,7 +17,10 @@ In der iPhone-App „Einstellungen“ → dein Name → Abos. Das Löschen der A
 Tippe in der App im Premium-Bildschirm (Einstellungen → Premium) auf „Käufe wiederherstellen“. Jahres-, Monats- und Einmalkäufe werden alle wiederhergestellt. Du musst mit demselben Apple Account angemeldet sein, mit dem du gekauft hast.
 
 ### Ich möchte eine Rückerstattung
-Rückerstattungen für Käufe im App Store werden von Apple bearbeitet (https://reportaproblem.apple.com/). Der Entwickler kann keine Rückerstattungsanträge annehmen. Wo dir das Gesetz ein Recht auf Rückerstattung gibt (zum Beispiel in Australien), gilt dieses Recht.
+Rückerstattungen für App-Store-Käufe wickelt Apple ab (https://reportaproblem.apple.com/). Da wir Ihre Zahlung nicht direkt erhalten, können wir sie nicht selbst zurückzahlen. Wenn Sie ein gesetzliches Recht ausüben möchten (zum Beispiel nach australischem Verbraucherrecht) oder Apple Ihr Anliegen nicht löst, schreiben Sie uns über „Kontakt“ unten. Wir helfen Ihnen, auch mit einer Anleitung zum Antrag bei Apple. Bei einer Kündigung während eines laufenden Zeitraums wird der verbleibende Zeitraum nicht anteilig erstattet (soweit gesetzlich nicht anders vorgeschrieben).
+
+### Kann meine Familie Premium nutzen? (Familienfreigabe)
+Premium ist nicht für die Familienfreigabe verfügbar. Es kann nur mit dem Apple Account genutzt werden, mit dem der Kauf getätigt wurde.
 
 ### Meine Einträge erscheinen nicht auf meinem zweiten iPhone, oder die Synchronisierung hat aufgehört
 Prüfe auf beiden iPhones, ob du mit demselben Apple Account bei iCloud angemeldet bist, ob iCloud Drive aktiviert ist (Einstellungen → dein Name → iCloud) und ob noch iCloud-Speicher frei ist. Unter „iCloud-Synchronisierung“ in den Einstellungen der App siehst du den Zeitpunkt der letzten Synchronisierung und eventuelle Probleme. Bei vielen Fotos kann die erste Synchronisierung eine Weile dauern.

@@ -17,7 +17,10 @@ Nell'app Impostazioni dell'iPhone → il tuo nome → Abbonamenti. Eliminare l'a
 Tocca «Ripristina acquisti» nella schermata Premium (Impostazioni → Premium) dell'app. Vengono ripristinati gli acquisti annuali, mensili e unici. Devi aver effettuato l'accesso con lo stesso Apple Account usato per l'acquisto.
 
 ### Vorrei un rimborso
-I rimborsi degli acquisti nell'App Store sono gestiti da Apple (https://reportaproblem.apple.com/). Lo sviluppatore non può accettare richieste di rimborso. Dove la legge ti riconosce un diritto al rimborso (ad esempio in Australia), quel diritto si applica.
+I rimborsi degli acquisti sull'App Store sono gestiti da Apple (https://reportaproblem.apple.com/). Poiché non riceviamo direttamente il Suo pagamento, non possiamo restituirlo noi. Se desidera esercitare un diritto previsto dalla legge (ad esempio, la normativa australiana sui consumatori), o se Apple non risolve il Suo problema, ci scriva da «Contatti» qui sotto. La aiuteremo, anche guidandoLa nella richiesta ad Apple. Se annulla a metà di un periodo, la parte restante non viene rimborsata pro rata (salvo quanto previsto dalla legge).
+
+### La mia famiglia può usare Premium? (In famiglia)
+Premium non è disponibile con In famiglia. Può essere usato solo con l'Account Apple con cui è stato effettuato l'acquisto.
 
 ### Le mie voci non compaiono sul secondo iPhone, o la sincronizzazione si è fermata
 Su entrambi gli iPhone, verifica di aver effettuato l'accesso a iCloud con lo stesso Apple Account, che iCloud Drive sia attivo (Impostazioni → il tuo nome → iCloud) e che ci sia spazio libero su iCloud. «Sincronizzazione iCloud» nelle Impostazioni dell'app mostra l'ultima sincronizzazione ed eventuali problemi. Con molte foto, la prima sincronizzazione può richiedere un po' di tempo.

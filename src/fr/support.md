@@ -17,7 +17,10 @@ Dans l'app Réglages de l'iPhone → ton nom → Abonnements. Supprimer l'app ne
 Touche « Restaurer les achats » sur l'écran Premium (Réglages → Premium) de l'app. Les achats annuels, mensuels et uniques sont tous restaurés. Tu dois être connecté avec le même compte Apple que celui utilisé pour l'achat.
 
 ### Je voudrais un remboursement
-Les remboursements des achats sur l'App Store sont gérés par Apple (https://reportaproblem.apple.com/). Le développeur ne peut pas accepter de demandes de remboursement. Là où la loi te donne droit à un remboursement (par exemple en Australie), ce droit s'applique.
+Les remboursements des achats sur l'App Store sont gérés par Apple (https://reportaproblem.apple.com/). Comme nous ne recevons pas directement votre paiement, nous ne pouvons pas vous le restituer nous-mêmes. Si vous souhaitez exercer un droit prévu par la loi (par exemple, le droit australien de la consommation), ou si Apple ne résout pas votre problème, écrivez-nous via « Contact » ci-dessous. Nous vous aiderons, notamment en vous guidant dans la demande auprès d'Apple. Si vous résiliez en cours de période, la partie restante n'est pas remboursée au prorata (sauf disposition légale contraire).
+
+### Ma famille peut-elle utiliser Premium ? (Partage familial)
+Premium n'est pas compatible avec le Partage familial. Il ne peut être utilisé qu'avec le compte Apple ayant effectué l'achat.
 
 ### Mes entrées n'apparaissent pas sur mon deuxième iPhone, ou la synchronisation s'est arrêtée
 Sur les deux iPhone, vérifie que tu es connecté à iCloud avec le même compte Apple, qu'iCloud Drive est activé (Réglages → ton nom → iCloud) et qu'il te reste de l'espace iCloud. « Synchronisation iCloud » dans les Réglages de l'app indique la dernière synchronisation et les éventuels problèmes. Avec beaucoup de photos, la première synchronisation peut prendre un moment.

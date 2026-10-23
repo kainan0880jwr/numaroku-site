@@ -41,7 +41,7 @@ Ana ekranda boş bir alana dokunup basılı tut, sol üstteki "Düzenle" → "Wi
 iPhone'undaki veriler silinir. iCloud'a giriş yaptıysan iCloud'da saklanan kayıtlar kalır ve yeniden yüklediğinde geri gelir. Her şeyi silmek için uygulamada oshilerini ve kayıtlarını sil veya iPhone'daki Ayarlar uygulaması → adın → iCloud → Hesap Saklama Alanını Yönet'ten uygulamanın verilerini sil. iCloud Drive yedekleri uygulamanın Ayarlar → Yedek ve Veriler bölümünden silinebilir.
 
 ### Fotoğraflar eşzamanlanıyor ve yedekleniyor mu?
-Fotoğraflar iCloud ile eşzamanlanır. Otomatik yedeklere ve CSV dışa aktarımlarına dahil edilmez.
+Fotoğraflar iCloud ile eşzamanlanır. 1.4 sürümünden itibaren otomatik yedeklere fotoğraflar da dahildir (yalnızca bu iPhone'da saklanır, iCloud Drive'a kaydedilmez). Ayarlar → Yedek ve Veriler'deki "Fotoğrafları yedekle" ile açıp kapatabilirsin. Çok fotoğrafın varsa birkaç otomatik yedeğe bölünerek kaydedilir. Hepsini hemen kaydetmek için "Şimdi Yedekle"ye dokun. Fotoğraflar CSV dışa aktarımlarına dahil edilmez.
 
 ### Para birimini değiştirebilir miyim?
 Evet, Ayarlar → Para birimi bölümünden. Para birimini değiştirmek kayıtlarını dönüştürmez; sayılar aynı kalır, yalnızca para birimi değişir. Para birimi her cihazda ayrı saklanır ve eşzamanlanmaz.

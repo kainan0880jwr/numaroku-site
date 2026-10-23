@@ -41,7 +41,7 @@ Lege den Finger auf eine freie Stelle des Home-Bildschirms, tippe oben links auf
 Die Daten auf deinem iPhone werden gelöscht. Wenn du bei iCloud angemeldet bist, bleiben die in iCloud gespeicherten Einträge erhalten und kommen bei einer Neuinstallation zurück. Um alles zu löschen, lösche deine Oshis und Einträge in der App oder lösche die Daten der App in der iPhone-App „Einstellungen“ → dein Name → iCloud → Accountspeicher verwalten. Backups in iCloud Drive löschst du in der App unter Einstellungen → Backup & Daten.
 
 ### Werden Fotos synchronisiert und gesichert?
-Fotos werden mit iCloud synchronisiert. In automatischen Backups und CSV-Exporten sind sie nicht enthalten.
+Fotos werden mit iCloud synchronisiert. Ab Version 1.4 sind Fotos auch in automatischen Backups enthalten (sie werden nur auf diesem iPhone gespeichert, nicht in iCloud Drive). Unter Einstellungen → Backup & Daten kannst du „Fotos sichern“ ein- oder ausschalten. Bei vielen Fotos werden sie über mehrere automatische Backups verteilt gespeichert. Wenn du sofort alles sichern möchtest, tippe auf „Jetzt sichern“. In CSV-Exporten sind Fotos nicht enthalten.
 
 ### Kann ich die Währung ändern?
 Ja, unter Einstellungen → Währung. Beim Wechsel der Währung werden deine Einträge nicht umgerechnet; die Zahlen bleiben gleich, nur die Währung ändert sich. Die Währung wird auf jedem Gerät einzeln gespeichert und nicht synchronisiert.

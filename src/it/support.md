@@ -41,7 +41,7 @@ Tieni premuta un'area vuota della schermata Home, tocca «Modifica» in alto a s
 I dati sul tuo iPhone vengono eliminati. Se hai effettuato l'accesso a iCloud, le voci salvate in iCloud restano e tornano quando reinstalli l'app. Per eliminare tutto, elimina i tuoi oshi e le voci nell'app, oppure elimina i dati dell'app nell'app Impostazioni dell'iPhone → il tuo nome → iCloud → Gestisci spazio dell'account. I backup su iCloud Drive si eliminano in Impostazioni → Backup e dati dell'app.
 
 ### Le foto vengono sincronizzate e salvate nei backup?
-Le foto vengono sincronizzate con iCloud. Non sono incluse nei backup automatici né nelle esportazioni CSV.
+Le foto vengono sincronizzate con iCloud. Dalla versione 1.4, i backup automatici includono anche le foto (vengono salvate solo su questo iPhone, non su iCloud Drive). Puoi attivare o disattivare «Backup delle foto» in Impostazioni → Backup e dati. Se hai molte foto, vengono salvate nel corso di più backup automatici. Per salvarle tutte subito, tocca «Esegui backup ora». Le foto non sono incluse nelle esportazioni CSV.
 
 ### Posso cambiare valuta?
 Sì, in Impostazioni → Valuta. Cambiare valuta non converte le tue voci: i numeri restano uguali e cambia solo la valuta. La valuta è salvata su ogni dispositivo e non viene sincronizzata.

@@ -41,7 +41,7 @@ Toque e mantenha pressionada uma área vazia da Tela de Início, toque em "Edita
 Os dados do seu iPhone são apagados. Se você estiver conectado ao iCloud, os registros salvos no iCloud continuam lá e voltam quando você reinstala. Para apagar tudo, apague seus oshis e registros no app, ou apague os dados do app no app Ajustes do iPhone → seu nome → iCloud → Gerenciar Armazenamento da Conta. Os backups do iCloud Drive podem ser apagados em Ajustes → Backup e dados no app.
 
 ### As fotos são sincronizadas e incluídas no backup?
-As fotos são sincronizadas com o iCloud. Elas não entram nos backups automáticos nem nas exportações CSV.
+As fotos são sincronizadas com o iCloud. A partir da versão 1.4, os backups automáticos também incluem as fotos (elas ficam salvas só neste iPhone, não no iCloud Drive). Você pode ativar ou desativar "Fazer backup das fotos" em Ajustes → Backup e dados. Se você tiver muitas fotos, elas são salvas ao longo de vários backups automáticos. Para salvar todas na hora, toque em "Fazer backup agora". As fotos não entram nas exportações CSV.
 
 ### Posso mudar a moeda?
 Sim, em Ajustes → Moeda. Mudar a moeda não converte seus registros; os números continuam iguais e só a moeda muda. A moeda é salva em cada aparelho e não é sincronizada.

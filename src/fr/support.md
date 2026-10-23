@@ -41,7 +41,7 @@ Touche longuement une zone vide de l'écran d'accueil, touche « Modifier » en 
 Les données de ton iPhone sont supprimées. Si tu es connecté à iCloud, les entrées enregistrées dans iCloud sont conservées et reviennent à la réinstallation. Pour tout supprimer, supprime tes oshis et tes entrées dans l'app, ou supprime les données de l'app dans l'app Réglages de l'iPhone → ton nom → iCloud → Gérer le stockage du compte. Les sauvegardes iCloud Drive se suppriment dans Réglages → Sauvegarde et données de l'app.
 
 ### Les photos sont-elles synchronisées et sauvegardées ?
-Les photos sont synchronisées avec iCloud. Elles ne sont pas incluses dans les sauvegardes automatiques ni dans les exports CSV.
+Les photos sont synchronisées avec iCloud. Depuis la version 1.4, les sauvegardes automatiques incluent aussi les photos (elles sont stockées uniquement sur cet iPhone, pas dans iCloud Drive). Tu peux activer ou désactiver « Sauvegarder les photos » dans Réglages → Sauvegarde et données. Si tu as beaucoup de photos, elles sont enregistrées sur plusieurs sauvegardes automatiques. Pour tout enregistrer tout de suite, touche « Sauvegarder maintenant ». Les photos ne sont pas incluses dans les exports CSV.
 
 ### Puis-je changer de devise ?
 Oui, dans Réglages → Devise. Changer de devise ne convertit pas tes entrées : les nombres restent les mêmes, seule la devise change. La devise est enregistrée sur chaque appareil et n'est pas synchronisée.

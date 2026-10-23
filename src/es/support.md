@@ -41,7 +41,7 @@ Mantén pulsada una zona vacía de la pantalla de inicio, toca «Editar» arriba
 Los datos de tu iPhone se eliminan. Si has iniciado sesión en iCloud, los registros guardados en iCloud se conservan y vuelven al reinstalar. Para borrarlo todo, elimina tus oshis y registros en la app, o elimina los datos de la app en la app Ajustes del iPhone → tu nombre → iCloud → Gestionar almacenamiento de la cuenta. Las copias en iCloud Drive se pueden eliminar en Ajustes → Copias y datos de la app.
 
 ### ¿Las fotos se sincronizan y se respaldan?
-Las fotos se sincronizan con iCloud. No se incluyen en las copias automáticas ni en las exportaciones CSV.
+Las fotos se sincronizan con iCloud. Desde la versión 1.4, las copias automáticas también incluyen las fotos (se guardan solo en este iPhone, no en iCloud Drive). Puedes activarlo o desactivarlo con «Copiar fotos» en Ajustes → Copias y datos. Si tienes muchas fotos, se guardan a lo largo de varias copias automáticas. Para guardarlas todas de inmediato, toca «Hacer copia ahora». Las fotos no se incluyen en las exportaciones CSV.
 
 ### ¿Puedo cambiar la moneda?
 Sí, en Ajustes → Moneda. Cambiar la moneda no convierte tus registros: los números siguen iguales y solo cambia la moneda. La moneda se guarda en cada dispositivo y no se sincroniza.

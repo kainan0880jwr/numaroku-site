@@ -41,7 +41,7 @@ Sentuh dan tahan area kosong di layar Utama, ketuk "Edit" di kiri atas → "Tamb
 Data di iPhone akan terhapus. Jika kamu masuk ke iCloud, catatan yang tersimpan di iCloud tetap ada dan kembali saat kamu menginstal ulang. Untuk menghapus semuanya, hapus oshi dan catatanmu di aplikasi, atau hapus data aplikasi di aplikasi Pengaturan iPhone → nama kamu → iCloud → Kelola Penyimpanan Akun. Cadangan iCloud Drive bisa dihapus di Pengaturan → Cadangan & Data di aplikasi.
 
 ### Apakah foto ikut tersinkron dan dicadangkan?
-Foto tersinkron dengan iCloud. Foto tidak termasuk dalam cadangan otomatis maupun ekspor CSV.
+Foto tersinkron dengan iCloud. Mulai versi 1.4, cadangan otomatis juga menyertakan foto (disimpan hanya di iPhone ini, tidak di iCloud Drive). Kamu bisa menyalakan atau mematikannya lewat "Cadangkan foto" di Pengaturan → Cadangan & Data. Jika fotomu banyak, foto disimpan bertahap dalam beberapa cadangan otomatis. Untuk menyimpan semuanya sekarang, ketuk "Cadangkan sekarang". Foto tidak termasuk dalam ekspor CSV.
 
 ### Bisakah saya mengganti mata uang?
 Bisa, di Pengaturan → Mata uang. Mengganti mata uang tidak mengonversi catatanmu; angkanya tetap sama, hanya mata uangnya yang berubah. Mata uang disimpan di masing-masing perangkat dan tidak disinkronkan.

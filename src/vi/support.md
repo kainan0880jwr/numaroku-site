@@ -41,7 +41,7 @@ Chạm và giữ một vùng trống trên màn hình chính, chạm "Sửa" ở
 Dữ liệu trên iPhone sẽ bị xóa. Nếu bạn đăng nhập iCloud, dữ liệu lưu trong iCloud vẫn còn và sẽ quay lại khi bạn cài lại. Để xóa toàn bộ, hãy xóa oshi và các khoản ghi trong ứng dụng, hoặc xóa dữ liệu của ứng dụng trong ứng dụng Cài đặt của iPhone → tên của bạn → iCloud → Quản lý dung lượng tài khoản. Bản sao lưu trên iCloud Drive có thể xóa trong Cài đặt → Sao lưu & dữ liệu của ứng dụng.
 
 ### Ảnh có được đồng bộ và sao lưu không?
-Ảnh được đồng bộ với iCloud. Ảnh không nằm trong bản sao lưu tự động và tệp CSV xuất ra.
+Ảnh được đồng bộ với iCloud. Từ phiên bản 1.4, bản sao lưu tự động cũng bao gồm ảnh (chỉ lưu trên iPhone này, không lưu vào iCloud Drive). Bạn có thể bật hoặc tắt "Sao lưu ảnh" trong Cài đặt → Sao lưu & dữ liệu. Nếu có nhiều ảnh, ảnh sẽ được lưu dần qua vài lần sao lưu tự động. Để lưu hết ngay, hãy chạm "Sao lưu ngay". Ảnh không nằm trong tệp CSV xuất ra.
 
 ### Tôi có thể đổi tiền tệ không?
 Có, trong Cài đặt → Tiền tệ. Đổi tiền tệ không quy đổi các khoản đã ghi; con số giữ nguyên, chỉ có đơn vị tiền tệ thay đổi. Cài đặt tiền tệ được lưu riêng trên từng thiết bị và không đồng bộ.

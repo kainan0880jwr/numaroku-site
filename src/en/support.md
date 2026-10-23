@@ -41,7 +41,7 @@ Touch and hold an empty area of the Home Screen, tap "Edit" at the top left → 
 The data on your iPhone is deleted. If you are signed in to iCloud, the records stored in iCloud remain and come back when you reinstall. To delete everything, delete your oshis and records in the app, or delete the app's data in the iPhone Settings app → your name → iCloud → Manage Account Storage. iCloud Drive backups can be deleted in the app's Settings → Backup & Data.
 
 ### Are photos synced and backed up?
-Photos are synced with iCloud. They are not included in automatic backups or CSV exports.
+Photos are synced with iCloud. Starting with version 1.4, automatic backups also include photos (they're stored only on this iPhone, not in iCloud Drive). You can turn this on or off with "Back Up Photos" in Settings → Backup & Data. If you have lots of photos, they're saved over several automatic backups. To save them all right away, tap "Back Up Now". Photos are not included in CSV exports.
 
 ### Can I change the currency?
 Yes, in Settings → Currency. Changing the currency doesn't convert your records; the numbers stay the same and only the currency changes. The currency setting is kept on each device and is not synced.

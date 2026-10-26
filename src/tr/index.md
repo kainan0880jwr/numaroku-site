@@ -24,7 +24,7 @@ Oshi sıralamanla aylık özetler ve her aralıkta bir yıllık özet. Hikâyele
 Verilerin yalnızca iPhone'unda ve kendi iCloud'unda saklanır. Geliştiricinin sunucusu yoktur ve kayıtlarını asla almaz. Reklam yok, üçüncü taraf analiz yok. Uygulamayı Face ID veya Touch ID ile kilitle.
 
 ## Premium
-Premium; oshi × kategori dağılımını, geçen yılla karşılaştırmayı, oshi başına bütçeleri, yıllık özetin tüm kartlarını, kayıt başına sınırsız fotoğrafı, "Bu Ayın Harcaması" widget'ını, oshi renginde uygulama simgelerini ve filigransız özet görsellerini ekler.
+Premium; oshi × kategori dağılımını, geçen yılla karşılaştırmayı, oshi başına bütçeleri, yıllık özetin tüm kartlarını, kayıt başına 100 adede kadar fotoğrafı, "Bu Ayın Harcaması" widget'ını, oshi renginde uygulama simgelerini ve filigransız özet görsellerini ekler.
 
 Planlar: yıllık (ilk kez abone olanlara 7 gün ücretsiz deneme), aylık veya tek seferlik satın alma. Fiyatlar App Store'da gösterilir. Yıllık ve aylık planlar, dönem bitmeden en az 24 saat önce iptal edilmezse otomatik olarak yenilenir.
 

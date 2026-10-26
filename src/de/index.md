@@ -24,7 +24,7 @@ Monatliche Rückblicke mit deinem Oshi-Ranking und jeden Dezember ein Jahresrüc
 Deine Daten werden nur auf deinem iPhone und in deiner eigenen iCloud gespeichert. Der Entwickler hat keine Server und erhält deine Einträge nie. Keine Werbung, keine Analyse durch Dritte. Sperre die App mit Face ID oder Touch ID.
 
 ## Premium
-Premium bietet die Aufteilung nach Oshi × Kategorie, den Vergleich mit dem Vorjahr, Budgets je Oshi, alle Karten des Jahresrückblicks, unbegrenzt viele Fotos pro Eintrag, das Widget „Ausgaben diesen Monat“, App-Symbole in Oshi-Farben und Rückblickbilder ohne Wasserzeichen.
+Premium bietet die Aufteilung nach Oshi × Kategorie, den Vergleich mit dem Vorjahr, Budgets je Oshi, alle Karten des Jahresrückblicks, bis zu 100 Fotos pro Eintrag, das Widget „Ausgaben diesen Monat“, App-Symbole in Oshi-Farben und Rückblickbilder ohne Wasserzeichen.
 
 Angebote: jährlich (Erstabonnenten erhalten 7 Tage kostenlos), monatlich oder ein Einmalkauf. Die Preise werden im App Store angezeigt. Jahres- und Monatsabos verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ablauf des Zeitraums gekündigt werden.
 

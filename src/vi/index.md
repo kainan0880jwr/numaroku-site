@@ -24,7 +24,7 @@ Tổng kết hằng tháng với bảng xếp hạng oshi, và tổng kết năm
 Dữ liệu chỉ được lưu trên iPhone và trong iCloud của chính bạn. Nhà phát triển không có máy chủ và không bao giờ nhận được dữ liệu của bạn. Không quảng cáo, không phân tích của bên thứ ba. Khóa ứng dụng bằng Face ID hoặc Touch ID.
 
 ## Premium
-Premium bổ sung chi tiết theo oshi × danh mục, so sánh với năm trước, ngân sách cho từng oshi, toàn bộ thẻ tổng kết năm, không giới hạn ảnh cho mỗi khoản, tiện ích "Chi tiêu tháng này", biểu tượng ứng dụng theo màu oshi và ảnh tổng kết không có hình mờ.
+Premium bổ sung chi tiết theo oshi × danh mục, so sánh với năm trước, ngân sách cho từng oshi, toàn bộ thẻ tổng kết năm, tối đa 100 ảnh cho mỗi khoản, tiện ích "Chi tiêu tháng này", biểu tượng ứng dụng theo màu oshi và ảnh tổng kết không có hình mờ.
 
 Gói: theo năm (người đăng ký lần đầu được dùng thử miễn phí 7 ngày), theo tháng hoặc mua một lần. Giá được hiển thị trên App Store. Gói năm và gói tháng tự động gia hạn trừ khi bị hủy ít nhất 24 giờ trước khi kết thúc kỳ hạn.
 

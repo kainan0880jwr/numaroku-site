@@ -24,7 +24,7 @@ Rekap bulanan dengan peringkat oshi, dan rekap tahunan setiap Desember. Pilih po
 Datamu hanya disimpan di iPhone dan iCloud milikmu sendiri. Pengembang tidak punya server dan tidak pernah menerima catatanmu. Tanpa iklan, tanpa analitik pihak ketiga. Kunci aplikasi dengan Face ID atau Touch ID.
 
 ## Premium
-Premium menambahkan rincian oshi × kategori, perbandingan dengan tahun lalu, anggaran per oshi, semua kartu rekap tahunan, foto tanpa batas per catatan, widget "Pengeluaran bulan ini", ikon aplikasi dengan warna oshi, dan gambar rekap tanpa watermark.
+Premium menambahkan rincian oshi × kategori, perbandingan dengan tahun lalu, anggaran per oshi, semua kartu rekap tahunan, hingga 100 foto per catatan, widget "Pengeluaran bulan ini", ikon aplikasi dengan warna oshi, dan gambar rekap tanpa watermark.
 
 Paket: tahunan (pelanggan baru mendapat uji coba gratis 7 hari), bulanan, atau pembelian sekali bayar. Harga ditampilkan di App Store. Paket tahunan dan bulanan diperpanjang otomatis kecuali dibatalkan setidaknya 24 jam sebelum akhir periode.
 

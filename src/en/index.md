@@ -24,7 +24,7 @@ Monthly recap images with your oshi ranking, and a yearly recap every December. 
 Your data is stored only on your iPhone and in your own iCloud. The developer has no servers and never receives your records. No ads, no third-party analytics. Lock the app with Face ID or Touch ID.
 
 ## Premium
-Premium adds oshi × category breakdowns, comparison with last year, budgets per oshi, all yearly recap cards, unlimited photos per entry, the "This Month's Spending" widget, oshi color app icons, and recap images without a watermark.
+Premium adds oshi × category breakdowns, comparison with last year, budgets per oshi, all yearly recap cards, up to 100 photos per entry, the "This Month's Spending" widget, oshi color app icons, and recap images without a watermark.
 
 Plans: yearly (first-time subscribers get a 7-day free trial), monthly, or a one-time purchase. Prices are shown in the App Store. Yearly and monthly plans renew automatically unless canceled at least 24 hours before the end of the period.
 

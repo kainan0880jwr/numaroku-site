@@ -24,7 +24,7 @@ Des récaps mensuels avec ton classement des oshis, et un récap annuel chaque d
 Tes données sont enregistrées uniquement sur ton iPhone et dans ton propre iCloud. Le développeur n'a aucun serveur et ne reçoit jamais tes entrées. Sans publicité, sans outil d'analyse tiers. Verrouille l'app avec Face ID ou Touch ID.
 
 ## Premium
-Premium ajoute le détail par oshi × catégorie, la comparaison avec l'année précédente, des budgets par oshi, toutes les cartes du récap annuel, des photos illimitées par entrée, le widget « Dépenses du mois », des icônes d'app aux couleurs de ton oshi et des images récap sans filigrane.
+Premium ajoute le détail par oshi × catégorie, la comparaison avec l'année précédente, des budgets par oshi, toutes les cartes du récap annuel, jusqu'à 100 photos par entrée, le widget « Dépenses du mois », des icônes d'app aux couleurs de ton oshi et des images récap sans filigrane.
 
 Formules : annuelle (7 jours d'essai gratuit pour un premier abonnement), mensuelle ou achat unique. Les prix sont affichés dans l'App Store. Les formules annuelle et mensuelle se renouvellent automatiquement sauf résiliation au moins 24 heures avant la fin de la période.
 

@@ -24,7 +24,7 @@ Resúmenes mensuales con tu ranking de oshis y un resumen anual cada diciembre. 
 Tus datos se guardan solo en tu iPhone y en tu propio iCloud. El desarrollador no tiene servidores y nunca recibe tus registros. Sin anuncios ni análisis de terceros. Bloquea la app con Face ID o Touch ID.
 
 ## Premium
-Premium añade el desglose por oshi × categoría, la comparación con el año anterior, presupuestos por oshi, todas las tarjetas del resumen anual, fotos ilimitadas por registro, el widget «Gastos de este mes», iconos de app con el color de tu oshi e imágenes de resumen sin marca de agua.
+Premium añade el desglose por oshi × categoría, la comparación con el año anterior, presupuestos por oshi, todas las tarjetas del resumen anual, hasta 100 fotos por registro, el widget «Gastos de este mes», iconos de app con el color de tu oshi e imágenes de resumen sin marca de agua.
 
 Planes: anual (los nuevos suscriptores tienen 7 días de prueba gratis), mensual o compra única. Los precios se muestran en el App Store. Los planes anual y mensual se renuevan automáticamente salvo que se cancelen al menos 24 horas antes del final del periodo.
 

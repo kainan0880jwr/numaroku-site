@@ -23,10 +23,13 @@ Des récaps mensuels avec ton classement des oshis, et un récap annuel chaque d
 ### Tes données restent à toi
 Tes données sont enregistrées uniquement sur ton iPhone et dans ton propre iCloud. Le développeur n'a aucun serveur et ne reçoit jamais tes entrées. Sans publicité, sans outil d'analyse tiers. Verrouille l'app avec Face ID ou Touch ID.
 
-## Premium
-Premium ajoute le détail par oshi × catégorie, la comparaison avec l'année précédente, des budgets par oshi, toutes les cartes du récap annuel, jusqu'à 100 photos par entrée, le widget « Dépenses du mois », des icônes d'app aux couleurs de ton oshi et des images récap sans filigrane.
+## Gratuit
+Oshis illimités, saisie, totaux et détails, événements et billets, images récap mensuelles, la galerie photo, la synchronisation iCloud, les sauvegardes automatiques (photos comprises), l'export CSV et le verrouillage de l'app sont gratuits. Photos : 1 par entrée en version gratuite. Sans publicité.
 
-Formules : annuelle (7 jours d'essai gratuit pour un premier abonnement), mensuelle ou achat unique. Les prix sont affichés dans l'App Store. Les formules annuelle et mensuelle se renouvellent automatiquement sauf résiliation au moins 24 heures avant la fin de la période.
+## Premium
+Premium ajoute toutes les cartes du récap annuel (et leur enregistrement en une fois), jusqu'à 100 photos par entrée, le détail par oshi × catégorie, la comparaison avec l'année précédente et les moyennes mensuelles, des budgets par oshi, le widget « Dépenses du mois », des icônes d'app aux couleurs de ton oshi et des images récap sans filigrane.
+
+Formules : annuelle, mensuelle ou achat unique. Les prix sont affichés dans l'App Store. Un premier abonnement à la formule annuelle inclut 7 jours d'essai gratuit. Si tu ne résilies pas au moins 24 heures avant la fin de l'essai, le prix annuel est facturé sur ton compte Apple à la fin de l'essai, puis la formule se renouvelle chaque année. Les formules annuelle et mensuelle se renouvellent automatiquement sauf résiliation au moins 24 heures avant la fin de la période. L'achat unique est un paiement unique, sans renouvellement, qui débloque Premium tant que l'app est proposée.
 
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

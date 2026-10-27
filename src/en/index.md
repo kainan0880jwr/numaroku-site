@@ -23,10 +23,13 @@ Monthly recap images with your oshi ranking, and a yearly recap every December. 
 ### Your data stays yours
 Your data is stored only on your iPhone and in your own iCloud. The developer has no servers and never receives your records. No ads, no third-party analytics. Lock the app with Face ID or Touch ID.
 
-## Premium
-Premium adds oshi × category breakdowns, comparison with last year, budgets per oshi, all yearly recap cards, up to 100 photos per entry, the "This Month's Spending" widget, oshi color app icons, and recap images without a watermark.
+## Free
+Unlimited oshis, logging, totals and breakdowns, events and tickets, monthly recap images, the photo gallery, iCloud sync, automatic backups (including photos), CSV export and the app lock are all free. Photos: 1 per entry on the free plan. No ads.
 
-Plans: yearly (first-time subscribers get a 7-day free trial), monthly, or a one-time purchase. Prices are shown in the App Store. Yearly and monthly plans renew automatically unless canceled at least 24 hours before the end of the period.
+## Premium
+Premium adds every yearly recap card (and saving them all at once), up to 100 photos per entry, oshi × category breakdowns, comparison with last year and monthly averages, budgets per oshi, the "This Month's Spending" widget, oshi color app icons, and recap images without a watermark.
+
+Plans: yearly, monthly, or a one-time purchase. Prices are shown in the App Store. First-time subscribers to the yearly plan get a 7-day free trial. Unless you cancel at least 24 hours before the trial ends, the yearly price is charged to your Apple Account when the trial ends, and the plan then renews every year. Yearly and monthly plans renew automatically unless canceled at least 24 hours before the end of the period. The one-time purchase is a single payment with no renewal and unlocks Premium for as long as the app is offered.
 
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

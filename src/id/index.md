@@ -23,10 +23,13 @@ Rekap bulanan dengan peringkat oshi, dan rekap tahunan setiap Desember. Pilih po
 ### Datamu tetap milikmu
 Datamu hanya disimpan di iPhone dan iCloud milikmu sendiri. Pengembang tidak punya server dan tidak pernah menerima catatanmu. Tanpa iklan, tanpa analitik pihak ketiga. Kunci aplikasi dengan Face ID atau Touch ID.
 
-## Premium
-Premium menambahkan rincian oshi × kategori, perbandingan dengan tahun lalu, anggaran per oshi, semua kartu rekap tahunan, hingga 100 foto per catatan, widget "Pengeluaran bulan ini", ikon aplikasi dengan warna oshi, dan gambar rekap tanpa watermark.
+## Gratis
+Oshi tanpa batas, pencatatan, total dan rincian, acara dan tiket, gambar rekap bulanan, galeri foto, sinkronisasi iCloud, cadangan otomatis (termasuk foto), ekspor CSV, dan kunci aplikasi semuanya gratis. Foto: 1 per catatan di versi gratis. Tanpa iklan.
 
-Paket: tahunan (pelanggan baru mendapat uji coba gratis 7 hari), bulanan, atau pembelian sekali bayar. Harga ditampilkan di App Store. Paket tahunan dan bulanan diperpanjang otomatis kecuali dibatalkan setidaknya 24 jam sebelum akhir periode.
+## Premium
+Premium menambahkan semua kartu rekap tahunan (dan menyimpan semuanya sekaligus), hingga 100 foto per catatan, rincian oshi × kategori, perbandingan dengan tahun lalu dan rata-rata bulanan, anggaran per oshi, widget "Pengeluaran bulan ini", ikon aplikasi dengan warna oshi, dan gambar rekap tanpa watermark.
+
+Paket: tahunan, bulanan, atau pembelian sekali bayar. Harga ditampilkan di App Store. Pelanggan baru paket tahunan mendapat uji coba gratis 7 hari. Jika kamu tidak membatalkan setidaknya 24 jam sebelum uji coba berakhir, harga tahunan ditagihkan ke Akun Apple kamu saat uji coba berakhir, lalu paket diperpanjang setiap tahun. Paket tahunan dan bulanan diperpanjang otomatis kecuali dibatalkan setidaknya 24 jam sebelum akhir periode. Pembelian sekali bayar adalah satu kali pembayaran tanpa perpanjangan dan membuka Premium selama aplikasi masih tersedia.
 
 ## Kontak
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

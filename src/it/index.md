@@ -23,10 +23,13 @@ Riepiloghi mensili con la classifica dei tuoi oshi e un riepilogo annuale ogni d
 ### I tuoi dati restano tuoi
 I tuoi dati sono salvati solo sul tuo iPhone e nel tuo iCloud. Lo sviluppatore non ha server e non riceve mai le tue voci. Niente pubblicità, niente analisi di terze parti. Blocca l'app con Face ID o Touch ID.
 
-## Premium
-Premium aggiunge il dettaglio per oshi × categoria, il confronto con l'anno precedente, budget per oshi, tutte le schede del riepilogo annuale, fino a 100 foto per voce, il widget «Spese del mese», icone dell'app nei colori dei tuoi oshi e immagini di riepilogo senza filigrana.
+## Gratis
+Oshi illimitati, registrazioni, totali e dettagli, eventi e biglietti, immagini di riepilogo mensile, la galleria foto, la sincronizzazione iCloud, i backup automatici (foto incluse), l'esportazione CSV e il blocco dell'app sono gratuiti. Foto: 1 per voce nella versione gratuita. Niente pubblicità.
 
-Piani: annuale (7 giorni di prova gratuita per i nuovi abbonati), mensile o acquisto unico. I prezzi sono indicati nell'App Store. I piani annuale e mensile si rinnovano automaticamente se non vengono disdetti almeno 24 ore prima della fine del periodo.
+## Premium
+Premium aggiunge tutte le schede del riepilogo annuale (e il salvataggio di tutte in una volta), fino a 100 foto per voce, il dettaglio per oshi × categoria, il confronto con l'anno precedente e le medie mensili, budget per oshi, il widget «Spese del mese», icone dell'app nei colori dei tuoi oshi e immagini di riepilogo senza filigrana.
+
+Piani: annuale, mensile o acquisto unico. I prezzi sono indicati nell'App Store. I nuovi abbonati al piano annuale hanno 7 giorni di prova gratuita. Se non disdici almeno 24 ore prima della fine della prova, al termine il prezzo annuale viene addebitato sul tuo Account Apple e il piano si rinnova poi ogni anno. I piani annuale e mensile si rinnovano automaticamente se non vengono disdetti almeno 24 ore prima della fine del periodo. L'acquisto unico è un solo pagamento, senza rinnovo, e sblocca Premium finché l'app è offerta.
 
 ## Contatti
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

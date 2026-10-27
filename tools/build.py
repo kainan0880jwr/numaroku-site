@@ -40,25 +40,25 @@ PAGES = [
 # 日本語以外のページ（1.3 多言語版）。アプリはその言語の /<dir>/ の規約・ポリシー・サポートを開く（アプリの LegalLinks と同じ dir）。
 # 規約・ポリシーは日本語版が正本で、ほかの言語はその訳（原稿は ../../oshikatsu/legal の *_<言語>_20261019.md）
 LANGS = {
-    "en": {"dir": "en", "name": "English", "tagline": "Oshi spending log",
+    "en": {"dir": "en", "name": "English", "tagline": "Oshi spending log", "store": "Download on the App Store",
            "support": "Support", "terms": "Terms of Use", "privacy": "Privacy Policy"},
-    "de": {"dir": "de", "name": "Deutsch", "tagline": "Oshi-Ausgabenbuch",
+    "de": {"dir": "de", "name": "Deutsch", "tagline": "Oshi-Ausgabenbuch", "store": "Laden im App Store",
            "support": "Support", "terms": "Nutzungsbedingungen", "privacy": "Datenschutzerklärung"},
-    "es": {"dir": "es", "name": "Español", "tagline": "Registro de gastos de oshi",
+    "es": {"dir": "es", "name": "Español", "tagline": "Registro de gastos de oshi", "store": "Descargar en el App Store",
            "support": "Soporte", "terms": "Términos de uso", "privacy": "Política de privacidad"},
-    "fr": {"dir": "fr", "name": "Français", "tagline": "Carnet de dépenses d'oshi",
+    "fr": {"dir": "fr", "name": "Français", "tagline": "Carnet de dépenses d'oshi", "store": "Télécharger dans l'App Store",
            "support": "Assistance", "terms": "Conditions d'utilisation", "privacy": "Politique de confidentialité"},
-    "it": {"dir": "it", "name": "Italiano", "tagline": "Diario delle spese per gli oshi",
+    "it": {"dir": "it", "name": "Italiano", "tagline": "Diario delle spese per gli oshi", "store": "Scarica su App Store",
            "support": "Supporto", "terms": "Termini di utilizzo", "privacy": "Informativa sulla privacy"},
-    "pt-BR": {"dir": "pt-br", "name": "Português (Brasil)", "tagline": "Registro de gastos com oshi",
+    "pt-BR": {"dir": "pt-br", "name": "Português (Brasil)", "tagline": "Registro de gastos com oshi", "store": "Baixar na App Store",
               "support": "Suporte", "terms": "Termos de Uso", "privacy": "Política de Privacidade"},
-    "tr": {"dir": "tr", "name": "Türkçe", "tagline": "Oshi harcama kaydı",
+    "tr": {"dir": "tr", "name": "Türkçe", "tagline": "Oshi harcama kaydı", "store": "App Store'dan İndirin",
            "support": "Destek", "terms": "Kullanım Koşulları", "privacy": "Gizlilik Politikası"},
-    "hi": {"dir": "hi", "name": "हिन्दी", "tagline": "ओशी खर्च रिकॉर्ड",
+    "hi": {"dir": "hi", "name": "हिन्दी", "tagline": "ओशी खर्च रिकॉर्ड", "store": "App Store से डाउनलोड करें",
            "support": "सहायता", "terms": "उपयोग की शर्तें", "privacy": "गोपनीयता नीति"},
-    "vi": {"dir": "vi", "name": "Tiếng Việt", "tagline": "Sổ chi tiêu cho oshi",
+    "vi": {"dir": "vi", "name": "Tiếng Việt", "tagline": "Sổ chi tiêu cho oshi", "store": "Tải về trên App Store",
            "support": "Hỗ trợ", "terms": "Điều khoản sử dụng", "privacy": "Chính sách quyền riêng tư"},
-    "id": {"dir": "id", "name": "Bahasa Indonesia", "tagline": "Catatan belanja oshi",
+    "id": {"dir": "id", "name": "Bahasa Indonesia", "tagline": "Catatan belanja oshi", "store": "Unduh di App Store",
            "support": "Bantuan", "terms": "Ketentuan Penggunaan", "privacy": "Kebijakan Privasi"},
 }
 PAGES_INTL = []
@@ -95,6 +95,8 @@ PENDING = re.compile(r"【(要記入|確認事項)[^】]*】")
 UNRESOLVED = re.compile(r"【[^】]*】|TODO|要確認")
 # リンク先として許すもの（https・メール・同じサイトの中の相対パス）
 SAFE_HREF = re.compile(r"^(https://|mailto:|(?![a-zA-Z][a-zA-Z0-9+.-]*:)[\w./#-]*$)")
+# 実装と食い違う表記（過去に直したもの）。公開物に1つでもあれば止める（2026-10-28 の専門家レビュー）
+STALE_CLAIMS = ["何枚でも", "複数枚", "写真はバックアップと CSV には含まれず", "Unlimited photos", "unlimited photos", "Unbegrenzt Fotos"]
 APP_STORE_URL = re.compile(r"^https://apps\.apple\.com/(jp/)?app/id[0-9]+$")
 EMAIL = re.compile(r"^[\w.+-]+@[\w-]+(\.[\w-]+)+$")
 
@@ -198,6 +200,7 @@ STYLE = """
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;-webkit-text-size-adjust:100%}
 header{background:linear-gradient(135deg,#2a1f4f,#121628);color:#fff;padding:20px 16px}
+.store{margin:16px 0}.store-link{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:12px;background:#000;color:#fff;font-weight:700;text-decoration:none}
 header a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
 nav{max-width:720px;margin:0 auto;display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
 nav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
@@ -231,6 +234,8 @@ a{color:var(--accent)}
 .skip{position:absolute;left:-9999px;top:8px;background:#fff;color:#1d1b26;padding:8px 14px;border-radius:8px;z-index:20}
 .skip:focus{left:8px}
 p,li{overflow-wrap:anywhere}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+section[id]{scroll-margin-top:64px}
 /* ヘッダー */
 .site-header{position:sticky;top:0;z-index:10;background:rgba(18,22,40,.94);color:#fff}
 @supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){.site-header{background:rgba(18,22,40,.7);-webkit-backdrop-filter:saturate(1.4) blur(16px);backdrop-filter:saturate(1.4) blur(16px)}}
@@ -322,6 +327,12 @@ p,li{overflow-wrap:anywhere}
 @media (min-width:860px){.plans{grid-template-columns:repeat(3,1fr);align-items:stretch}}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
 .plan-featured{border:2px solid var(--accent)}
+.plan-tag{display:inline-block;margin:0 0 8px;padding:2px 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:13px;font-weight:800}
+@media (prefers-color-scheme:dark){.plan-tag{color:#1d1b26}}
+.premium-list{list-style:none;margin:0 auto 32px;padding:0;max-width:760px;display:grid;gap:8px 20px}
+@media (min-width:640px){.premium-list{grid-template-columns:repeat(2,1fr)}}
+.premium-list li{position:relative;padding-left:26px}
+.premium-list li::before{content:"✦";position:absolute;left:2px;color:var(--accent)}
 .plan-name{margin:0;font-weight:800;color:var(--muted)}
 .plan-price{margin:4px 0 8px;font-size:30px;font-weight:800;line-height:1.3}
 .plan-price span{font-size:14px;font-weight:600;color:var(--muted)}
@@ -351,7 +362,7 @@ p,li{overflow-wrap:anywhere}
 .small{font-size:14px;color:var(--muted)}
 /* フッター */
 .site-footer{background:var(--navy2);color:rgba(255,255,255,.78);padding:40px 0;font-size:13px}
-.site-footer a{color:#fff}
+.site-footer a{color:#fff;display:inline-block;padding:10px 2px}
 .footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 16px;padding:0;list-style:none;font-size:14px}
 .site-footer p{margin:0 0 8px}
 """
@@ -403,10 +414,49 @@ def language_links(up: str) -> str:
     return "".join(items)
 
 
+def alternates(values: dict) -> str:
+    """紹介ページ（各言語のトップ）が互いに訳であることを検索エンジンに伝える"""
+    base = values["base_url"]
+    links = [f'<link rel="alternate" hreflang="ja" href="{base}">']
+    links += [f'<link rel="alternate" hreflang="{code}" href="{base}{lang["dir"]}/">' for code, lang in LANGS.items()]
+    links.append(f'<link rel="alternate" hreflang="x-default" href="{base}">')
+    return "\n".join(links)
+
+
+def app_store_url(values: dict, country: str = "") -> str:
+    """国を入れない URL は、開いた人の国の App Store に移る"""
+    app_id = str(values.get("app_store_id", "")).strip()
+    url = f"https://apps.apple.com/{country}app/id{app_id}"
+    if not app_id or not APP_STORE_URL.match(url):
+        raise BuildError(f"site.json の app_store_id の形が正しくありません: {app_id}")
+    return url
+
+
+def intl_top_head(body: str, lang: str, values: dict) -> str:
+    """日本語以外のトップの説明・OGP・canonical・スマートアプリバナー。説明は本文の最初の段落から作る"""
+    names = LANGS[lang]
+    base = f'{values["base_url"]}{names["dir"]}/'
+    m = re.search(r"<p>(.*?)</p>", body, flags=re.S)
+    description = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", m.group(1))).strip() if m else names["tagline"]
+    if len(description) > 160:
+        description = description[:157].rsplit(" ", 1)[0] + "…"
+    d = html.escape(description, quote=True)
+    return f"""<meta name="description" content="{d}">
+<link rel="canonical" href="{base}">
+{alternates(values)}
+<meta property="og:type" content="website">
+<meta property="og:title" content="Numaroku — {html.escape(names['tagline'], quote=True)}">
+<meta property="og:description" content="{d}">
+<meta property="og:url" content="{base}">
+<meta property="og:image" content="{values['base_url']}assets/ogp.jpg">
+<meta name="apple-itunes-app" content="app-id={html.escape(str(values['app_store_id']), quote=True)}">"""
+
+
 def page(title: str, body: str, depth: int, draft: bool, values: dict, lang: str = "ja") -> str:
     """サポート・規約などの、文章のページ。lang が ja 以外なら、その言語のページ（/<dir>/ の下。見出し・案内・フッターもその言語）"""
     up = "../" * depth or "./"
     banner = '<div class="draft">下書き：公開前に黄色の箇所を埋めてください</div>' if draft else ""
+    extra = ""
     if lang != "ja":
         names = LANGS[lang]
         base = f"{up}{names['dir']}/"
@@ -416,13 +466,17 @@ def page(title: str, body: str, depth: int, draft: bool, values: dict, lang: str
         footer = (f'<ul class="langs">{language_links(up)}</ul>'
                   f"Numaroku — {html.escape(names['tagline'])}<br>{html.escape(values.get('copyright', ''))}")
         page_title = title if title == "Numaroku" else f"{title} | Numaroku"
+        if title == "Numaroku":
+            extra = intl_top_head(body, lang, values)
+            store = f'<p class="store"><a class="store-link" href="{app_store_url(values)}">{html.escape(names["store"])}</a></p>'
+            body = re.sub(r"(<p>.*?</p>)", lambda m: m.group(1) + "\n" + store, body, count=1, flags=re.S) + "\n" + store
     else:
         nav = (f'<a href="{up}">沼ろく</a><span class="links"><a href="{up}support/">サポート</a><a href="{up}terms/">利用規約</a>'
                f'<a href="{up}privacy/">プライバシーポリシー</a><a href="{up}tokushoho/">特定商取引法に基づく表記</a>'
                f'<a href="{up}en/" lang="en">English</a></span>')
         footer = f'<ul class="langs">{language_links(up)}</ul>沼ろく — 推し活の支出記録<br>{html.escape(values.get("copyright", ""))}'
         page_title = f"{title}｜沼ろく"
-    return head(page_title, depth, draft, STYLE, lang=lang) + f"""<body>
+    return head(page_title, depth, draft, STYLE, extra, lang=lang) + f"""<body>
 {banner}
 <header><nav>{nav}</nav></header>
 <main>
@@ -465,7 +519,7 @@ def features_html(features: list) -> str:
     for f in features:
         points = []
         for p in f["points"]:
-            label = f'<span class="premium">{html.escape(p["premium"])}</span>' if p.get("premium") else ""
+            label = f'<span class="premium"><span class="vh">：</span>{html.escape(p["premium"])}</span>' if p.get("premium") else ""
             points.append(f"<li>{html.escape(p['text'])}{label}</li>")
         if not f.get("image"):
             cards.append(f"""<li class="card mini-feature" id="feature-{html.escape(f['id'], quote=True)}">
@@ -511,7 +565,7 @@ def faq_html(questions: list, support_text: str) -> str:
             raise BuildError(f"紹介ページ：サポートに「{question}」の質問が見つかりません")
         _, answer = render(m.group(1).strip(), up="")
         opened = " open" if i == 0 else ""
-        out.append(f'<details{opened}><summary>{html.escape(question)}</summary><div class="answer">{answer}</div></details>')
+        out.append(f'<details name="faq"{opened}><summary>{html.escape(question)}</summary><div class="answer">{answer}</div></details>')
     return "\n".join(out)
 
 
@@ -520,9 +574,7 @@ def store_cta(values: dict) -> str:
     app_id = str(values.get("app_store_id", "")).strip()
     if not app_id:
         return '<p class="soon"><span aria-hidden="true">✦</span> App Store で近日公開予定</p>'
-    url = f"https://apps.apple.com/jp/app/id{app_id}"
-    if not APP_STORE_URL.match(url):
-        raise BuildError(f"site.json の app_store_id の形が正しくありません: {app_id}")
+    url = app_store_url(values, "jp/")
     if not (ASSETS / "app-store-badge.png").exists():
         raise BuildError("Apple 公式の App Store バッジ（src/assets/app-store-badge.png）がありません")
     return f'<a class="store-badge" href="{url}"><img src="assets/app-store-badge.png" width="131" height="48" alt="App Store からダウンロード"></a>'
@@ -539,6 +591,7 @@ def landing(values: dict, support_text: str, draft: bool) -> str:
     banner = f'<meta name="apple-itunes-app" content="app-id={html.escape(app_id, quote=True)}">' if app_id else ""
     extra = f"""<meta name="description" content="{html.escape(description, quote=True)}">
 <link rel="canonical" href="{base}">
+{alternates(values)}
 <meta property="og:type" content="website">
 <meta property="og:title" content="沼ろく｜推し活の支出記録アプリ">
 <meta property="og:description" content="{html.escape(description, quote=True)}">
@@ -621,6 +674,9 @@ def check_image(data: bytes, name: str):
                 raise BuildError(f"{name}: メタデータ（{kind.decode(errors='replace')}）が残っています")
             pos += 12 + length
     else:
+        # 画像の終わり（EOI）の後ろに別の画像（HDR のゲインマップなど。中に Exif を持ちうる）が付いていないこと
+        if data.count(b"\xff\xd8\xff") != 1 or not data.rstrip(b"\x00").endswith(b"\xff\xd9"):
+            raise BuildError(f"{name}: 画像の後ろに別のデータが付いています")
         pos = 2
         while pos < len(data) and data[pos + 1] != 0xDA:
             marker = data[pos + 1]
@@ -667,9 +723,11 @@ class Audit(HTMLParser):
         a = dict(attrs)
         if tag in self.FORBIDDEN:
             self.error(f"<{tag}> は使えません")
-        if tag == "link" and a.get("rel") == "stylesheet":
+        if tag == "link" and "stylesheet" in (a.get("rel") or "").lower().split():
             self.error("外部の CSS は使えません")
-        if tag == "meta" and a.get("http-equiv") == "Content-Security-Policy":
+        if tag == "meta" and a.get("http-equiv") is not None:
+            if a["http-equiv"] != "Content-Security-Policy":
+                self.error(f'http-equiv="{a["http-equiv"]}" は使えません（refresh での移動などを防ぐ）')
             self.csp = a.get("content")
         if tag == "style":
             self.in_style = True
@@ -682,11 +740,11 @@ class Audit(HTMLParser):
             if key == "style" and re.search(r"url\(|expression|@import", value, flags=re.I):
                 self.error("style 属性の中で外部を読み込めません")
             urls = []
-            if key in {"href", "src"}:
+            if key in {"href", "src", "poster", "cite", "background", "action", "formaction", "ping", "data", "manifest"}:
                 urls = [value]
-            elif key == "srcset":
+            elif key in {"srcset", "imagesrcset"}:
                 urls = [part.strip().split()[0] for part in value.split(",") if part.strip()]
-            elif key == "content" and a.get("property", "").startswith("og:") and a.get("property") in {"og:url", "og:image"}:
+            elif key == "content" and (a.get("property") in {"og:url", "og:image"} or a.get("name") in {"twitter:image", "twitter:url"}):
                 urls = [value]
             for url in urls:
                 self.check_url(url)
@@ -713,7 +771,12 @@ class Audit(HTMLParser):
             if host == "kainan0880jwr.github.io":
                 if not url.startswith(self.values["base_url"]):
                     self.error(f"自分のサイト以外の github.io です: {url}")
-                self.check_url(url[len(self.values["base_url"]):] or "./")
+                # 絶対 URL はサイトの一番上から数える（ページの場所からではない）
+                page, self.page = self.page, "index.html"
+                try:
+                    self.check_url(url[len(self.values["base_url"]):] or "./")
+                finally:
+                    self.page = page
             if host == "apps.apple.com" and not APP_STORE_URL.match(url):
                 self.error(f"App Store の URL の形が正しくありません: {url}")
             return
@@ -751,6 +814,9 @@ def audit(outputs: dict[str, bytes | str], values: dict):
             raise BuildError(f"{name}: CSP が決まったものと違います")
         if UNRESOLVED.search(re.sub(r"<[^>]+>", "", content)):
             raise BuildError(f"{name}: 【】・TODO・要確認 が残っています")
+        for claim in STALE_CLAIMS:
+            if claim in content:
+                raise BuildError(f"{name}: 実装と食い違う古い表記「{claim}」が残っています")
     landing_page = outputs["index.html"]
     # 1.0 のアプリはトップをサポートとして開くので、トップからサポートと問い合わせ先にすぐ行けること
     if 'href="support/"' not in landing_page or f'href="mailto:{values["contact"]}"' not in landing_page:

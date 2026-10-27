@@ -23,10 +23,13 @@ Retrospectivas mensais com o ranking dos seus oshis e uma retrospectiva anual to
 ### Seus dados são seus
 Seus dados ficam salvos só no seu iPhone e no seu próprio iCloud. O desenvolvedor não tem servidores e nunca recebe seus registros. Sem anúncios, sem análises de terceiros. Bloqueie o app com Face ID ou Touch ID.
 
-## Premium
-O Premium adiciona o detalhamento por oshi × categoria, a comparação com o ano anterior, orçamentos por oshi, todos os cartões da retrospectiva anual, até 100 fotos por registro, o widget "Gastos do mês", ícones do app nas cores dos seus oshis e imagens de retrospectiva sem marca d'água.
+## Grátis
+Oshis ilimitados, registros, totais e detalhamentos, eventos e ingressos, imagens de retrospectiva mensal, a galeria de fotos, a sincronização com o iCloud, os backups automáticos (com fotos), a exportação CSV e o bloqueio do app são grátis. Fotos: 1 por registro na versão grátis. Sem anúncios.
 
-Planos: anual (novos assinantes ganham 7 dias de teste grátis), mensal ou compra única. Os preços são exibidos na App Store. Os planos anual e mensal são renovados automaticamente, a menos que sejam cancelados pelo menos 24 horas antes do fim do período.
+## Premium
+O Premium adiciona todos os cartões da retrospectiva anual (e salvar todos de uma vez), até 100 fotos por registro, o detalhamento por oshi × categoria, a comparação com o ano anterior e as médias mensais, orçamentos por oshi, o widget "Gastos do mês", ícones do app nas cores dos seus oshis e imagens de retrospectiva sem marca d'água.
+
+Planos: anual, mensal ou compra única. Os preços são exibidos na App Store. Novos assinantes do plano anual ganham 7 dias de teste grátis. Se você não cancelar pelo menos 24 horas antes do fim do teste, o preço anual é cobrado na sua Conta Apple quando o teste terminar, e o plano passa a ser renovado todo ano. Os planos anual e mensal são renovados automaticamente, a menos que sejam cancelados pelo menos 24 horas antes do fim do período. A compra única é um só pagamento, sem renovação, e libera o Premium enquanto o app for oferecido.
 
 ## Contato
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

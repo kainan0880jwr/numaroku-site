@@ -24,10 +24,10 @@ Rekap bulanan dengan peringkat oshi, dan rekap tahunan setiap Desember. Pilih po
 Datamu hanya disimpan di iPhone dan iCloud milikmu sendiri. Pengembang tidak punya server dan tidak pernah menerima catatanmu. Tanpa iklan, tanpa analitik pihak ketiga. Kunci aplikasi dengan Face ID atau Touch ID.
 
 ## Gratis
-Oshi tanpa batas, pencatatan, total dan rincian, acara dan tiket, gambar rekap bulanan, galeri foto, sinkronisasi iCloud, cadangan otomatis (termasuk foto), ekspor CSV, dan kunci aplikasi semuanya gratis. Foto: 1 per catatan di versi gratis. Tanpa iklan.
+Oshi tanpa batas, pencatatan, total dan rincian, acara dan tiket, gambar rekap bulanan, galeri foto, sinkronisasi iCloud, cadangan otomatis (termasuk foto), ekspor CSV, dan kunci aplikasi semuanya gratis. Foto: 1 per catatan di versi gratis. Tanpa iklan. Juga gratis: catat sekali ketuk, mode privasi, belanja ditahan, baca struk, dan kalender.
 
 ## Premium
-Premium menambahkan semua kartu rekap tahunan (dan menyimpan semuanya sekaligus), hingga 100 foto per catatan, rincian oshi × kategori, perbandingan dengan tahun lalu dan rata-rata bulanan, anggaran per oshi, widget "Pengeluaran bulan ini", ikon aplikasi dengan warna oshi, dan gambar rekap tanpa watermark.
+Premium menambahkan semua kartu rekap tahunan (dan menyimpan semuanya sekaligus), hingga 100 foto per catatan, rincian oshi × kategori, perbandingan dengan tahun lalu dan rata-rata bulanan, anggaran per oshi, widget "Pengeluaran bulan ini", ikon aplikasi dengan warna oshi, dan gambar rekap tanpa watermark. Juga: widget foto oshi, mata uang dan jumlah asli untuk belanja di luar negeri, acara dan tenggat di kalender iPhone, serta rincian belanja yang ditahan per oshi dan per bulan.
 
 Paket: tahunan, bulanan, atau pembelian sekali bayar. Harga ditampilkan di App Store. Pelanggan baru paket tahunan mendapat uji coba gratis 7 hari. Jika kamu tidak membatalkan setidaknya 24 jam sebelum uji coba berakhir, harga tahunan ditagihkan ke Akun Apple kamu saat uji coba berakhir, lalu paket diperpanjang setiap tahun. Paket tahunan dan bulanan diperpanjang otomatis kecuali dibatalkan setidaknya 24 jam sebelum akhir periode. Pembelian sekali bayar adalah satu kali pembayaran tanpa perpanjangan dan membuka Premium selama aplikasi masih tersedia.
 

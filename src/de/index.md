@@ -24,10 +24,10 @@ Monatliche Rückblicke mit deinem Oshi-Ranking und jeden Dezember ein Jahresrüc
 Deine Daten werden nur auf deinem iPhone und in deiner eigenen iCloud gespeichert. Der Entwickler hat keine Server und erhält deine Einträge nie. Keine Werbung, keine Analyse durch Dritte. Sperre die App mit Face ID oder Touch ID.
 
 ## Kostenlos
-Unbegrenzt viele Oshis, Einträge, Summen und Aufteilungen, Events und Tickets, monatliche Rückblickbilder, die Fotogalerie, iCloud-Synchronisierung, automatische Backups (inklusive Fotos), CSV-Export und die App-Sperre sind kostenlos. Fotos: 1 pro Eintrag in der kostenlosen Version. Keine Werbung.
+Unbegrenzt viele Oshis, Einträge, Summen und Aufteilungen, Events und Tickets, monatliche Rückblickbilder, die Fotogalerie, iCloud-Synchronisierung, automatische Backups (inklusive Fotos), CSV-Export und die App-Sperre sind kostenlos. Fotos: 1 pro Eintrag in der kostenlosen Version. Keine Werbung. Ebenfalls kostenlos: Ein-Tipp-Erfassung, Privatmodus, Verzichte, Belege lesen, Kalender.
 
 ## Premium
-Premium bietet alle Karten des Jahresrückblicks (und das Speichern aller auf einmal), bis zu 100 Fotos pro Eintrag, die Aufteilung nach Oshi × Kategorie, den Vergleich mit dem Vorjahr und Monatsdurchschnitte, Budgets je Oshi, das Widget „Ausgaben diesen Monat“, App-Symbole in Oshi-Farben und Rückblickbilder ohne Wasserzeichen.
+Premium bietet alle Karten des Jahresrückblicks (und das Speichern aller auf einmal), bis zu 100 Fotos pro Eintrag, die Aufteilung nach Oshi × Kategorie, den Vergleich mit dem Vorjahr und Monatsdurchschnitte, Budgets je Oshi, das Widget „Ausgaben diesen Monat“, App-Symbole in Oshi-Farben und Rückblickbilder ohne Wasserzeichen. Außerdem: das Widget „Oshi-Fotos“, Originalwährung und -betrag bei Ausgaben im Ausland, Events und Fristen im iPhone-Kalender sowie verzichtete Käufe nach Oshi und Monat.
 
 Angebote: jährlich, monatlich oder ein Einmalkauf. Die Preise werden im App Store angezeigt. Erstabonnenten des Jahresabos erhalten 7 Tage kostenlos. Wenn du nicht mindestens 24 Stunden vor Ende des Testzeitraums kündigst, wird der Jahrespreis am Ende des Testzeitraums deinem Apple Account belastet, und das Abo verlängert sich danach jedes Jahr. Jahres- und Monatsabos verlängern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ablauf des Zeitraums gekündigt werden. Der Einmalkauf ist eine einmalige Zahlung ohne Verlängerung und schaltet Premium frei, solange die App angeboten wird.
 

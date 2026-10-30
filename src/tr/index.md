@@ -24,10 +24,10 @@ Oshi sıralamanla aylık özetler ve her aralıkta bir yıllık özet. Hikâyele
 Verilerin yalnızca iPhone'unda ve kendi iCloud'unda saklanır. Geliştiricinin sunucusu yoktur ve kayıtlarını asla almaz. Reklam yok, üçüncü taraf analiz yok. Uygulamayı Face ID veya Touch ID ile kilitle.
 
 ## Ücretsiz
-Sınırsız oshi, kayıt, toplamlar ve dağılımlar, etkinlikler ve biletler, aylık özet görselleri, fotoğraf galerisi, iCloud eşzamanlama, otomatik yedekler (fotoğraflar dahil), CSV dışa aktarma ve uygulama kilidi ücretsizdir. Fotoğraf: ücretsiz sürümde kayıt başına 1. Reklam yok.
+Sınırsız oshi, kayıt, toplamlar ve dağılımlar, etkinlikler ve biletler, aylık özet görselleri, fotoğraf galerisi, iCloud eşzamanlama, otomatik yedekler (fotoğraflar dahil), CSV dışa aktarma ve uygulama kilidi ücretsizdir. Fotoğraf: ücretsiz sürümde kayıt başına 1. Reklam yok. Tek dokunuşla kayıt, gizli mod, vazgeçilen alışverişler, fiş okuma ve harcama takvimi de ücretsizdir.
 
 ## Premium
-Premium; yıllık özetin tüm kartlarını (ve hepsini tek seferde kaydetmeyi), kayıt başına 100 adede kadar fotoğrafı, oshi × kategori dağılımını, geçen yılla karşılaştırmayı ve aylık ortalamaları, oshi başına bütçeleri, "Bu Ayın Harcaması" widget'ını, oshi renginde uygulama simgelerini ve filigransız özet görsellerini ekler.
+Premium; yıllık özetin tüm kartlarını (ve hepsini tek seferde kaydetmeyi), kayıt başına 100 adede kadar fotoğrafı, oshi × kategori dağılımını, geçen yılla karşılaştırmayı ve aylık ortalamaları, oshi başına bütçeleri, "Bu Ayın Harcaması" widget'ını, oshi renginde uygulama simgelerini ve filigransız özet görsellerini ekler. Ayrıca: Oshi fotoğrafları widget'ı, yurt dışı harcamalarda orijinal para birimi ve tutar, etkinlikleri ve son tarihleri iPhone takvimine ekleme, vazgeçilen alışverişlerin oshi ve ay bazında dağılımı.
 
 Planlar: yıllık, aylık veya tek seferlik satın alma. Fiyatlar App Store'da gösterilir. Yıllık plana ilk kez abone olanlar 7 gün ücretsiz deneme alır. Deneme bitmeden en az 24 saat önce iptal etmezsen, deneme bittiğinde yıllık ücret Apple Hesabından tahsil edilir ve plan her yıl yenilenir. Yıllık ve aylık planlar, dönem bitmeden en az 24 saat önce iptal edilmezse otomatik olarak yenilenir. Tek seferlik satın alma, yenilenmeyen tek bir ödemedir ve uygulama sunulduğu sürece Premium'u açar.
 

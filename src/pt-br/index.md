@@ -24,10 +24,10 @@ Retrospectivas mensais com o ranking dos seus oshis e uma retrospectiva anual to
 Seus dados ficam salvos só no seu iPhone e no seu próprio iCloud. O desenvolvedor não tem servidores e nunca recebe seus registros. Sem anúncios, sem análises de terceiros. Bloqueie o app com Face ID ou Touch ID.
 
 ## Grátis
-Oshis ilimitados, registros, totais e detalhamentos, eventos e ingressos, imagens de retrospectiva mensal, a galeria de fotos, a sincronização com o iCloud, os backups automáticos (com fotos), a exportação CSV e o bloqueio do app são grátis. Fotos: 1 por registro na versão grátis. Sem anúncios.
+Oshis ilimitados, registros, totais e detalhamentos, eventos e ingressos, imagens de retrospectiva mensal, a galeria de fotos, a sincronização com o iCloud, os backups automáticos (com fotos), a exportação CSV e o bloqueio do app são grátis. Fotos: 1 por registro na versão grátis. Sem anúncios. Também grátis: registro com um toque, modo privado, compras evitadas, leitura de recibos e calendário.
 
 ## Premium
-O Premium adiciona todos os cartões da retrospectiva anual (e salvar todos de uma vez), até 100 fotos por registro, o detalhamento por oshi × categoria, a comparação com o ano anterior e as médias mensais, orçamentos por oshi, o widget "Gastos do mês", ícones do app nas cores dos seus oshis e imagens de retrospectiva sem marca d'água.
+O Premium adiciona todos os cartões da retrospectiva anual (e salvar todos de uma vez), até 100 fotos por registro, o detalhamento por oshi × categoria, a comparação com o ano anterior e as médias mensais, orçamentos por oshi, o widget "Gastos do mês", ícones do app nas cores dos seus oshis e imagens de retrospectiva sem marca d'água. Também inclui o widget "Fotos do oshi", a moeda e o valor originais de gastos no exterior, eventos e prazos no calendário do iPhone, e compras evitadas por oshi e por mês.
 
 Planos: anual, mensal ou compra única. Os preços são exibidos na App Store. Novos assinantes do plano anual ganham 7 dias de teste grátis. Se você não cancelar pelo menos 24 horas antes do fim do teste, o preço anual é cobrado na sua Conta Apple quando o teste terminar, e o plano passa a ser renovado todo ano. Os planos anual e mensal são renovados automaticamente, a menos que sejam cancelados pelo menos 24 horas antes do fim do período. A compra única é um só pagamento, sem renovação, e libera o Premium enquanto o app for oferecido.
 

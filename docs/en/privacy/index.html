@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light dark">
 
@@ -11,36 +11,14 @@
 <link rel="icon" href="../../assets/icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../../assets/icon-180.png">
 
-<style>
-:root{--bg:#f7f5fb;--surface:#fff;--text:#1d1b26;--muted:#5d5870;--accent:#c23a73;--line:#e3dfeb;--mark:#fff1a8}
-@media (prefers-color-scheme:dark){:root{--bg:#121628;--surface:#1c1f36;--text:#ece9f5;--muted:#a9a4bd;--accent:#ff8fbd;--line:#2f3352;--mark:#6b5a00}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;-webkit-text-size-adjust:100%}
-header{background:linear-gradient(135deg,#2a1f4f,#121628);color:#fff;padding:20px 16px}
-.store{margin:16px 0}.store-link{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:12px;background:#000;color:#fff;font-weight:700;text-decoration:none}
-header a{color:#fff;text-decoration:none;font-weight:700;font-size:18px}
-nav{max-width:720px;margin:0 auto;display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
-nav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px}nav .links a{font-weight:400;font-size:14px;opacity:.85}
-main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
-h1{font-size:26px;line-height:1.4;margin:0 0 20px}
-h2{font-size:19px;margin:32px 0 8px;padding-top:16px;border-top:1px solid var(--line)}
-h3{font-size:16px;margin:24px 0 4px}
-p,li{overflow-wrap:anywhere}
-ul,ol{padding-left:1.4em}
-a{color:var(--accent)}
-a:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
-mark{background:var(--mark);color:inherit;padding:0 2px}
-.draft{background:#fff1a8;color:#3d3300;padding:10px 16px;text-align:center;font-weight:700;font-size:14px}
-footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font-size:13px}
-.langs{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0 0 12px;padding:0;list-style:none}
-</style>
+<link rel="stylesheet" href="../../assets/site.css?v=3ca2b87047">
 </head>
 <body>
 
 <header><nav><a href="../../en/">Numaroku</a><span class="links"><a href="../../en/support/">Support</a><a href="../../en/terms/">Terms of Use</a><a href="../../en/privacy/">Privacy Policy</a><a href="../../" lang="ja">日本語</a></span></nav></header>
 <main>
 <h1>Privacy Policy</h1>
-<p>Established: October 11, 2026 / Last updated: October 27, 2026</p>
+<p>Established: October 11, 2026 / Last updated: November 2, 2026</p>
 <p>Daiki Ikebata (the &quot;Operator&quot;) sets out below how user information is handled in &quot;Numaroku&quot; (the &quot;App&quot;), an iPhone app.</p>
 <h2>1. Our Basic Approach</h2>
 <p>The App is designed so that <strong>the Operator has no servers</strong>. Information you record in the App is stored only on your iPhone and in your own iCloud. <strong>The Operator never receives or sees that information.</strong></p>
@@ -57,7 +35,7 @@ Events (such as concerts and shows): names, dates, venues, notes, ticket status,
 </li><li>
 App settings (such as whether the lock is on, the &quot;hide amounts&quot; setting, and the currency you chose)
 </li></ul>
-<p>When photos are added, they are resized and their metadata, such as where they were taken, is removed before they are saved.</p>
+<p>When photos are added (including photos taken with the camera), they are resized and their metadata, such as where they were taken, is removed before they are saved.</p>
 <h2>3. Sync and Backup with iCloud</h2>
 <p>If you are signed in to iCloud on your iPhone, the information in Section 2 is stored in Apple&#x27;s iCloud (the private area of your own account) and synced with your other devices that use the same Apple Account. The Operator cannot see this information. Apple&#x27;s privacy policy (<a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a>) applies to how iCloud handles it.</p>
 <p>To protect against data loss, the App automatically makes backups on your device and in the App&#x27;s folder in your iCloud Drive. You can turn off saving to iCloud Drive in the App (&quot;Backup &amp; Data&quot;). Turning it off does not automatically delete backups already in iCloud Drive; you can delete them with &quot;Delete iCloud Drive Backups&quot; on the same screen. If you export CSV files, you choose where they are saved and who they are shared with.</p>
@@ -83,6 +61,10 @@ Use analytics tools or send information to external services
 <h2>6. Photos and Notifications</h2>
 <ul><li>
 The App reads only the photos you choose. It never reads your whole photo library. When saving a recap image to Photos, it asks only for permission to add photos
+</li><li>
+The camera is used only when you tap &quot;Take Photo&quot; on the expense entry screen. Photos you take are not saved to Photos (your camera roll). Like photos chosen from your library, they are resized and their metadata, such as where they were taken, is removed before they are attached to the expense and saved (on your iPhone and in your own iCloud, as described in sections 2 and 3; they are never sent to the operator)
+</li><li>
+Reading the amount and date from a photo attached to an expense happens only on your iPhone. The recognized text is neither saved nor sent anywhere; it is used only to suggest an amount and date. You decide whether to fill them in
 </li><li>
 When you share a recap image, you choose the app and the people to send it to. Shared images are never sent to the Operator
 </li><li>

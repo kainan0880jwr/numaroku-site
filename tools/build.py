@@ -11,18 +11,20 @@
     サポート・特定商取引法の表記   … src/support.md・src/tokushoho.md
     画像                           … src/assets/（tools/make_images.sh で作る。公開してよいものだけ）。メタデータを消して assets/ へ写す
     運営者名・問い合わせ先・料金など … site.json
-出力: index.html（紹介ページ）・support/・terms/・privacy/・tokushoho/ の index.html・assets/
+出力: index.html（紹介ページ）・support/・terms/・privacy/・tokushoho/ の index.html・assets/（画像と site.css・landing.css）・sitemap.xml・robots.txt
     公開用は docs/（GitHub Pages が公開するフォルダ）、下書きは draft/ に作る（下書きを公開してしまわないよう、置き場所を分ける）
     1.0 のアプリと App Store Connect のサポート URL はトップを開くので、トップには常にサポートと問い合わせ先を置く（紹介ページの #contact）
     terms/・privacy/・tokushoho/ のパスはアプリが固定で持っているので、変えない
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import re
 import struct
 import sys
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -40,25 +42,25 @@ PAGES = [
 # 日本語以外のページ（1.3 多言語版）。アプリはその言語の /<dir>/ の規約・ポリシー・サポートを開く（アプリの LegalLinks と同じ dir）。
 # 規約・ポリシーは日本語版が正本で、ほかの言語はその訳（原稿は ../../oshikatsu/legal の *_<言語>_20261019.md）
 LANGS = {
-    "en": {"dir": "en", "name": "English", "tagline": "Oshi spending log", "store": "Download on the App Store",
+    "en": {"dir": "en", "og": "en_US", "name": "English", "tagline": "Oshi spending log", "store": "Download on the App Store",
            "support": "Support", "terms": "Terms of Use", "privacy": "Privacy Policy"},
-    "de": {"dir": "de", "name": "Deutsch", "tagline": "Oshi-Ausgabenbuch", "store": "Laden im App Store",
+    "de": {"dir": "de", "og": "de_DE", "name": "Deutsch", "tagline": "Oshi-Ausgabenbuch", "store": "Laden im App Store",
            "support": "Support", "terms": "Nutzungsbedingungen", "privacy": "Datenschutzerklärung"},
-    "es": {"dir": "es", "name": "Español", "tagline": "Registro de gastos de oshi", "store": "Descargar en el App Store",
+    "es": {"dir": "es", "og": "es_ES", "name": "Español", "tagline": "Registro de gastos de oshi", "store": "Descargar en el App Store",
            "support": "Soporte", "terms": "Términos de uso", "privacy": "Política de privacidad"},
-    "fr": {"dir": "fr", "name": "Français", "tagline": "Carnet de dépenses d'oshi", "store": "Télécharger dans l'App Store",
+    "fr": {"dir": "fr", "og": "fr_FR", "name": "Français", "tagline": "Carnet de dépenses d'oshi", "store": "Télécharger dans l'App Store",
            "support": "Assistance", "terms": "Conditions d'utilisation", "privacy": "Politique de confidentialité"},
-    "it": {"dir": "it", "name": "Italiano", "tagline": "Diario delle spese per gli oshi", "store": "Scarica su App Store",
+    "it": {"dir": "it", "og": "it_IT", "name": "Italiano", "tagline": "Diario delle spese per gli oshi", "store": "Scarica su App Store",
            "support": "Supporto", "terms": "Termini di utilizzo", "privacy": "Informativa sulla privacy"},
-    "pt-BR": {"dir": "pt-br", "name": "Português (Brasil)", "tagline": "Registro de gastos com oshi", "store": "Baixar na App Store",
+    "pt-BR": {"dir": "pt-br", "og": "pt_BR", "name": "Português (Brasil)", "tagline": "Registro de gastos com oshi", "store": "Baixar na App Store",
               "support": "Suporte", "terms": "Termos de Uso", "privacy": "Política de Privacidade"},
-    "tr": {"dir": "tr", "name": "Türkçe", "tagline": "Oshi harcama kaydı", "store": "App Store'dan İndirin",
+    "tr": {"dir": "tr", "og": "tr_TR", "name": "Türkçe", "tagline": "Oshi harcama kaydı", "store": "App Store'dan İndirin",
            "support": "Destek", "terms": "Kullanım Koşulları", "privacy": "Gizlilik Politikası"},
-    "hi": {"dir": "hi", "name": "हिन्दी", "tagline": "ओशी खर्च रिकॉर्ड", "store": "App Store से डाउनलोड करें",
+    "hi": {"dir": "hi", "og": "hi_IN", "name": "हिन्दी", "tagline": "ओशी खर्च रिकॉर्ड", "store": "App Store से डाउनलोड करें",
            "support": "सहायता", "terms": "उपयोग की शर्तें", "privacy": "गोपनीयता नीति"},
-    "vi": {"dir": "vi", "name": "Tiếng Việt", "tagline": "Sổ chi tiêu cho oshi", "store": "Tải về trên App Store",
+    "vi": {"dir": "vi", "og": "vi_VN", "name": "Tiếng Việt", "tagline": "Sổ chi tiêu cho oshi", "store": "Tải về trên App Store",
            "support": "Hỗ trợ", "terms": "Điều khoản sử dụng", "privacy": "Chính sách quyền riêng tư"},
-    "id": {"dir": "id", "name": "Bahasa Indonesia", "tagline": "Catatan belanja oshi", "store": "Unduh di App Store",
+    "id": {"dir": "id", "og": "id_ID", "name": "Bahasa Indonesia", "tagline": "Catatan belanja oshi", "store": "Unduh di App Store",
            "support": "Bantuan", "terms": "Ketentuan Penggunaan", "privacy": "Kebijakan Privasi"},
 }
 PAGES_INTL = []
@@ -73,11 +75,16 @@ for _code, _lang in LANGS.items():
 LANG_OF_DIR = {lang["dir"]: code for code, lang in LANGS.items()}
 
 # すべてのページに同じものを入れる（--release で一字一句同じかを確かめる）
-CSP = "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'"
+# CSS は同一オリジンの assets/*.css だけ（<style> と style 属性は使わない。'unsafe-inline' を入れない）
+CSP = "default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'"
 # 外部のリンク先として許すホスト（これ以外の https は止める）
 ALLOWED_HOSTS = {"apps.apple.com", "reportaproblem.apple.com", "www.apple.com", "kainan0880jwr.github.io", "docs.github.com"}
 # docs/ に置いてよいファイルの種類
-ALLOWED_SUFFIXES = {".html", ".png", ".jpg"}
+ALLOWED_SUFFIXES = {".html", ".png", ".jpg", ".css", ".xml", ".txt"}
+# .css・.xml・.txt は、このビルドが作る決まった名前のものだけ（原稿や画像の置き場から紛れ込ませない）
+GENERATED_TEXT_FILES = {"assets/site.css", "assets/landing.css", "sitemap.xml", "robots.txt"}
+# CSS の中に1つでもあれば止めるもの（外部の読み込み・古い IE の式・エスケープでの書き換え）
+CSS_FORBIDDEN = re.compile(r"url\(|@import|expression|(?<![\w-])behavior\s*:|-moz-binding|\\|</", flags=re.I)
 
 # site.json のキー → 原稿の【要記入】
 FIELDS = {
@@ -208,7 +215,7 @@ main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
 h1{font-size:26px;line-height:1.4;margin:0 0 20px}
 h2{font-size:19px;margin:32px 0 8px;padding-top:16px;border-top:1px solid var(--line)}
 h3{font-size:16px;margin:24px 0 4px}
-p,li{overflow-wrap:anywhere}
+p,li{overflow-wrap:anywhere;text-wrap:pretty}
 ul,ol{padding-left:1.4em}
 a{color:var(--accent)}
 a:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
@@ -231,9 +238,10 @@ a{color:var(--accent)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
 .narrow{max-width:760px}
 .nb{display:inline-block}
-.skip{position:absolute;left:-9999px;top:8px;background:#fff;color:#1d1b26;padding:8px 14px;border-radius:8px;z-index:20}
-.skip:focus{left:8px}
-p,li{overflow-wrap:anywhere}
+.skip{position:absolute;left:8px;top:8px;background:#fff;color:#1d1b26;padding:8px 14px;border-radius:8px;z-index:20;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip:focus{width:auto;height:auto;overflow:visible;clip-path:none}
+p,li{overflow-wrap:anywhere;text-wrap:pretty}
+.draft{background:#fff1a8;color:#3d3300;padding:10px 16px;text-align:center;font-weight:700;font-size:14px}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 section[id]{scroll-margin-top:64px}
 /* ヘッダー */
@@ -244,7 +252,9 @@ section[id]{scroll-margin-top:64px}
 .brand img{border-radius:9px}
 .header-nav{display:flex;align-items:center;gap:20px;font-size:14px}
 .header-nav a{color:rgba(255,255,255,.88);text-decoration:none}
-.header-nav a:hover{color:#fff}
+@media (hover:hover){.header-nav a:hover{color:#fff}}
+.header-nav .nav-lang{border:1px solid rgba(255,255,255,.4);padding:5px 10px;border-radius:999px;min-height:32px;display:inline-flex;align-items:center}
+@media (max-width:359px){.header-nav{gap:10px;font-size:13px}.header-nav .nav-pricing{display:none}}
 .header-nav .nav-support{background:#fff;color:#1d1b26;padding:7px 14px;border-radius:999px;font-weight:700;min-height:36px;display:inline-flex;align-items:center}
 .header-nav .nav-support:focus-visible{outline-color:#ff8fbd}
 .support-band{background:#fff1f6;color:#5a1e3b;font-size:14px;padding:9px 0;line-height:1.6}
@@ -264,7 +274,7 @@ section[id]{scroll-margin-top:64px}
 .final .soon{border-color:rgba(255,255,255,.55)}
 .store-badge img{height:48px;width:auto}
 .ghost{color:#fff;font-weight:700;text-decoration:none;padding:12px 4px}
-.ghost:hover{text-decoration:underline}
+@media (hover:hover){.ghost:hover{text-decoration:underline}}
 .badges{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;font-size:13px}
 .badges li{padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.92)}
 .hero-visual{position:relative;height:clamp(380px,112vw,520px);display:flex;justify-content:center}
@@ -282,7 +292,7 @@ section[id]{scroll-margin-top:64px}
   .only-wide{display:block}
   .header-nav .only-wide{display:inline}
 }
-@media (min-width:900px){@media (prefers-reduced-motion:no-preference){.phone-front{transition:transform .3s}.hero-visual:hover .phone-front{transform:translateY(-4px)}}}
+@media (min-width:900px) and (hover:hover) and (prefers-reduced-motion:no-preference){.phone-front{transition:transform .3s}.hero-visual:hover .phone-front{transform:translateY(-4px)}}
 /* セクション */
 .section{padding:72px 0;border-top:1px solid var(--line)}
 .section-title{margin:0 0 14px;font-size:clamp(24px,4.6vw,34px);line-height:1.35;text-align:center;font-weight:800;text-wrap:balance}
@@ -310,6 +320,7 @@ section[id]{scroll-margin-top:64px}
 .premium{display:inline-block;margin-left:6px;padding:0 8px;border-radius:6px;background:#2a1f4f;color:#fff;font-size:13px;font-weight:700;line-height:1.7;vertical-align:1px}
 @media (prefers-color-scheme:dark){.premium{background:#ff8fbd;color:#1d1b26}}
 @media (min-width:860px){.feature{grid-template-columns:300px 1fr;gap:56px}.feature:nth-of-type(even){grid-template-columns:1fr 300px}.feature-shot{order:0}.feature:nth-of-type(even) .feature-shot{order:2}}
+.highlights{margin:8px 0 24px}.highlights .card h3{font-size:19px}.highlights .card>p:not(.feature-label){margin:0 0 10px}.highlights .points{font-size:15px}
 .mini-features{margin:24px 0 40px}.mini-feature h3{font-size:20px}.mini-feature>p:not(.feature-label){margin:0 0 12px}.mini-feature .points{font-size:15px}
 .swatches{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;padding:0;font-size:13px}
 .swatches li{display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
@@ -368,7 +379,13 @@ section[id]{scroll-margin-top:64px}
 """
 
 
-def head(title: str, depth: int, draft: bool, style: str, extra: str = "", lang: str = "ja") -> str:
+def stylesheet_href(name: str, css: str, up: str = "") -> str:
+    """同一オリジンの CSS へのリンク。中身が変わったらキャッシュを使わないよう、中身のハッシュを ?v= に付ける"""
+    return f"{up}assets/{name}?v={hashlib.sha256(css.encode('utf-8')).hexdigest()[:10]}"
+
+
+def head(title: str, depth: int, draft: bool, stylesheet: str, extra: str = "", lang: str = "ja") -> str:
+    """stylesheet は stylesheet_href で作った、ページの場所から見た CSS の相対パス"""
     robots = '<meta name="robots" content="noindex">' if draft else ""
     up = "../" * depth
     return f"""<!doctype html>
@@ -384,7 +401,7 @@ def head(title: str, depth: int, draft: bool, style: str, extra: str = "", lang:
 <link rel="icon" href="{up}assets/icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="{up}assets/icon-180.png">
 {extra}
-<style>{style}</style>
+<link rel="stylesheet" href="{html.escape(stylesheet, quote=True)}">
 </head>
 """
 
@@ -419,7 +436,8 @@ def alternates(values: dict) -> str:
     base = values["base_url"]
     links = [f'<link rel="alternate" hreflang="ja" href="{base}">']
     links += [f'<link rel="alternate" hreflang="{code}" href="{base}{lang["dir"]}/">' for code, lang in LANGS.items()]
-    links.append(f'<link rel="alternate" hreflang="x-default" href="{base}">')
+    # 日本語以外の言語の人には英語のページを（日本語の人は hreflang="ja" で日本語のページへ）
+    links.append(f'<link rel="alternate" hreflang="x-default" href="{base}en/">')
     return "\n".join(links)
 
 
@@ -430,6 +448,11 @@ def app_store_url(values: dict, country: str = "") -> str:
     if not app_id or not APP_STORE_URL.match(url):
         raise BuildError(f"site.json の app_store_id の形が正しくありません: {app_id}")
     return url
+
+
+# OGP の画像（assets/ogp.jpg。全言語で同じ日本語の画像）の説明
+OGP_ALT_JA = "沼ろくのアイコンと「推しに使ったお金、ぜんぶ思い出に。」の文字。横にホーム画面（10月に推しに使った金額 23,020円、推しごとの内訳）"
+OGP_ALT_EN = "Numaroku app icon with its Japanese tagline, next to the Home screen showing ¥23,020 spent on oshis in October and the breakdown per oshi"
 
 
 def intl_top_head(body: str, lang: str, values: dict) -> str:
@@ -449,6 +472,11 @@ def intl_top_head(body: str, lang: str, values: dict) -> str:
 <meta property="og:description" content="{d}">
 <meta property="og:url" content="{base}">
 <meta property="og:image" content="{values['base_url']}assets/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{html.escape(OGP_ALT_EN, quote=True)}">
+<meta property="og:locale" content="{names['og']}">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="apple-itunes-app" content="app-id={html.escape(str(values['app_store_id']), quote=True)}">"""
 
 
@@ -476,7 +504,7 @@ def page(title: str, body: str, depth: int, draft: bool, values: dict, lang: str
                f'<a href="{up}en/" lang="en">English</a></span>')
         footer = f'<ul class="langs">{language_links(up)}</ul>沼ろく — 推し活の支出記録<br>{html.escape(values.get("copyright", ""))}'
         page_title = f"{title}｜沼ろく"
-    return head(page_title, depth, draft, STYLE, extra, lang=lang) + f"""<body>
+    return head(page_title, depth, draft, stylesheet_href("site.css", site_css(), "../" * depth), extra, lang=lang) + f"""<body>
 {banner}
 <header><nav>{nav}</nav></header>
 <main>
@@ -514,13 +542,24 @@ def fill_template(template: str, text_values: dict, html_values: dict) -> str:
 
 
 def features_html(features: list) -> str:
-    """画像のある機能は左右交互の大きな並び、画像のない機能（image が空）は最後にカードとして並べる"""
-    out, cards = [], []
+    """画像のある機能は左右交互の大きな並び、画像のない機能（image が空）は最後にカードとして並べる。
+    "layout": "highlight" の機能は、欄の最初に3列のカードとして並べる（見せるときモードなど、推し活ならではの小さな機能）"""
+    out, cards, highlights = [], [], []
     for f in features:
         points = []
         for p in f["points"]:
             label = f'<span class="premium"><span class="vh">：</span>{html.escape(p["premium"])}</span>' if p.get("premium") else ""
             points.append(f"<li>{html.escape(p['text'])}{label}</li>")
+        if f.get("layout") == "highlight":
+            if f.get("image"):
+                raise BuildError(f"landing_features.json: highlight の機能（{f['id']}）には画像を付けません")
+            point_list = f'\n<ul class="points">{"".join(points)}</ul>' if points else ""
+            highlights.append(f"""<li class="card" id="feature-{html.escape(f['id'], quote=True)}">
+<p class="feature-label">{html.escape(f['eyebrow'])}</p>
+<h3>{html.escape(f['title'])}</h3>
+<p>{html.escape(f['lead'])}</p>{point_list}
+</li>""")
+            continue
         if not f.get("image"):
             cards.append(f"""<li class="card mini-feature" id="feature-{html.escape(f['id'], quote=True)}">
 <p class="feature-label">{html.escape(f['eyebrow'])}</p>
@@ -541,6 +580,8 @@ def features_html(features: list) -> str:
 </article>""")
     if cards:
         out.append(f'<ul class="cards two mini-features">{"".join(cards)}</ul>')
+    if highlights:
+        out.insert(0, f'<ul class="cards three highlights">{"".join(highlights)}</ul>')
     return "\n".join(out)
 
 
@@ -552,8 +593,23 @@ def swatches_html(swatches) -> str:
     for name, color in swatches:
         if not re.match(r"^#[0-9A-Fa-f]{6}$", color):
             raise BuildError(f"推し色の見本の色の形が正しくありません: {color}")
-        items.append(f'<li style="--c:{color}">{html.escape(name)}</li>')
+        items.append(f'<li class="sw-{color[1:].lower()}">{html.escape(name)}</li>')
     return f'\n<ul class="swatches" aria-label="選べる推し色（12色）の一部">{"".join(items)}</ul>'
+
+
+def site_css() -> str:
+    """文章のページ（サポート・規約など）の CSS（assets/site.css）"""
+    return STYLE.lstrip()
+
+
+def landing_css(features: list) -> str:
+    """紹介ページの CSS（assets/landing.css）。推し色の見本の色は、style 属性ではなくクラスで渡す"""
+    colors = sorted({color.lower() for f in features for _, color in (f.get("swatches") or [])})
+    for color in colors:
+        if not re.match(r"^#[0-9a-f]{6}$", color):
+            raise BuildError(f"推し色の見本の色の形が正しくありません: {color}")
+    swatches = "".join(f".sw-{c[1:]}{{--c:{c}}}" for c in colors)
+    return LANDING_STYLE.lstrip() + "/* 推し色の見本 */\n" + swatches + "\n"
 
 
 def faq_html(questions: list, support_text: str) -> str:
@@ -599,6 +655,7 @@ def landing(values: dict, support_text: str, draft: bool) -> str:
 <meta property="og:image" content="{base}assets/ogp.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{html.escape(OGP_ALT_JA, quote=True)}">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#2a1f4f" media="(prefers-color-scheme: light)">
@@ -613,8 +670,8 @@ def landing(values: dict, support_text: str, draft: bool) -> str:
         "features_html": features_html(features),
         "faq_html": faq_html(values["landing_faq"], support_text),
     })
-    banner_html = '<div class="draft" style="background:#fff1a8;color:#3d3300;padding:10px 16px;text-align:center;font-weight:700;font-size:14px">下書き：公開前に黄色の箇所を埋めてください</div>' if draft else ""
-    return head("沼ろく｜推し活の支出記録アプリ", 0, draft, LANDING_STYLE, extra) + f"<body>\n{banner_html}\n{body}\n{footer_html('', values)}\n</body>\n</html>\n"
+    banner_html = '<div class="draft">下書き：公開前に黄色の箇所を埋めてください</div>' if draft else ""
+    return head("沼ろく｜推し活の支出記録アプリ", 0, draft, stylesheet_href("landing.css", landing_css(features)), extra) + f"<body>\n{banner_html}\n{body}\n{footer_html('', values)}\n</body>\n</html>\n"
 
 
 def check_prices(values: dict, tokushoho: str):
@@ -702,16 +759,80 @@ def assets() -> dict[str, bytes]:
     return out
 
 
+# ---- 検索エンジン向け（sitemap.xml・robots.txt） ----
+
+SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+XHTML_NS = "http://www.w3.org/1999/xhtml"
+
+
+def page_url(base: str, target: str) -> str:
+    """出力先（en/support/index.html）→ 公開 URL（…/en/support/）"""
+    return base + target.removesuffix("index.html")
+
+
+def sitemap(outputs: dict, values: dict) -> str:
+    """すべてのページの URL。各言語に同じページがあるもの（トップ・サポート・規約・ポリシー）は hreflang で互いを示す。
+    x-default は英語（ページの <link rel="alternate"> と同じ考え方）。lastmod は入れない（出力を毎回同じにするため）"""
+    base = values["base_url"]
+    pages = sorted(name for name in outputs if name.endswith(".html"))
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             f'<urlset xmlns="{SITEMAP_NS}" xmlns:xhtml="{XHTML_NS}">']
+    for target in pages:
+        lines.append(f"<url><loc>{html.escape(page_url(base, target))}</loc>")
+        lang_dir = target.split("/")[0]
+        rest = target[len(lang_dir) + 1:] if lang_dir in LANG_OF_DIR else target
+        group = {"ja": rest} | {code: f"{lang['dir']}/{rest}" for code, lang in LANGS.items()}
+        if all(t in outputs for t in group.values()):
+            for code, t in group.items():
+                lines.append(f'<xhtml:link rel="alternate" hreflang="{code}" href="{html.escape(page_url(base, t))}"/>')
+            lines.append(f'<xhtml:link rel="alternate" hreflang="x-default" href="{html.escape(page_url(base, group["en"]))}"/>')
+        lines.append("</url>")
+    lines.append("</urlset>")
+    return "\n".join(lines) + "\n"
+
+
+def robots(values: dict, draft: bool) -> str:
+    """GitHub Pages のプロジェクトサイト（/numaroku-site/）では、検索エンジンはドメインの一番上の /robots.txt しか読まない。
+    ここに置くのは、ホスティングを移したときにそのまま使えるようにするため（サイトマップは Search Console で別に知らせる）"""
+    if draft:
+        return "User-agent: *\nDisallow: /\n"
+    return f"User-agent: *\nAllow: /\n\nSitemap: {values['base_url']}sitemap.xml\n"
+
+
+def audit_sitemap(content: str, outputs: dict, values: dict):
+    """sitemap.xml の URL がすべて自分のサイトの実在するページで、すべてのページが載っていること"""
+    base = values["base_url"]
+    try:
+        root = ET.fromstring(content)
+    except ET.ParseError as error:
+        raise BuildError(f"sitemap.xml: XML として読めません（{error}）")
+    listed = set()
+    for url in root.findall(f"{{{SITEMAP_NS}}}url"):
+        links = [url.findtext(f"{{{SITEMAP_NS}}}loc") or ""]
+        links += [link.get("href") or "" for link in url.findall(f"{{{XHTML_NS}}}link")]
+        for link in links:
+            if not link.startswith(base):
+                raise BuildError(f"sitemap.xml: 自分のサイト以外の URL です: {link}")
+            target = link[len(base):] + "index.html"
+            if not link.endswith("/") or target not in outputs:
+                raise BuildError(f"sitemap.xml: ページがありません: {link}")
+        listed.add(links[0][len(base):] + "index.html")
+    missing = sorted(name for name in outputs if name.endswith(".html") and name not in listed)
+    if missing:
+        raise BuildError(f"sitemap.xml: 載っていないページがあります: {', '.join(missing)}")
+
+
 # ---- 出力した HTML の検査 ----
 
 class Audit(HTMLParser):
     """許していない要素・属性・リンク先・コメントを見つけたら止める（Markdown 側の検査をすり抜ける生の HTML のため）"""
-    FORBIDDEN = {"script", "iframe", "object", "embed", "form", "base", "frame", "frameset", "svg"}
+    # <style> も止める（CSS は assets/*.css だけ。CSP の style-src 'self' と合わせる）
+    FORBIDDEN = {"script", "iframe", "object", "embed", "form", "base", "frame", "frameset", "svg", "style"}
 
     def __init__(self, page_path: str, files: set[str], values: dict):
         super().__init__(convert_charrefs=True)
         self.page, self.files, self.values = page_path, files, values
-        self.csp, self.in_style = None, False
+        self.csp = None
 
     def error(self, message: str):
         raise BuildError(f"{self.page}: {message}")
@@ -724,21 +845,26 @@ class Audit(HTMLParser):
         if tag in self.FORBIDDEN:
             self.error(f"<{tag}> は使えません")
         if tag == "link" and "stylesheet" in (a.get("rel") or "").lower().split():
-            self.error("外部の CSS は使えません")
+            href = a.get("href") or ""
+            # 同じサイトの assets/ の、このビルドが作った CSS だけ（https:// で書いた自分のサイトも認めない）
+            if not re.match(r"^(\.\./)*assets/(site|landing)\.css\?v=[0-9a-f]{10}$", href):
+                self.error(f"許していない CSS です: {href}")
+        if tag == "img":
+            missing = [k for k in ("width", "height", "alt") if a.get(k) is None]
+            if missing:
+                self.error(f"<img> に {'・'.join(missing)} がありません（レイアウトのずれと読み上げのため）: {a.get('src')}")
         if tag == "meta" and a.get("http-equiv") is not None:
             if a["http-equiv"] != "Content-Security-Policy":
                 self.error(f'http-equiv="{a["http-equiv"]}" は使えません（refresh での移動などを防ぐ）')
             self.csp = a.get("content")
-        if tag == "style":
-            self.in_style = True
         if a.get("target") == "_blank":
             self.error('target="_blank" は使いません')
         for key, value in attrs:
             value = value or ""
             if key.startswith("on"):
                 self.error(f"{key} 属性は使えません")
-            if key == "style" and re.search(r"url\(|expression|@import", value, flags=re.I):
-                self.error("style 属性の中で外部を読み込めません")
+            if key == "style":
+                self.error("style 属性は使えません（CSP で 'unsafe-inline' を許していないため。クラスにする）")
             urls = []
             if key in {"href", "src", "poster", "cite", "background", "action", "formaction", "ping", "data", "manifest"}:
                 urls = [value]
@@ -748,14 +874,6 @@ class Audit(HTMLParser):
                 urls = [value]
             for url in urls:
                 self.check_url(url)
-
-    def handle_endtag(self, tag):
-        if tag == "style":
-            self.in_style = False
-
-    def handle_data(self, data):
-        if self.in_style and re.search(r"url\(|@import", data, flags=re.I):
-            self.error("<style> の中で外部を読み込めません")
 
     def check_url(self, url: str):
         if url.startswith("mailto:"):
@@ -784,7 +902,7 @@ class Audit(HTMLParser):
             self.error(f"許していないリンク先です: {url}")
         # 同じサイトの中：ページの場所から実在するファイルを確かめる
         base = self.page.rsplit("/", 1)[0] if "/" in self.page else ""
-        path = url.split("#")[0]
+        path = url.split("#")[0].split("?")[0]
         parts = [p for p in (base.split("/") if base else [])]
         for p in path.split("/"):
             if p in ("", "."):
@@ -802,10 +920,25 @@ class Audit(HTMLParser):
             self.error(f"リンク先のファイルがありません: {url}（{target}）")
 
 
-def audit(outputs: dict[str, bytes | str], values: dict):
+def audit(outputs: dict[str, bytes | str], values: dict, draft: bool = False):
     files = set(outputs)
     for name, content in outputs.items():
-        if not name.endswith(".html"):
+        suffix = Path(name).suffix
+        if suffix not in ALLOWED_SUFFIXES:
+            raise BuildError(f"{name}: 置けない種類のファイルです")
+        if suffix in {".css", ".xml", ".txt"} and name not in GENERATED_TEXT_FILES:
+            raise BuildError(f"{name}: このビルドが作る決まったファイル以外の .css・.xml・.txt は置けません")
+        if suffix == ".css":
+            m = CSS_FORBIDDEN.search(content)
+            if m:
+                raise BuildError(f"{name}: CSS に使えないもの（{m.group(0)}）があります（外部の読み込み・エスケープは使わない）")
+            if UNRESOLVED.search(content):
+                raise BuildError(f"{name}: 【】・TODO・要確認 が残っています")
+        if name == "sitemap.xml":
+            audit_sitemap(content, outputs, values)
+        if name == "robots.txt" and content != robots(values, draft):
+            raise BuildError("robots.txt: 決まった中身と違います")
+        if suffix != ".html":
             continue
         checker = Audit(name, files, values)
         checker.feed(content)
@@ -860,8 +993,13 @@ def main() -> int:
             outputs[target] = page(title, body, depth, draft=bool(left), values=values, lang=lang)
         check_prices(values, tokushoho_text)
         outputs["index.html"] = landing(values, support_text, draft=bool(problems))
+        features = json.loads((ROOT / "src" / "landing_features.json").read_text(encoding="utf-8"))
+        outputs["assets/site.css"] = site_css()
+        outputs["assets/landing.css"] = landing_css(features)
         outputs.update(assets())
-        audit(outputs, values)
+        outputs["sitemap.xml"] = sitemap(outputs, values)
+        outputs["robots.txt"] = robots(values, draft=not release)
+        audit(outputs, values, draft=not release)
     except BuildError as error:
         print(f"止めました: {error}")
         return 1
@@ -875,7 +1013,8 @@ def main() -> int:
         # 今回作らなかったファイルが docs/ に残っていたら止める（消すのは人が確かめてから）
         stale = sorted(str(p.relative_to(dist)) for p in dist.rglob("*")
                        if p.is_file() and p.name != ".nojekyll" and str(p.relative_to(dist)) not in outputs)
-        odd = sorted(name for name in outputs if Path(name).suffix not in ALLOWED_SUFFIXES)
+        odd = sorted(name for name in outputs if Path(name).suffix not in ALLOWED_SUFFIXES
+                     or (Path(name).suffix in {".css", ".xml", ".txt"} and name not in GENERATED_TEXT_FILES))
         if stale or odd:
             for name in stale:
                 print(f"古いファイル: docs/{name}（今回は作っていません。確かめてから消してください）")

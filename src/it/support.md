@@ -52,6 +52,9 @@ Verifica che «Promemoria degli anniversari dell'oshi» sia attivo in Notifiche,
 ### Lo sviluppatore può vedere le mie voci?
 No. L'app non ha server dello sviluppatore e le tue voci non vengono mai inviate allo sviluppatore. Per i dettagli, consulta l'Informativa sulla privacy.
 
+### Dove vengono salvate le foto scattate con la fotocamera?
+Dalla versione 1.7 puoi fotografare scontrini e biglietti con «Scatta foto» nella schermata «Registra spesa». Le foto scattate non vengono salvate in Foto. Vengono salvate come foto della spesa su questo iPhone e nel tuo iCloud (se la sincronizzazione è attiva) e non vengono mai inviate allo sviluppatore. Anche la lettura di importo e data avviene solo sul tuo iPhone. Puoi modificare l'accesso alla fotocamera in Impostazioni → Numaroku → Fotocamera.
+
 ## Contatti
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

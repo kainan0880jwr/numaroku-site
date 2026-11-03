@@ -52,6 +52,9 @@ Prüfe, ob „Erinnerungen an Oshi-Jahrestage“ in den Einstellungen der App un
 ### Kann der Entwickler meine Einträge sehen?
 Nein. Die App hat keine Server des Entwicklers, und deine Einträge werden nie an den Entwickler gesendet. Details findest du in der Datenschutzerklärung.
 
+### Wo werden mit der Kamera aufgenommene Fotos gespeichert?
+Ab Version 1.7 kannst du Belege und Tickets mit „Foto aufnehmen“ auf dem Bildschirm „Ausgabe erfassen“ fotografieren. Aufgenommene Fotos werden nicht in „Fotos“ gesichert. Sie werden als Fotos der Ausgabe auf diesem iPhone und in deiner iCloud (wenn die Synchronisierung an ist) gespeichert und nie an den Entwickler gesendet. Auch das Lesen von Betrag und Datum aus dem Foto geschieht nur auf deinem iPhone. Den Kamerazugriff änderst du in der Einstellungen-App → Numaroku → Kamera.
+
 ## Kontakt
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

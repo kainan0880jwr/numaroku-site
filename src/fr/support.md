@@ -52,6 +52,9 @@ Vérifie que « Rappels d'anniversaires de l'oshi » est activé dans Notificati
 ### Le développeur peut-il voir mes entrées ?
 Non. L'app n'a aucun serveur du développeur, et tes entrées ne sont jamais envoyées au développeur. Pour en savoir plus, consulte la Politique de confidentialité.
 
+### Où sont enregistrées les photos prises avec l'appareil photo ?
+Depuis la version 1.7, tu peux photographier tickets et billets avec « Prendre une photo » sur l'écran « Noter une dépense ». Les photos prises ne sont pas enregistrées dans Photos. Elles sont enregistrées comme photos de la dépense sur cet iPhone et dans ton iCloud (si la synchro est activée), et ne sont jamais envoyées au développeur. La lecture du montant et de la date se fait aussi uniquement sur ton iPhone. Tu peux modifier l'accès à l'appareil photo dans Réglages → Numaroku → Appareil photo.
+
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

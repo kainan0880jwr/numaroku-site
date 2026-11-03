@@ -52,6 +52,9 @@ Verifique se "Lembretes de datas do oshi" está ativado em Notificações, nos A
 ### O desenvolvedor pode ver meus registros?
 Não. O app não tem servidores do desenvolvedor, e seus registros nunca são enviados ao desenvolvedor. Veja a Política de Privacidade para mais detalhes.
 
+### Onde ficam as fotos que tiro com a câmera?
+A partir da versão 1.7, você pode fotografar recibos e ingressos com "Tirar foto" na tela "Registrar gasto". As fotos tiradas não são salvas no app Fotos. Elas ficam salvas como fotos do gasto neste iPhone e no seu iCloud (se a sincronização estiver ativada) e nunca são enviadas ao desenvolvedor. A leitura do valor e da data também acontece só no seu iPhone. Você pode mudar o acesso à câmera em Ajustes → Numaroku → Câmera.
+
 ## Contato
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

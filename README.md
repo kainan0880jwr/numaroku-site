@@ -29,5 +29,8 @@ iPhone アプリ「沼ろく」の紹介ページと、サポート・利用規�
 - 紹介ページに載せるのは、App Store で公開済みのバージョンの機能だけ。画像も公開済みのバージョンで撮った画面だけ（`tools/make_images.sh` の元の画像）
 - 料金・無料体験は `site.json` と `src/tokushoho.md` を同じ日に直す（違えば `--release` が止まる）。App Store Connect で価格やオファーを変えたら、サイトも同じ日に直す
 - CSP・外部リンクの許可先・ファイルの種類は `build.py` の定数で決めている。`--release` は、出力したすべての HTML を読み直して、`<script>`・HTML のコメント・許していないリンク先・無いファイルへのリンク・画像のメタデータがあれば止まる
+- CSS は `build.py` の `STYLE`（文章のページ → `assets/site.css`）と `LANDING_STYLE`（紹介ページ → `assets/landing.css`）に書き、同一オリジンのファイルとして出す。CSP は `style-src 'self'`（`'unsafe-inline'` なし）なので、`<style>` と `style` 属性は使えない（検査で止まる）。CSS に `url(`・`@import`・`\` があっても止まる
+- `sitemap.xml`（hreflang 付き。x-default は英語）と `robots.txt` も作る。ただし GitHub Pages のプロジェクトサイトでは、検索エンジンはドメインの一番上の `/robots.txt` しか読まないので、サイトマップを知らせるには Search Console に登録する（運営者が行う）
+- 紹介ページの機能の欄の最初に並ぶ小さなカードは、`src/landing_features.json` の `"layout": "highlight"` の項目
 - `docs/` に今回作っていないファイルが残っていると止まる。消すのは確かめてから人が行う
 

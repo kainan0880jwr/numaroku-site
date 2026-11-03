@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kainan0880jwr.github.io/numaroku-site/sitemap.xml

@@ -53,7 +53,7 @@ Check that "Oshi anniversary reminders" is on under Notifications in the app's S
 No. The app has no developer servers, and your records are never sent to the developer. See the Privacy Policy for details.
 
 ### Where are photos I take with the camera saved?
-From version 1.7, you can photograph receipts and tickets with "Take Photo" on the Log Spending screen. From version 1.8, you can also use "Scan Receipt" on that screen or from Control Center, Siri and similar. Photos taken with "Just Read Receipt" are not saved after the amount and date are read. Photos you take are not saved to Photos (your camera roll). They are saved as photos attached to the expense, on this iPhone and in your iCloud (when sync is on). They are never sent to the developer. Reading the amount and date from a photo also happens only on your iPhone. You can change camera access in the iPhone Settings app → Numaroku → Camera.
+From version 1.7, you can photograph receipts and tickets with "Take Photo" on the Log Spending screen. From version 1.8, you can also use "Scan Receipt" on that screen or from Control Center, Siri or similar. Photos taken with "Just Read Receipt" are not saved after the amount and date are read. Photos you take are not saved to Photos (your camera roll). They are saved as photos attached to the expense, on this iPhone and in your iCloud (when sync is on). They are never sent to the developer. Reading the amount and date from a photo also happens only on your iPhone. You can change camera access in the iPhone Settings app → Numaroku → Camera.
 
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

@@ -9,7 +9,7 @@ Gratis para empezar (con compras dentro de la app). Sin anuncios. Oshis ilimitad
 ## Funciones
 
 ### Registra en segundos
-El teclado numérico se abre al instante. Escribe el importe y elige a tu oshi. Divide una compra entre varios oshis y deja que los gastos recurrentes, como las cuotas del club de fans, se registren solos. También puedes abrir la pantalla de registro desde el Centro de control, el botón de acción o Siri.
+El teclado numérico se abre al instante. Escribe el importe y elige a tu oshi. Divide una compra entre varios oshis y deja que los gastos recurrentes, como las cuotas del club de fans, se registren solos. También puedes abrir la pantalla de registro desde el centro de control, el botón de acción o Siri.
 
 ### El total de todos tus oshis
 Totales de este mes y de este año, con gráficas por oshi y por categoría. Los «días como fan» aparecen en Inicio y en los widgets, y los presupuestos te avisan al 80 % y al 100 %.

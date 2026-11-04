@@ -53,7 +53,7 @@ Pastikan "Pengingat hari spesial oshi" aktif di bagian Notifikasi pada Pengatura
 Tidak. Aplikasi tidak punya server pengembang, dan catatanmu tidak pernah dikirim ke pengembang. Lihat Kebijakan Privasi untuk detailnya.
 
 ### Di mana foto yang diambil dengan kamera disimpan?
-Mulai versi 1.7, kamu bisa memotret struk dan tiket dengan "Ambil Foto" di layar "Catat pengeluaran". Foto yang diambil tidak disimpan ke Foto. Foto disimpan sebagai foto pengeluaran di iPhone ini dan iCloud kamu (jika sinkronisasi aktif), dan tidak pernah dikirim ke pengembang. Pembacaan jumlah dan tanggal dari foto juga hanya terjadi di iPhone kamu. Kamu bisa mengubah akses kamera di Pengaturan → Numaroku → Kamera.
+Mulai versi 1.7, kamu bisa memotret struk dan tiket dengan "Ambil Foto" di layar "Catat pengeluaran". Mulai versi 1.8, kamu juga bisa memakai "Pindai struk", atau "Foto struk" dari Pusat Kontrol, Siri, dan sejenisnya. Foto yang diambil dengan "Baca struk saja" tidak disimpan setelah jumlah dan tanggal dibaca. Foto yang diambil tidak disimpan ke Foto. Foto disimpan sebagai foto pengeluaran di iPhone ini dan iCloud kamu (jika sinkronisasi aktif), dan tidak pernah dikirim ke pengembang. Pembacaan jumlah dan tanggal dari foto juga hanya terjadi di iPhone kamu. Kamu bisa mengubah akses kamera di Pengaturan → Numaroku → Kamera.
 
 ## Kontak
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

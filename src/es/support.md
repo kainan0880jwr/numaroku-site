@@ -53,7 +53,7 @@ Comprueba que «Avisos de aniversarios del oshi» está activado en Avisos, dent
 No. La app no tiene servidores del desarrollador y tus registros nunca se envían al desarrollador. Consulta la Política de privacidad para más detalles.
 
 ### ¿Dónde se guardan las fotos que tomo con la cámara?
-Desde la versión 1.7 puedes fotografiar recibos y entradas con «Tomar foto» en la pantalla «Registrar gasto». Las fotos que tomes no se guardan en Fotos. Se guardan como fotos del gasto en este iPhone y en tu iCloud (si la sincronización está activada), y nunca se envían al desarrollador. La lectura del importe y la fecha también se hace solo en tu iPhone. Puedes cambiar el acceso a la cámara en Ajustes → Numaroku → Cámara.
+Desde la versión 1.7 puedes fotografiar recibos y entradas con «Tomar foto» en la pantalla «Registrar gasto». Desde la versión 1.8 también puedes usar «Escanear ticket» o «Fotografiar ticket» desde el Centro de control, Siri y similares. Las fotos tomadas con «Solo leer el ticket» no se guardan después de leer el importe y la fecha. Las fotos que tomes no se guardan en Fotos. Se guardan como fotos del gasto en este iPhone y en tu iCloud (si la sincronización está activada), y nunca se envían al desarrollador. La lectura del importe y la fecha también se hace solo en tu iPhone. Puedes cambiar el acceso a la cámara en Ajustes → Numaroku → Cámara.
 
 ## Contacto
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

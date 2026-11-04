@@ -53,7 +53,7 @@ Hãy kiểm tra rằng "Nhắc ngày kỷ niệm của oshi" đang bật trong m
 Không. Ứng dụng không có máy chủ của nhà phát triển, và dữ liệu của bạn không bao giờ được gửi cho nhà phát triển. Xem Chính sách quyền riêng tư để biết thêm chi tiết.
 
 ### Ảnh chụp bằng camera được lưu ở đâu?
-Từ phiên bản 1.7, bạn có thể chụp hóa đơn và vé bằng "Chụp ảnh" trên màn hình "Ghi chi tiêu". Ảnh chụp không được lưu vào ứng dụng Ảnh. Ảnh được lưu như ảnh đính kèm khoản chi trên iPhone này và iCloud của bạn (khi bật đồng bộ), và không bao giờ được gửi cho nhà phát triển. Việc đọc số tiền và ngày từ ảnh cũng chỉ diễn ra trên iPhone của bạn. Bạn có thể đổi quyền camera trong Cài đặt → Numaroku → Camera.
+Từ phiên bản 1.7, bạn có thể chụp hóa đơn và vé bằng "Chụp ảnh" trên màn hình "Ghi chi tiêu". Từ phiên bản 1.8, bạn cũng có thể dùng "Quét hóa đơn", hoặc "Chụp hóa đơn" từ Trung tâm điều khiển, Siri và các cách tương tự. Ảnh chụp bằng "Chỉ đọc hóa đơn" không được lưu sau khi đã đọc số tiền và ngày. Ảnh chụp không được lưu vào ứng dụng Ảnh. Ảnh được lưu như ảnh đính kèm khoản chi trên iPhone này và iCloud của bạn (khi bật đồng bộ), và không bao giờ được gửi cho nhà phát triển. Việc đọc số tiền và ngày từ ảnh cũng chỉ diễn ra trên iPhone của bạn. Bạn có thể đổi quyền camera trong Cài đặt → Numaroku → Camera.
 
 ## Liên hệ
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

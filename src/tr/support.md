@@ -53,7 +53,7 @@ Uygulamanın Ayarlar'ında Bildirimler altındaki "Oshi yıl dönümü hatırlat
 Hayır. Uygulamanın geliştiriciye ait sunucusu yoktur ve kayıtların asla geliştiriciye gönderilmez. Ayrıntılar için Gizlilik Politikası'na bak.
 
 ### Kamerayla çektiğim fotoğraflar nereye kaydedilir?
-Sürüm 1.7'den itibaren "Harcama ekle" ekranındaki "Fotoğraf çek" ile fiş ve biletlerin fotoğrafını çekebilirsin. Çektiğin fotoğraflar Fotoğraflar'a kaydedilmez. Harcamaya eklenen fotoğraf olarak bu iPhone'da ve iCloud'unda (eşzamanlama açıksa) saklanır, geliştiriciye asla gönderilmez. Tutar ve tarihin okunması da yalnızca iPhone'unda yapılır. Kamera erişimini Ayarlar → Numaroku → Kamera'dan değiştirebilirsin.
+Sürüm 1.7'den itibaren "Harcama ekle" ekranındaki "Fotoğraf çek" ile fiş ve biletlerin fotoğrafını çekebilirsin. Sürüm 1.8'den itibaren "Fişi tara"yı veya Denetim Merkezi, Siri ve benzeri yollarla "Fişi çek"i de kullanabilirsin. "Fişi yalnızca oku" ile çekilen fotoğraflar, tutar ve tarih okunduktan sonra kaydedilmez. Çektiğin fotoğraflar Fotoğraflar'a kaydedilmez. Harcamaya eklenen fotoğraf olarak bu iPhone'da ve iCloud'unda (eşzamanlama açıksa) saklanır, geliştiriciye asla gönderilmez. Tutar ve tarihin okunması da yalnızca iPhone'unda yapılır. Kamera erişimini Ayarlar → Numaroku → Kamera'dan değiştirebilirsin.
 
 ## İletişim
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

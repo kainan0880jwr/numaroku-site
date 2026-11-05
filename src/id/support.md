@@ -55,6 +55,9 @@ Tidak. Aplikasi tidak punya server pengembang, dan catatanmu tidak pernah dikiri
 ### Di mana foto yang diambil dengan kamera disimpan?
 Mulai versi 1.7, kamu bisa memotret struk dan tiket dengan "Ambil Foto" di layar "Catat pengeluaran". Mulai versi 1.8, kamu juga bisa memakai "Pindai struk", atau "Foto struk" dari Pusat Kontrol, Siri, dan sejenisnya. Foto yang diambil dengan "Baca struk saja" tidak disimpan setelah jumlah dan tanggal dibaca. Foto yang diambil tidak disimpan ke Foto. Foto disimpan sebagai foto pengeluaran di iPhone ini dan iCloud kamu (jika sinkronisasi aktif), dan tidak pernah dikirim ke pengembang. Pembacaan jumlah dan tanggal dari foto juga hanya terjadi di iPhone kamu. Kamu bisa mengubah akses kamera di Pengaturan → Numaroku → Kamera.
 
+### Bagaimana cara mencatat dari tangkapan layar?
+Buka tangkapan layar e-tiket atau konfirmasi pesanan online, ketuk tombol Bagikan, lalu pilih Numaroku. Ketuk notifikasi atau buka Numaroku untuk melihat layar pencatatan dengan saran jumlah dan tanggal. Periksa saran sebelum menggunakannya. Pembacaan hanya terjadi di iPhone Anda. Jika Numaroku tidak terlihat, cari di "Lainnya" di ujung daftar.
+
 ## Kontak
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

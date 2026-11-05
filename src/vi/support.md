@@ -55,6 +55,9 @@ Không. Ứng dụng không có máy chủ của nhà phát triển, và dữ li
 ### Ảnh chụp bằng camera được lưu ở đâu?
 Từ phiên bản 1.7, bạn có thể chụp hóa đơn và vé bằng "Chụp ảnh" trên màn hình "Ghi chi tiêu". Từ phiên bản 1.8, bạn cũng có thể dùng "Quét hóa đơn", hoặc "Chụp hóa đơn" từ Trung tâm điều khiển, Siri và các cách tương tự. Ảnh chụp bằng "Chỉ đọc hóa đơn" không được lưu sau khi đã đọc số tiền và ngày. Ảnh chụp không được lưu vào ứng dụng Ảnh. Ảnh được lưu như ảnh đính kèm khoản chi trên iPhone này và iCloud của bạn (khi bật đồng bộ), và không bao giờ được gửi cho nhà phát triển. Việc đọc số tiền và ngày từ ảnh cũng chỉ diễn ra trên iPhone của bạn. Bạn có thể đổi quyền camera trong Cài đặt → Numaroku → Camera.
 
+### Làm sao để ghi chép từ ảnh chụp màn hình?
+Mở ảnh chụp màn hình vé điện tử hoặc xác nhận đơn hàng, chạm nút Chia sẻ rồi chọn Numaroku. Chạm vào thông báo hoặc mở Numaroku để thấy màn hình ghi chép với số tiền và ngày được gợi ý. Hãy kiểm tra gợi ý trước khi dùng. Việc đọc chỉ diễn ra trên iPhone của bạn. Nếu không thấy Numaroku, hãy tìm trong "Thêm" ở cuối danh sách.
+
 ## Liên hệ
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

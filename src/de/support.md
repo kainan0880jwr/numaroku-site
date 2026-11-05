@@ -55,6 +55,9 @@ Nein. Die App hat keine Server des Entwicklers, und deine Einträge werden nie a
 ### Wo werden mit der Kamera aufgenommene Fotos gespeichert?
 Ab Version 1.7 kannst du Belege und Tickets mit „Foto aufnehmen“ auf dem Bildschirm „Ausgabe erfassen“ fotografieren. Ab Version 1.8 geht das auch mit „Beleg scannen“ oder mit „Beleg fotografieren“ über das Kontrollzentrum, Siri und Ähnliches. Mit „Beleg nur lesen“ aufgenommene Fotos werden nicht gespeichert, nachdem Betrag und Datum gelesen wurden. Aufgenommene Fotos werden nicht in „Fotos“ gesichert. Sie werden als Fotos der Ausgabe auf diesem iPhone und in deiner iCloud (wenn die Synchronisierung an ist) gespeichert und nie an den Entwickler gesendet. Auch das Lesen von Betrag und Datum aus dem Foto geschieht nur auf deinem iPhone. Den Kamerazugriff änderst du in der Einstellungen-App → Numaroku → Kamera.
 
+### Wie erfasse ich eine Ausgabe aus einem Screenshot?
+Öffnen Sie einen Screenshot eines E-Tickets oder einer Bestellbestätigung, tippen Sie auf „Teilen“ und wählen Sie Numaroku. Tippen Sie auf die Mitteilung oder öffnen Sie Numaroku: Der Eingabebildschirm zeigt den vorgeschlagenen Betrag und das Datum. Bitte prüfen Sie den Vorschlag, bevor Sie ihn übernehmen. Das Lesen erfolgt nur auf Ihrem iPhone. Wenn Sie Numaroku nicht finden, sehen Sie am Ende der Liste unter „Mehr“ nach.
+
 ## Kontakt
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

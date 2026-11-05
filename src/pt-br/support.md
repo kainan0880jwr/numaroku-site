@@ -55,6 +55,9 @@ Não. O app não tem servidores do desenvolvedor, e seus registros nunca são en
 ### Onde ficam as fotos que tiro com a câmera?
 A partir da versão 1.7, você pode fotografar recibos e ingressos com "Tirar foto" na tela "Registrar gasto". A partir da versão 1.8, você também pode usar "Escanear recibo", ou "Fotografar recibo" pela Central de Controle, pela Siri e por meios semelhantes. As fotos tiradas com "Só ler o recibo" não são salvas depois que o valor e a data são lidos. As fotos tiradas não são salvas no app Fotos. Elas ficam salvas como fotos do gasto neste iPhone e no seu iCloud (se a sincronização estiver ativada) e nunca são enviadas ao desenvolvedor. A leitura do valor e da data também acontece só no seu iPhone. Você pode mudar o acesso à câmera em Ajustes → Numaroku → Câmera.
 
+### Como registro um gasto a partir de uma captura de tela?
+Abra a captura de tela de um ingresso eletrônico ou de uma confirmação de pedido, toque no botão Compartilhar e escolha Numaroku. Toque na notificação ou abra o Numaroku para ver a tela de registro com o valor e a data sugeridos. Confira a sugestão antes de usá-la. A leitura acontece somente no seu iPhone. Se não encontrar o Numaroku, procure em "Mais" no fim da lista.
+
 ## Contato
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

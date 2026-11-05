@@ -55,6 +55,9 @@ Non. L'app n'a aucun serveur du développeur, et tes entrées ne sont jamais env
 ### Où sont enregistrées les photos prises avec l'appareil photo ?
 Depuis la version 1.7, tu peux photographier tickets et billets avec « Prendre une photo » sur l'écran « Noter une dépense ». Depuis la version 1.8, tu peux aussi utiliser « Scanner un ticket », ou « Photographier un ticket » depuis le centre de contrôle, Siri et autres. Les photos prises avec « Lire le ticket seulement » ne sont pas enregistrées une fois le montant et la date lus. Les photos prises ne sont pas enregistrées dans Photos. Elles sont enregistrées comme photos de la dépense sur cet iPhone et dans ton iCloud (si la synchro est activée), et ne sont jamais envoyées au développeur. La lecture du montant et de la date se fait aussi uniquement sur ton iPhone. Tu peux modifier l'accès à l'appareil photo dans Réglages → Numaroku → Appareil photo.
 
+### Comment enregistrer une dépense à partir d'une capture d'écran ?
+Ouvrez la capture d'écran d'un billet électronique ou d'une confirmation de commande, touchez le bouton Partager et choisissez Numaroku. Touchez la notification ou ouvrez Numaroku pour voir l'écran de saisie avec le montant et la date proposés. Vérifiez la proposition avant de l'utiliser. La lecture se fait uniquement sur votre iPhone. Si vous ne trouvez pas Numaroku, regardez dans « Plus » à la fin de la liste.
+
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

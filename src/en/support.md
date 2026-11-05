@@ -55,6 +55,9 @@ No. The app has no developer servers, and your records are never sent to the dev
 ### Where are photos I take with the camera saved?
 From version 1.7, you can photograph receipts and tickets with "Take Photo" on the Log Spending screen. From version 1.8, you can also use "Scan Receipt" on that screen or from Control Center, Siri or similar. Photos taken with "Just Read Receipt" are not saved after the amount and date are read. Photos you take are not saved to Photos (your camera roll). They are saved as photos attached to the expense, on this iPhone and in your iCloud (when sync is on). They are never sent to the developer. Reading the amount and date from a photo also happens only on your iPhone. You can change camera access in the iPhone Settings app → Numaroku → Camera.
 
+### How do I record from a screenshot?
+Open a screenshot of an e-ticket or online order confirmation, tap the Share button, and choose Numaroku. Tap the notification or open Numaroku to see the entry screen with the suggested amount and date. Please check the suggestion before using it. Reading happens only on your iPhone. If you can't find Numaroku, look under "More" at the end of the share list.
+
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
 

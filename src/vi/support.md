@@ -8,7 +8,7 @@ Numaroku là ứng dụng iPhone để ghi lại và nhìn lại số tiền b�
 Nếu bạn đăng nhập iCloud bằng cùng một Tài khoản Apple, dữ liệu sẽ tự động đồng bộ sang iPhone mới. Nếu không dùng iCloud, trên iPhone cũ hãy xuất tệp bằng "Xuất CSV" trong Cài đặt → Sao lưu & dữ liệu, rồi nhập vào iPhone mới bằng "Nhập CSV" trên cùng màn hình (tệp CSV không bao gồm ảnh).
 
 ### Tôi có thể khôi phục dữ liệu lỡ xóa không?
-Ứng dụng tự động sao lưu. Trong Cài đặt → Sao lưu & dữ liệu, hãy chọn bản sao lưu tại thời điểm bạn muốn quay lại. Trạng thái ngay trước khi khôi phục cũng được giữ lại thành một bản sao lưu riêng.
+Ứng dụng tự động sao lưu mỗi tuần một lần và ngay trước khi khôi phục hoặc nhập dữ liệu (giữ 8 bản mới nhất). Trong Cài đặt → Sao lưu & dữ liệu, hãy chọn bản sao lưu tại thời điểm bạn muốn quay lại. Những gì bạn ghi hoặc thay đổi sau bản sao lưu đó sẽ không được khôi phục. Trạng thái ngay trước khi khôi phục cũng được giữ lại thành một bản sao lưu riêng.
 
 ### Làm sao để hủy Premium?
 Trong ứng dụng Cài đặt của iPhone → tên của bạn → Đăng ký. Xóa ứng dụng không hủy gói đăng ký. Gói mua một lần không tự gia hạn nên không có gì để hủy.
@@ -50,13 +50,13 @@ Có, trong Cài đặt → Tiền tệ. Đổi tiền tệ không quy đổi cá
 Hãy kiểm tra rằng "Nhắc ngày kỷ niệm của oshi" đang bật trong mục Thông báo ở phần Cài đặt của ứng dụng, và thông báo của Numaroku được cho phép trong ứng dụng Cài đặt của iPhone → Thông báo. Nhắc nhở được gửi lúc 9 giờ sáng.
 
 ### Nhà phát triển có xem được dữ liệu của tôi không?
-Không. Ứng dụng không có máy chủ của nhà phát triển, và dữ liệu của bạn không bao giờ được gửi cho nhà phát triển. Xem Chính sách quyền riêng tư để biết thêm chi tiết.
+Không. Ứng dụng không có máy chủ của nhà phát triển, và dữ liệu của bạn không bao giờ được gửi cho nhà phát triển. Nếu bạn viết nội dung dữ liệu vào email gửi cho chúng tôi hoặc đính kèm ảnh chụp màn hình, nhà phát triển chỉ thấy phần bạn gửi. Xem Chính sách quyền riêng tư để biết thêm chi tiết.
 
 ### Ảnh chụp bằng camera được lưu ở đâu?
 Từ phiên bản 1.7, bạn có thể chụp hóa đơn và vé bằng "Chụp ảnh" trên màn hình "Ghi chi tiêu". Từ phiên bản 1.8, bạn cũng có thể dùng "Quét hóa đơn", hoặc "Chụp hóa đơn" từ Trung tâm điều khiển, Siri và các cách tương tự. Ảnh chụp bằng "Chỉ đọc hóa đơn" không được lưu sau khi đã đọc số tiền và ngày. Ảnh chụp không được lưu vào ứng dụng Ảnh. Ảnh được lưu như ảnh đính kèm khoản chi trên iPhone này và iCloud của bạn (khi bật đồng bộ), và không bao giờ được gửi cho nhà phát triển. Việc đọc số tiền và ngày từ ảnh cũng chỉ diễn ra trên iPhone của bạn. Bạn có thể đổi quyền camera trong Cài đặt → Numaroku → Camera.
 
 ### Làm sao để ghi chép từ ảnh chụp màn hình?
-Mở ảnh chụp màn hình vé điện tử hoặc xác nhận đơn hàng, chạm nút Chia sẻ rồi chọn Numaroku. Chạm vào thông báo hoặc mở Numaroku để thấy màn hình ghi chép với số tiền và ngày được gợi ý. Hãy kiểm tra gợi ý trước khi dùng. Việc đọc chỉ diễn ra trên iPhone của bạn. Nếu không thấy Numaroku, hãy tìm trong "Thêm" ở cuối danh sách.
+Mở ảnh chụp màn hình vé điện tử hoặc xác nhận đơn hàng, chạm nút Chia sẻ rồi chọn Numaroku. Chạm vào thông báo hoặc mở Numaroku để thấy màn hình ghi chép với số tiền và ngày được gợi ý. Việc đọc không phải lúc nào cũng chính xác, vì vậy hãy kiểm tra gợi ý trước khi dùng. Việc đọc chỉ diễn ra trên iPhone của bạn. Nếu không thấy Numaroku, hãy tìm trong "Thêm" ở cuối danh sách.
 
 ## Liên hệ
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

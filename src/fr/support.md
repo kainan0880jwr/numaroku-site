@@ -8,7 +8,7 @@ Numaroku est une app iPhone pour noter et revoir l'argent que tu dépenses pour 
 Si tu es connecté à iCloud avec le même compte Apple, tes entrées se synchronisent automatiquement avec le nouvel iPhone. Si tu n'utilises pas iCloud, exporte un fichier sur l'ancien iPhone avec « Exporter en CSV » dans Réglages → Sauvegarde et données, puis importe-le sur le nouvel iPhone avec « Importer un CSV » sur le même écran (les fichiers CSV ne contiennent pas les photos).
 
 ### Puis-je récupérer des entrées supprimées par erreur ?
-L'app crée des sauvegardes automatiquement. Dans Réglages → Sauvegarde et données, choisis la sauvegarde du moment auquel tu veux revenir. L'état juste avant la restauration est aussi conservé dans une sauvegarde à part.
+L'app crée automatiquement des sauvegardes une fois par semaine et juste avant une restauration ou une importation (les 8 plus récentes sont conservées). Dans Réglages → Sauvegarde et données, choisis la sauvegarde du moment auquel tu veux revenir. Ce que tu as noté ou modifié après cette sauvegarde ne sera pas récupéré. L'état juste avant la restauration est aussi conservé dans une sauvegarde à part.
 
 ### Comment résilier Premium ?
 Dans l'app Réglages de l'iPhone → ton nom → Abonnements. Supprimer l'app ne résilie pas l'abonnement. L'achat unique ne se renouvelle pas, il n'y a donc rien à résilier.
@@ -50,13 +50,13 @@ Oui, dans Réglages → Devise. Changer de devise ne convertit pas tes entrées 
 Vérifie que « Rappels d'anniversaires de l'oshi » est activé dans Notifications, dans les Réglages de l'app, et que les notifications de Numaroku sont autorisées dans l'app Réglages de l'iPhone → Notifications. Les rappels arrivent à 9 h.
 
 ### Le développeur peut-il voir mes entrées ?
-Non. L'app n'a aucun serveur du développeur, et tes entrées ne sont jamais envoyées au développeur. Pour en savoir plus, consulte la Politique de confidentialité.
+Non. L'app n'a aucun serveur du développeur, et tes entrées ne sont jamais envoyées au développeur. Si tu écris le contenu de tes entrées dans un e-mail que tu nous envoies ou si tu y joins des captures d'écran, le développeur ne verra que ce que tu envoies. Pour en savoir plus, consulte la Politique de confidentialité.
 
 ### Où sont enregistrées les photos prises avec l'appareil photo ?
 Depuis la version 1.7, tu peux photographier tickets et billets avec « Prendre une photo » sur l'écran « Noter une dépense ». Depuis la version 1.8, tu peux aussi utiliser « Scanner un ticket », ou « Photographier un ticket » depuis le centre de contrôle, Siri et autres. Les photos prises avec « Lire le ticket seulement » ne sont pas enregistrées une fois le montant et la date lus. Les photos prises ne sont pas enregistrées dans Photos. Elles sont enregistrées comme photos de la dépense sur cet iPhone et dans ton iCloud (si la synchro est activée), et ne sont jamais envoyées au développeur. La lecture du montant et de la date se fait aussi uniquement sur ton iPhone. Tu peux modifier l'accès à l'appareil photo dans Réglages → Numaroku → Appareil photo.
 
 ### Comment enregistrer une dépense à partir d'une capture d'écran ?
-Ouvrez la capture d'écran d'un billet électronique ou d'une confirmation de commande, touchez le bouton Partager et choisissez Numaroku. Touchez la notification ou ouvrez Numaroku pour voir l'écran de saisie avec le montant et la date proposés. Vérifiez la proposition avant de l'utiliser. La lecture se fait uniquement sur votre iPhone. Si vous ne trouvez pas Numaroku, regardez dans « Plus » à la fin de la liste.
+Ouvrez la capture d'écran d'un billet électronique ou d'une confirmation de commande, touchez le bouton Partager et choisissez Numaroku. Touchez la notification ou ouvrez Numaroku pour voir l'écran de saisie avec le montant et la date proposés. La lecture n'est pas toujours exacte : vérifiez la proposition avant de l'utiliser. La lecture se fait uniquement sur votre iPhone. Si vous ne trouvez pas Numaroku, regardez dans « Plus » à la fin de la liste.
 
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

@@ -96,6 +96,10 @@ FIELDS = {
 }
 # ほかの言語の公開日（運営者の名前は英語と同じ表記を使う）
 FIELDS.update({f"published_{code}": f"【要記入：公開日（{code}）】" for code in LANGS if code != "en"})
+# 1.10 のポリシー改定日（1.10 が App Store で公開された日に site.json の revised_1_10・revised_1_10_<言語> を書く。
+# 書くまでは下書きも公開用も止まる＝公開前のポリシーを出さないための歯止め。2026-11-11 法務レビュー L-1・L-3・L-16・L-21）
+FIELDS["revised_1_10"] = "【要記入：1.10 の公開日】"
+FIELDS.update({f"revised_1_10_{code}": f"【要記入：1.10 の公開日（{code}）】" for code in LANGS})
 
 PENDING = re.compile(r"【(要記入|確認事項)[^】]*】")
 # 公開用で1つでも残っていたら止める印（【要記入】【確認事項】のほか、【メモ】など【】で書いた運営者向けの書き込みすべて）
@@ -202,6 +206,7 @@ def render(markdown: str, up: str = "") -> tuple[str, str]:
 
 
 STYLE = """
+@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}
 :root{--bg:#f7f5fb;--surface:#fff;--text:#1d1b26;--muted:#5d5870;--accent:#c23a73;--line:#e3dfeb;--mark:#fff1a8}
 @media (prefers-color-scheme:dark){:root{--bg:#121628;--surface:#1c1f36;--text:#ece9f5;--muted:#a9a4bd;--accent:#ff8fbd;--line:#2f3352;--mark:#6b5a00}}
 *{box-sizing:border-box}
@@ -225,158 +230,8 @@ footer{max-width:720px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font
 .langs{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0 0 12px;padding:0;list-style:none}
 """
 
-LANDING_STYLE = """
-:root{--bg:#f7f5fb;--band:#fff;--text:#1d1b26;--muted:#5d5870;--accent:#c23a73;--pink:#FF6FA3;--line:#e3dfeb;--card:#fff;--navy1:#2a1f4f;--navy2:#121628;--shadow:0 10px 30px rgba(42,31,79,.12)}
-@media (prefers-color-scheme:dark){:root{--bg:#121628;--band:#1a1e36;--text:#ece9f5;--muted:#b3aec7;--accent:#ff8fbd;--line:#2f3352;--card:#1f2340;--navy1:#1c1538;--navy2:#0b0e1c;--shadow:0 10px 30px rgba(0,0,0,.35)}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--accent)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
-.narrow{max-width:760px}
-.nb{display:inline-block}
-.skip{position:absolute;left:8px;top:8px;background:#fff;color:#1d1b26;padding:8px 14px;border-radius:8px;z-index:20;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.skip:focus{width:auto;height:auto;overflow:visible;clip-path:none}
-p,li{overflow-wrap:anywhere;text-wrap:pretty}
-.draft{background:#fff1a8;color:#3d3300;padding:10px 16px;text-align:center;font-weight:700;font-size:14px}
-.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-section[id]{scroll-margin-top:64px}
-/* ヘッダー */
-.site-header{position:sticky;top:0;z-index:10;background:rgba(18,22,40,.94);color:#fff}
-@supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){.site-header{background:rgba(18,22,40,.7);-webkit-backdrop-filter:saturate(1.4) blur(16px);backdrop-filter:saturate(1.4) blur(16px)}}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
-.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:19px}
-.brand img{border-radius:9px}
-.header-nav{display:flex;align-items:center;gap:20px;font-size:14px}
-.header-nav a{color:rgba(255,255,255,.88);text-decoration:none}
-@media (hover:hover){.header-nav a:hover{color:#fff}}
-.header-nav .nav-lang{border:1px solid rgba(255,255,255,.4);padding:5px 10px;border-radius:999px;min-height:32px;display:inline-flex;align-items:center}
-@media (max-width:359px){.header-nav{gap:10px;font-size:13px}.header-nav .nav-pricing{display:none}}
-.header-nav .nav-support{background:#fff;color:#1d1b26;padding:7px 14px;border-radius:999px;font-weight:700;min-height:36px;display:inline-flex;align-items:center}
-.header-nav .nav-support:focus-visible{outline-color:#ff8fbd}
-.support-band{background:#fff1f6;color:#5a1e3b;font-size:14px;padding:9px 0;line-height:1.6}
-.support-band a{color:#a8285f;font-weight:700}
-@media (prefers-color-scheme:dark){.support-band{background:#2a1830;color:#f7d9e6}.support-band a{color:#ff9cc6}}
-/* ヒーロー */
-.hero{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--navy1),var(--navy2) 70%);color:#fff;padding:56px 0 0}
-.glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px 320px at 12% 18%,rgba(255,111,163,.32),transparent 70%),radial-gradient(460px 360px at 88% 30%,rgba(74,144,226,.28),transparent 70%),radial-gradient(420px 300px at 55% 100%,rgba(155,107,255,.30),transparent 70%)}
-@media (prefers-reduced-motion:no-preference){.glow{animation:glow 9s ease-in-out infinite alternate}@keyframes glow{from{opacity:.75}to{opacity:1}}}
-.hero-inner{position:relative;display:grid;gap:40px;align-items:center}
-.eyebrow{display:inline-block;margin:0 0 14px;padding:4px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;font-size:13px;color:rgba(255,255,255,.9);letter-spacing:.04em}
-.eyebrow span{margin:0 6px;opacity:.6}
-.hero h1{margin:0 0 18px;font-size:clamp(32px,7.6vw,56px);line-height:1.28;letter-spacing:.02em;font-weight:800;text-wrap:balance}
-.lead{margin:0 0 26px;font-size:clamp(15px,2.2vw,18px);color:rgba(255,255,255,.86);max-width:34em}
-.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
-.soon{display:inline-flex;align-items:center;gap:8px;margin:0;padding:12px 20px;border:1.5px dashed rgba(255,255,255,.55);border-radius:14px;font-weight:700;color:#fff;cursor:default}
-.final .soon{border-color:rgba(255,255,255,.55)}
-.store-badge img{height:48px;width:auto}
-.ghost{color:#fff;font-weight:700;text-decoration:none;padding:12px 4px}
-@media (hover:hover){.ghost:hover{text-decoration:underline}}
-.badges{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;font-size:13px}
-.badges li{padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.92)}
-.hero-visual{position:relative;height:clamp(380px,112vw,520px);display:flex;justify-content:center}
-.phone{position:absolute;border-radius:38px;padding:8px;background:#0e0f1a;box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08)}
-.phone img{border-radius:30px}
-.phone-front{width:min(68vw,270px);top:0;z-index:2}
-.phone-back{width:220px;top:56px;opacity:.95}
-.phone-left{transform:translateX(-170px) rotate(-5deg)}
-.phone-right{transform:translateX(170px) rotate(5deg)}
-.only-wide{display:none}
-@media (min-width:900px){
-  .hero{padding:72px 0 0}
-  .hero-inner{grid-template-columns:1.05fr 1fr}
-  .hero-visual{height:560px}
-  .only-wide{display:block}
-  .header-nav .only-wide{display:inline}
-}
-@media (min-width:900px) and (hover:hover) and (prefers-reduced-motion:no-preference){.phone-front{transition:transform .3s}.hero-visual:hover .phone-front{transform:translateY(-4px)}}
-/* セクション */
-.section{padding:72px 0;border-top:1px solid var(--line)}
-.section-title{margin:0 0 14px;font-size:clamp(24px,4.6vw,34px);line-height:1.35;text-align:center;font-weight:800;text-wrap:balance}
-.section-lead{margin:0 auto 32px;max-width:40em;text-align:center;color:var(--muted)}
-.cards{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
-.card h3{margin:0 0 6px;font-size:17px;line-height:1.5}
-.card p{margin:0;color:var(--muted);font-size:15px}
-.card-icon{display:inline-grid;place-items:center;width:40px;height:40px;margin-bottom:10px;border-radius:12px;background:linear-gradient(135deg,#ff8fbd,#9b6bff);color:#fff;font-weight:800}
-@media (min-width:760px){.three{grid-template-columns:repeat(3,1fr)}.two{grid-template-columns:repeat(2,1fr)}}
-.steps{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:32px 0 0;padding:0;font-weight:700}
-.steps li{display:flex;align-items:center;gap:10px}
-.step-no{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px}
-/* 機能 */
-.feature{display:grid;gap:28px;align-items:center;padding:36px 0}
-.feature + .feature{border-top:1px dashed var(--line)}
-.feature-shot{justify-self:center;order:2;width:min(62vw,240px);border-radius:36px;padding:8px;background:#0e0f1a;box-shadow:var(--shadow)}
-.feature-shot img{border-radius:28px}
-.feature-label{margin:0 0 6px;color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.08em}
-.feature h3{margin:0 0 10px;font-size:clamp(22px,4vw,30px);line-height:1.4;text-wrap:balance}
-.feature-lead{margin:0 0 14px;color:var(--muted)}
-.points{margin:0;padding:0;list-style:none;display:grid;gap:10px}
-.points li{position:relative;padding-left:26px}
-.points li::before{content:"";position:absolute;left:4px;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--pink)}
-.premium{display:inline-block;margin-left:6px;padding:0 8px;border-radius:6px;background:#2a1f4f;color:#fff;font-size:13px;font-weight:700;line-height:1.7;vertical-align:1px}
-@media (prefers-color-scheme:dark){.premium{background:#ff8fbd;color:#1d1b26}}
-@media (min-width:860px){.feature{grid-template-columns:300px 1fr;gap:56px}.feature:nth-of-type(even){grid-template-columns:1fr 300px}.feature-shot{order:0}.feature:nth-of-type(even) .feature-shot{order:2}}
-.highlights{margin:8px 0 24px}.highlights .card h3{font-size:19px}.highlights .card>p:not(.feature-label){margin:0 0 10px}.highlights .points{font-size:15px}
-.mini-features{margin:24px 0 40px}.mini-feature h3{font-size:20px}.mini-feature>p:not(.feature-label){margin:0 0 12px}.mini-feature .points{font-size:15px}
-.swatches{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;padding:0;font-size:13px}
-.swatches li{display:flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:var(--card);border:1px solid var(--line)}
-.swatches li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--c)}
-/* 安心 */
-.trust{background:linear-gradient(160deg,var(--navy1),var(--navy2));color:#fff;border-top:0}
-.trust .card.dark{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);box-shadow:none}
-.trust .card.dark p{color:rgba(255,255,255,.8)}
-/* 料金 */
-.free-box{max-width:760px;margin:0 auto 36px;padding:24px;border-radius:22px;background:var(--card);border:2px solid var(--accent);text-align:center}
-.free-title{margin:0 0 6px;font-size:22px;font-weight:800}
-.free-box p{margin:0}
-.plans-title{text-align:center;font-size:22px;margin:0 0 8px}
-.plans{list-style:none;margin:0;padding:0;display:grid;gap:16px}
-@media (min-width:860px){.plans{grid-template-columns:repeat(3,1fr);align-items:stretch}}
-.plan{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
-.plan-featured{border:2px solid var(--accent)}
-.plan-tag{display:inline-block;margin:0 0 8px;padding:2px 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:13px;font-weight:800}
-@media (prefers-color-scheme:dark){.plan-tag{color:#1d1b26}}
-.premium-list{list-style:none;margin:0 auto 32px;padding:0;max-width:760px;display:grid;gap:8px 20px}
-@media (min-width:640px){.premium-list{grid-template-columns:repeat(2,1fr)}}
-.premium-list li{position:relative;padding-left:26px}
-.premium-list li::before{content:"✦";position:absolute;left:2px;color:var(--accent)}
-.plan-name{margin:0;font-weight:800;color:var(--muted)}
-.plan-price{margin:4px 0 8px;font-size:30px;font-weight:800;line-height:1.3}
-.plan-price span{font-size:14px;font-weight:600;color:var(--muted)}
-.plan-note,.plan-trial{margin:0 0 8px;font-size:15px}
-.plan-trial{padding:12px;border-radius:12px;background:var(--bg)}
-.terms-box{max-width:860px;margin:28px auto 0;font-size:14px;color:var(--muted)}
-.terms-box ul{padding-left:1.3em;margin:8px 0}
-.legal-links{display:flex;flex-wrap:wrap;gap:6px 18px}
-/* よくある質問 */
-.faq details{border:1px solid var(--line);border-radius:16px;background:var(--card);margin:0 0 12px}
-.faq summary{list-style:none;cursor:pointer;padding:16px 48px 16px 18px;font-weight:700;position:relative;min-height:44px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"＋";position:absolute;right:18px;top:15px;color:var(--accent);font-weight:800}
-.faq details[open] summary::after{content:"－"}
-.faq .answer{padding:0 18px 16px;color:var(--muted)}
-.faq .answer p{margin:0 0 8px}
-.more{text-align:center;margin:24px 0 0;font-weight:700}
-/* 最後の呼びかけ */
-.final{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--navy1),var(--navy2));color:#fff;padding:72px 0;text-align:center}
-.final-inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px}
-.final img{border-radius:22px;box-shadow:0 14px 34px rgba(0,0,0,.35)}
-.final h2{margin:6px 0 0;font-size:clamp(24px,5vw,36px)}
-.final p{margin:0;color:rgba(255,255,255,.82);max-width:32em}
-/* 問い合わせ */
-.contact{text-align:center}
-.mail{font-size:20px;font-weight:800;margin:8px 0}
-.small{font-size:14px;color:var(--muted)}
-/* フッター */
-.site-footer{background:var(--navy2);color:rgba(255,255,255,.78);padding:40px 0;font-size:13px}
-.site-footer a{color:#fff;display:inline-block;padding:10px 2px}
-.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 16px;padding:0;list-style:none;font-size:14px}
-.site-footer p{margin:0 0 8px}
-"""
+# 紹介ページの CSS は src/landing.css に書く（2026-11 の作り直しで build.py の外へ出した。検査は今までどおり CSS_FORBIDDEN）
+LANDING_STYLE = (ROOT / "src" / "landing.css").read_text(encoding="utf-8")
 
 
 def stylesheet_href(name: str, css: str, up: str = "") -> str:
@@ -451,8 +306,8 @@ def app_store_url(values: dict, country: str = "") -> str:
 
 
 # OGP の画像（assets/ogp.jpg。全言語で同じ日本語の画像）の説明
-OGP_ALT_JA = "沼ろくのアイコンと「推しに使ったお金、ぜんぶ思い出に。」の文字。横にホーム画面（10月に推しに使った金額 23,020円、推しごとの内訳）"
-OGP_ALT_EN = "Numaroku app icon with its Japanese tagline, next to the Home screen showing ¥23,020 spent on oshis in October and the breakdown per oshi"
+OGP_ALT_JA = "沼ろくのアイコンと「推しに使ったお金、ぜんぶ思い出に。」の文字。横にホーム画面（11月に推しに使った金額 23,020円、次のイベントまで12日、見送った金額）"
+OGP_ALT_EN = "Numaroku app icon with its Japanese tagline, next to the Home screen showing ¥23,020 spent on oshis in November, 12 days to the next event, and skipped purchases"
 
 
 def intl_top_head(body: str, lang: str, values: dict) -> str:
@@ -542,59 +397,16 @@ def fill_template(template: str, text_values: dict, html_values: dict) -> str:
 
 
 def features_html(features: list) -> str:
-    """画像のある機能は左右交互の大きな並び、画像のない機能（image が空）は最後にカードとして並べる。
-    "layout": "highlight" の機能は、欄の最初に3列のカードとして並べる（見せるときモードなど、推し活ならではの小さな機能）"""
-    out, cards, highlights = [], [], []
-    for f in features:
-        points = []
-        for p in f["points"]:
-            label = f'<span class="premium"><span class="vh">：</span>{html.escape(p["premium"])}</span>' if p.get("premium") else ""
-            points.append(f"<li>{html.escape(p['text'])}{label}</li>")
-        if f.get("layout") == "highlight":
-            if f.get("image"):
-                raise BuildError(f"landing_features.json: highlight の機能（{f['id']}）には画像を付けません")
-            point_list = f'\n<ul class="points">{"".join(points)}</ul>' if points else ""
-            highlights.append(f"""<li class="card" id="feature-{html.escape(f['id'], quote=True)}">
-<p class="feature-label">{html.escape(f['eyebrow'])}</p>
-<h3>{html.escape(f['title'])}</h3>
-<p>{html.escape(f['lead'])}</p>{point_list}
-</li>""")
-            continue
-        if not f.get("image"):
-            cards.append(f"""<li class="card mini-feature" id="feature-{html.escape(f['id'], quote=True)}">
-<p class="feature-label">{html.escape(f['eyebrow'])}</p>
-<h3>{html.escape(f['title'])}</h3>
-<p>{html.escape(f['lead'])}</p>
-<ul class="points">{''.join(points)}</ul>
-</li>""")
-            continue
-        image = html.escape(f["image"], quote=True)
-        out.append(f"""<article class="feature" id="feature-{html.escape(f['id'], quote=True)}">
-<div class="feature-shot"><img src="assets/screen-{image}-320.jpg" srcset="assets/screen-{image}-320.jpg 320w, assets/screen-{image}-640.jpg 640w" sizes="(min-width: 860px) 284px, min(62vw, 224px)" width="320" height="695" alt="{html.escape(f['alt'], quote=True)}" loading="lazy" decoding="async"></div>
-<div class="feature-copy">
-<p class="feature-label">{html.escape(f['eyebrow'])}</p>
-<h3>{html.escape(f['title'])}</h3>
-<p class="feature-lead">{html.escape(f['lead'])}</p>
-<ul class="points">{''.join(points)}</ul>{swatches_html(f.get("swatches"))}
-</div>
-</article>""")
-    if cards:
-        out.append(f'<ul class="cards two mini-features">{"".join(cards)}</ul>')
-    if highlights:
-        out.insert(0, f'<ul class="cards three highlights">{"".join(highlights)}</ul>')
-    return "\n".join(out)
-
-
-def swatches_html(swatches) -> str:
-    """推し色の見本（色の値は #RRGGBB だけを許す）"""
-    if not swatches:
-        return ""
+    """「ほかにも」の格子（src/landing_features.json）。主役の機能は landing.html に直接書く。
+    プレミアムの部分は札ではなく ✦ の印と短い文で添える（無料で使えるものを主役にするため）"""
     items = []
-    for name, color in swatches:
-        if not re.match(r"^#[0-9A-Fa-f]{6}$", color):
-            raise BuildError(f"推し色の見本の色の形が正しくありません: {color}")
-        items.append(f'<li class="sw-{color[1:].lower()}">{html.escape(name)}</li>')
-    return f'\n<ul class="swatches" aria-label="選べる推し色（12色）の一部">{"".join(items)}</ul>'
+    for f in features:
+        for key in ("id", "title", "text"):
+            if not f.get(key):
+                raise BuildError(f"landing_features.json: {key} がありません: {f}")
+        premium = f'<span class="premium-mark"><span aria-hidden="true">✦ </span>{html.escape(f["premium"])}</span>' if f.get("premium") else ""
+        items.append(f'<li id="more-{html.escape(f["id"], quote=True)}"><h3>{html.escape(f["title"])}</h3><p>{html.escape(f["text"])}{premium}</p></li>')
+    return f'<ul class="more-grid">{"".join(items)}</ul>'
 
 
 def site_css() -> str:
@@ -603,13 +415,8 @@ def site_css() -> str:
 
 
 def landing_css(features: list) -> str:
-    """紹介ページの CSS（assets/landing.css）。推し色の見本の色は、style 属性ではなくクラスで渡す"""
-    colors = sorted({color.lower() for f in features for _, color in (f.get("swatches") or [])})
-    for color in colors:
-        if not re.match(r"^#[0-9a-f]{6}$", color):
-            raise BuildError(f"推し色の見本の色の形が正しくありません: {color}")
-    swatches = "".join(f".sw-{c[1:]}{{--c:{c}}}" for c in colors)
-    return LANDING_STYLE.lstrip() + "/* 推し色の見本 */\n" + swatches + "\n"
+    """紹介ページの CSS（assets/landing.css）。推し色はクラスと CSS の変数で切り替える（style 属性は使わない）"""
+    return LANDING_STYLE.lstrip()
 
 
 def faq_html(questions: list, support_text: str) -> str:

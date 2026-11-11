@@ -8,7 +8,7 @@ Numaroku adalah aplikasi iPhone untuk mencatat dan melihat kembali uang yang kam
 Jika kamu masuk ke iCloud dengan Akun Apple yang sama, catatanmu otomatis tersinkron ke iPhone baru. Jika tidak memakai iCloud, di iPhone lama ekspor file dengan "Ekspor sebagai CSV" di Pengaturan → Cadangan & Data, lalu impor di iPhone baru dengan "Impor CSV" di layar yang sama (file CSV tidak berisi foto).
 
 ### Bisakah saya memulihkan catatan yang terhapus tidak sengaja?
-Aplikasi membuat cadangan secara otomatis. Di Pengaturan → Cadangan & Data, pilih cadangan dari waktu yang ingin kamu kembalikan. Kondisi tepat sebelum pemulihan juga disimpan sebagai cadangan terpisah.
+Aplikasi membuat cadangan secara otomatis seminggu sekali dan tepat sebelum pemulihan atau impor (8 cadangan terbaru disimpan). Di Pengaturan → Cadangan & Data, pilih cadangan dari waktu yang ingin kamu kembalikan. Catatan dan perubahan yang kamu buat setelah cadangan itu tidak akan kembali. Kondisi tepat sebelum pemulihan juga disimpan sebagai cadangan terpisah.
 
 ### Bagaimana cara membatalkan Premium?
 Di aplikasi Pengaturan iPhone → nama kamu → Langganan. Menghapus aplikasi tidak membatalkan langganan. Pembelian sekali bayar tidak diperpanjang, jadi tidak ada yang perlu dibatalkan.
@@ -50,13 +50,13 @@ Bisa, di Pengaturan → Mata uang. Mengganti mata uang tidak mengonversi catatan
 Pastikan "Pengingat hari spesial oshi" aktif di bagian Notifikasi pada Pengaturan aplikasi, dan notifikasi Numaroku diizinkan di aplikasi Pengaturan iPhone → Notifikasi. Pengingat datang pukul 09.00.
 
 ### Apakah pengembang bisa melihat catatan saya?
-Tidak. Aplikasi tidak punya server pengembang, dan catatanmu tidak pernah dikirim ke pengembang. Lihat Kebijakan Privasi untuk detailnya.
+Tidak. Aplikasi tidak punya server pengembang, dan catatanmu tidak pernah dikirim ke pengembang. Jika kamu menulis isi catatan dalam email kepada kami atau melampirkan tangkapan layar, pengembang hanya akan melihat apa yang kamu kirim. Lihat Kebijakan Privasi untuk detailnya.
 
 ### Di mana foto yang diambil dengan kamera disimpan?
 Mulai versi 1.7, kamu bisa memotret struk dan tiket dengan "Ambil Foto" di layar "Catat pengeluaran". Mulai versi 1.8, kamu juga bisa memakai "Pindai struk", atau "Foto struk" dari Pusat Kontrol, Siri, dan sejenisnya. Foto yang diambil dengan "Baca struk saja" tidak disimpan setelah jumlah dan tanggal dibaca. Foto yang diambil tidak disimpan ke Foto. Foto disimpan sebagai foto pengeluaran di iPhone ini dan iCloud kamu (jika sinkronisasi aktif), dan tidak pernah dikirim ke pengembang. Pembacaan jumlah dan tanggal dari foto juga hanya terjadi di iPhone kamu. Kamu bisa mengubah akses kamera di Pengaturan → Numaroku → Kamera.
 
 ### Bagaimana cara mencatat dari tangkapan layar?
-Buka tangkapan layar e-tiket atau konfirmasi pesanan online, ketuk tombol Bagikan, lalu pilih Numaroku. Ketuk notifikasi atau buka Numaroku untuk melihat layar pencatatan dengan saran jumlah dan tanggal. Periksa saran sebelum menggunakannya. Pembacaan hanya terjadi di iPhone Anda. Jika Numaroku tidak terlihat, cari di "Lainnya" di ujung daftar.
+Buka tangkapan layar e-tiket atau konfirmasi pesanan online, ketuk tombol Bagikan, lalu pilih Numaroku. Ketuk notifikasi atau buka Numaroku untuk melihat layar pencatatan dengan saran jumlah dan tanggal. Pembacaan tidak selalu tepat, jadi periksa saran sebelum menggunakannya. Pembacaan hanya terjadi di iPhone Anda. Jika Numaroku tidak terlihat, cari di "Lainnya" di ujung daftar.
 
 ## Kontak
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

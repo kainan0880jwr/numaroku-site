@@ -8,7 +8,7 @@ Numaroku es una app para iPhone para registrar y repasar el dinero que gastas en
 Si has iniciado sesión en iCloud con el mismo Apple Account, tus registros se sincronizan automáticamente con el iPhone nuevo. Si no usas iCloud, en el iPhone anterior exporta un archivo con «Exportar como CSV» en Ajustes → Copias y datos, y luego impórtalo en el iPhone nuevo con «Importar CSV» en la misma pantalla (los archivos CSV no incluyen fotos).
 
 ### ¿Puedo recuperar registros que borré por error?
-La app hace copias de seguridad automáticamente. En Ajustes → Copias y datos, elige la copia del momento al que quieres volver. El estado justo antes de restaurar también se guarda como una copia aparte.
+La app hace copias de seguridad automáticamente una vez a la semana y justo antes de restaurar o importar (se guardan las 8 más recientes). En Ajustes → Copias y datos, elige la copia del momento al que quieres volver. Lo que hayas registrado o cambiado después de esa copia no se recupera. El estado justo antes de restaurar también se guarda como una copia aparte.
 
 ### ¿Cómo cancelo Premium?
 En la app Ajustes del iPhone → tu nombre → Suscripciones. Eliminar la app no cancela la suscripción. La compra única no se renueva, así que no hay nada que cancelar.
@@ -50,13 +50,13 @@ Sí, en Ajustes → Moneda. Cambiar la moneda no convierte tus registros: los n�
 Comprueba que «Avisos de aniversarios del oshi» está activado en Avisos, dentro de los Ajustes de la app, y que las notificaciones de Numaroku están permitidas en la app Ajustes del iPhone → Notificaciones. Los avisos llegan a las 9:00.
 
 ### ¿El desarrollador puede ver mis registros?
-No. La app no tiene servidores del desarrollador y tus registros nunca se envían al desarrollador. Consulta la Política de privacidad para más detalles.
+No. La app no tiene servidores del desarrollador y tus registros nunca se envían al desarrollador. Si escribes el contenido de tus registros en un correo que nos envíes o adjuntas capturas de pantalla, el desarrollador verá solo lo que envíes. Consulta la Política de privacidad para más detalles.
 
 ### ¿Dónde se guardan las fotos que tomo con la cámara?
 Desde la versión 1.7 puedes fotografiar recibos y entradas con «Tomar foto» en la pantalla «Registrar gasto». Desde la versión 1.8 también puedes usar «Escanear ticket», o «Fotografiar ticket» desde el centro de control, Siri y similares. Las fotos tomadas con «Solo leer el ticket» no se guardan después de leer el importe y la fecha. Las fotos que tomes no se guardan en Fotos. Se guardan como fotos del gasto en este iPhone y en tu iCloud (si la sincronización está activada), y nunca se envían al desarrollador. La lectura del importe y la fecha también se hace solo en tu iPhone. Puedes cambiar el acceso a la cámara en Ajustes → Numaroku → Cámara.
 
 ### ¿Cómo registro un gasto desde una captura de pantalla?
-Abra la captura de una entrada electrónica o de una confirmación de pedido, toque el botón Compartir y elija Numaroku. Toque la notificación o abra Numaroku para ver la pantalla de registro con el importe y la fecha sugeridos. Compruebe la sugerencia antes de usarla. La lectura se realiza solo en su iPhone. Si no encuentra Numaroku, búsquelo en «Más» al final de la lista.
+Abra la captura de una entrada electrónica o de una confirmación de pedido, toque el botón Compartir y elija Numaroku. Toque la notificación o abra Numaroku para ver la pantalla de registro con el importe y la fecha sugeridos. La lectura no siempre es correcta, así que compruebe la sugerencia antes de usarla. La lectura se realiza solo en su iPhone. Si no encuentra Numaroku, búsquelo en «Más» al final de la lista.
 
 ## Contacto
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

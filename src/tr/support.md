@@ -8,7 +8,7 @@ Numaroku, oshilerine harcadığın parayı kaydetmen ve geriye dönüp bakman i�
 Aynı Apple Hesabı ile iCloud'a giriş yaptıysan kayıtların yeni iPhone ile otomatik olarak eşzamanlanır. iCloud kullanmıyorsan eski iPhone'da Ayarlar → Yedek ve Veriler'deki "CSV olarak dışa aktar" ile bir dosya oluştur, ardından yeni iPhone'da aynı ekrandaki "CSV içe aktar" ile içe aktar (CSV dosyaları fotoğrafları içermez).
 
 ### Yanlışlıkla sildiğim kayıtları geri getirebilir miyim?
-Uygulama otomatik olarak yedek alır. Ayarlar → Yedek ve Veriler'de dönmek istediğin zamana ait yedeği seç. Geri yüklemeden hemen önceki durum da ayrı bir yedek olarak saklanır.
+Uygulama haftada bir kez ve geri yükleme ya da içe aktarmadan hemen önce otomatik olarak yedek alır (en yeni 8 yedek saklanır). Ayarlar → Yedek ve Veriler'de dönmek istediğin zamana ait yedeği seç. O yedekten sonra kaydettiğin veya değiştirdiğin şeyler geri gelmez. Geri yüklemeden hemen önceki durum da ayrı bir yedek olarak saklanır.
 
 ### Premium'u nasıl iptal ederim?
 iPhone'daki Ayarlar uygulaması → adın → Abonelikler'den iptal edebilirsin. Uygulamayı silmek aboneliği iptal etmez. Tek seferlik satın alma yenilenmez, bu yüzden iptal edilecek bir şey yoktur.
@@ -50,13 +50,13 @@ Evet, Ayarlar → Para birimi bölümünden. Para birimini değiştirmek kayıtl
 Uygulamanın Ayarlar'ında Bildirimler altındaki "Oshi yıl dönümü hatırlatmaları"nın açık olduğunu ve iPhone'daki Ayarlar uygulaması → Bildirimler'de Numaroku bildirimlerine izin verildiğini kontrol et. Hatırlatmalar saat 09.00'da gelir.
 
 ### Geliştirici kayıtlarımı görebilir mi?
-Hayır. Uygulamanın geliştiriciye ait sunucusu yoktur ve kayıtların asla geliştiriciye gönderilmez. Ayrıntılar için Gizlilik Politikası'na bak.
+Hayır. Uygulamanın geliştiriciye ait sunucusu yoktur ve kayıtların asla geliştiriciye gönderilmez. Bize gönderdiğin bir e-postaya kayıtlarının içeriğini yazar veya ekran görüntüsü eklersen, geliştirici yalnızca gönderdiğin kadarını görür. Ayrıntılar için Gizlilik Politikası'na bak.
 
 ### Kamerayla çektiğim fotoğraflar nereye kaydedilir?
 Sürüm 1.7'den itibaren "Harcama ekle" ekranındaki "Fotoğraf çek" ile fiş ve biletlerin fotoğrafını çekebilirsin. Sürüm 1.8'den itibaren "Fişi tara"yı veya Denetim Merkezi, Siri ve benzeri yollarla "Fişin fotoğrafını çek"i de kullanabilirsin. "Fişi yalnızca oku" ile çekilen fotoğraflar, tutar ve tarih okunduktan sonra kaydedilmez. Çektiğin fotoğraflar Fotoğraflar'a kaydedilmez. Harcamaya eklenen fotoğraf olarak bu iPhone'da ve iCloud'unda (eşzamanlama açıksa) saklanır, geliştiriciye asla gönderilmez. Tutar ve tarihin okunması da yalnızca iPhone'unda yapılır. Kamera erişimini Ayarlar → Numaroku → Kamera'dan değiştirebilirsin.
 
 ### Ekran görüntüsünden nasıl kayıt yaparım?
-Bir e-biletin veya çevrim içi sipariş onayının ekran görüntüsünü açın, Paylaş düğmesine dokunun ve Numaroku'yu seçin. Bildirime dokunun veya Numaroku'yu açın; kayıt ekranında önerilen tutar ve tarih görünür. Öneriyi kullanmadan önce kontrol edin. Okuma yalnızca iPhone'unuzda gerçekleşir. Numaroku'yu bulamazsanız listenin sonundaki "Diğer" bölümüne bakın.
+Bir e-biletin veya çevrim içi sipariş onayının ekran görüntüsünü açın, Paylaş düğmesine dokunun ve Numaroku'yu seçin. Bildirime dokunun veya Numaroku'yu açın; kayıt ekranında önerilen tutar ve tarih görünür. Okuma her zaman doğru olmayabilir; öneriyi kullanmadan önce kontrol edin. Okuma yalnızca iPhone'unuzda gerçekleşir. Numaroku'yu bulamazsanız listenin sonundaki "Diğer" bölümüne bakın.
 
 ## İletişim
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

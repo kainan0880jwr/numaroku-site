@@ -8,7 +8,7 @@ Numaroku ist eine iPhone-App, mit der du das Geld festhältst und zurückblickst
 Wenn du mit demselben Apple Account bei iCloud angemeldet bist, werden deine Einträge automatisch mit dem neuen iPhone synchronisiert. Ohne iCloud exportierst du auf dem alten iPhone unter Einstellungen → Backup & Daten mit „Als CSV exportieren“ eine Datei und importierst sie auf dem neuen iPhone im selben Bildschirm mit „CSV importieren“ (Fotos sind in CSV-Dateien nicht enthalten).
 
 ### Kann ich versehentlich gelöschte Einträge wiederherstellen?
-Die App erstellt automatisch Backups. Wähle unter Einstellungen → Backup & Daten das Backup des Zeitpunkts, zu dem du zurückkehren möchtest. Der Zustand direkt vor der Wiederherstellung wird zusätzlich als eigenes Backup aufbewahrt.
+Die App erstellt einmal pro Woche und direkt vor dem Wiederherstellen oder Importieren automatisch Backups (die letzten 8 bleiben erhalten). Wähle unter Einstellungen → Backup & Daten das Backup des Zeitpunkts, zu dem du zurückkehren möchtest. Was du nach diesem Backup erfasst oder geändert hast, kommt nicht zurück. Der Zustand direkt vor der Wiederherstellung wird zusätzlich als eigenes Backup aufbewahrt.
 
 ### Wie kündige ich Premium?
 In der iPhone-App „Einstellungen“ → dein Name → Abos. Das Löschen der App kündigt dein Abo nicht. Der Einmalkauf verlängert sich nicht, daher gibt es nichts zu kündigen.
@@ -50,13 +50,13 @@ Ja, unter Einstellungen → Währung. Beim Wechsel der Währung werden deine Ein
 Prüfe, ob „Erinnerungen an Oshi-Jahrestage“ in den Einstellungen der App unter Mitteilungen aktiviert ist und ob Mitteilungen für Numaroku in der iPhone-App „Einstellungen“ → Mitteilungen erlaubt sind. Erinnerungen kommen um 9:00 Uhr.
 
 ### Kann der Entwickler meine Einträge sehen?
-Nein. Die App hat keine Server des Entwicklers, und deine Einträge werden nie an den Entwickler gesendet. Details findest du in der Datenschutzerklärung.
+Nein. Die App hat keine Server des Entwicklers, und deine Einträge werden nie an den Entwickler gesendet. Wenn du Inhalte deiner Einträge in eine E-Mail an uns schreibst oder Screenshots anhängst, sieht der Entwickler nur das, was du schickst. Details findest du in der Datenschutzerklärung.
 
 ### Wo werden mit der Kamera aufgenommene Fotos gespeichert?
 Ab Version 1.7 kannst du Belege und Tickets mit „Foto aufnehmen“ auf dem Bildschirm „Ausgabe erfassen“ fotografieren. Ab Version 1.8 geht das auch mit „Beleg scannen“ oder mit „Beleg fotografieren“ über das Kontrollzentrum, Siri und Ähnliches. Mit „Beleg nur lesen“ aufgenommene Fotos werden nicht gespeichert, nachdem Betrag und Datum gelesen wurden. Aufgenommene Fotos werden nicht in „Fotos“ gesichert. Sie werden als Fotos der Ausgabe auf diesem iPhone und in deiner iCloud (wenn die Synchronisierung an ist) gespeichert und nie an den Entwickler gesendet. Auch das Lesen von Betrag und Datum aus dem Foto geschieht nur auf deinem iPhone. Den Kamerazugriff änderst du in der Einstellungen-App → Numaroku → Kamera.
 
 ### Wie erfasse ich eine Ausgabe aus einem Screenshot?
-Öffnen Sie einen Screenshot eines E-Tickets oder einer Bestellbestätigung, tippen Sie auf „Teilen“ und wählen Sie Numaroku. Tippen Sie auf die Mitteilung oder öffnen Sie Numaroku: Der Eingabebildschirm zeigt den vorgeschlagenen Betrag und das Datum. Bitte prüfen Sie den Vorschlag, bevor Sie ihn übernehmen. Das Lesen erfolgt nur auf Ihrem iPhone. Wenn Sie Numaroku nicht finden, sehen Sie am Ende der Liste unter „Mehr“ nach.
+Öffnen Sie einen Screenshot eines E-Tickets oder einer Bestellbestätigung, tippen Sie auf „Teilen“ und wählen Sie Numaroku. Tippen Sie auf die Mitteilung oder öffnen Sie Numaroku: Der Eingabebildschirm zeigt den vorgeschlagenen Betrag und das Datum. Das Lesen klappt nicht immer richtig. Bitte prüfen Sie den Vorschlag, bevor Sie ihn übernehmen. Das Lesen erfolgt nur auf Ihrem iPhone. Wenn Sie Numaroku nicht finden, sehen Sie am Ende der Liste unter „Mehr“ nach.
 
 ## Kontakt
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

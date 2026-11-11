@@ -8,7 +8,7 @@ Numaroku is an iPhone app for recording and looking back on the money you spend 
 If you are signed in to iCloud with the same Apple Account, your records sync to the new iPhone automatically. If you don't use iCloud, export a file on your old iPhone with "Export as CSV" in Settings → Backup & Data, then import it on your new iPhone with "Import CSV" on the same screen (photos are not included in CSV files).
 
 ### Can I restore records I deleted by mistake?
-The app makes backups automatically. In Settings → Backup & Data, choose the backup from the point you want to go back to. The state just before restoring is also kept as a separate backup.
+The app automatically makes backups once a week and right before restoring or importing (the latest 8 are kept). In Settings → Backup & Data, choose the backup from the point you want to go back to. Anything you recorded or changed after that backup won't come back. The state just before restoring is also kept as a separate backup.
 
 ### How do I cancel Premium?
 You can cancel in the iPhone Settings app → your name → Subscriptions. Deleting the app does not cancel your subscription. The one-time purchase does not renew, so there is nothing to cancel.
@@ -50,13 +50,13 @@ Yes, in Settings → Currency. Changing the currency doesn't convert your record
 Check that "Oshi anniversary reminders" is on under Notifications in the app's Settings, and that notifications are allowed for Numaroku in the iPhone Settings app → Notifications. Reminders arrive at 9 AM.
 
 ### Can the developer see my records?
-No. The app has no developer servers, and your records are never sent to the developer. See the Privacy Policy for details.
+No. The app has no developer servers, and your records are never sent to the developer. If you write the content of your records in an email to us or attach screenshots, the developer will see only what you send. See the Privacy Policy for details.
 
 ### Where are photos I take with the camera saved?
 From version 1.7, you can photograph receipts and tickets with "Take Photo" on the Log Spending screen. From version 1.8, you can also use "Scan Receipt" on that screen or from Control Center, Siri or similar. Photos taken with "Just Read Receipt" are not saved after the amount and date are read. Photos you take are not saved to Photos (your camera roll). They are saved as photos attached to the expense, on this iPhone and in your iCloud (when sync is on). They are never sent to the developer. Reading the amount and date from a photo also happens only on your iPhone. You can change camera access in the iPhone Settings app → Numaroku → Camera.
 
 ### How do I record from a screenshot?
-Open a screenshot of an e-ticket or online order confirmation, tap the Share button, and choose Numaroku. Tap the notification or open Numaroku to see the entry screen with the suggested amount and date. Please check the suggestion before using it. Reading happens only on your iPhone. If you can't find Numaroku, look under "More" at the end of the share list.
+Open a screenshot of an e-ticket or online order confirmation, tap the Share button, and choose Numaroku. Tap the notification or open Numaroku to see the entry screen with the suggested amount and date. Reading isn't always accurate, so please check the suggestion before using it. Reading happens only on your iPhone. If you can't find Numaroku, look under "More" at the end of the share list.
 
 ## Contact
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】

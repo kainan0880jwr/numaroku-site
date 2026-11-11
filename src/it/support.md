@@ -8,7 +8,7 @@ Numaroku è un'app per iPhone per registrare e rivedere i soldi che spendi per i
 Se hai effettuato l'accesso a iCloud con lo stesso Apple Account, le tue voci si sincronizzano automaticamente con il nuovo iPhone. Se non usi iCloud, sul vecchio iPhone esporta un file con «Esporta in CSV» in Impostazioni → Backup e dati, poi importalo sul nuovo iPhone con «Importa CSV» nella stessa schermata (i file CSV non includono le foto).
 
 ### Posso recuperare voci eliminate per errore?
-L'app crea backup automaticamente. In Impostazioni → Backup e dati, scegli il backup del momento a cui vuoi tornare. Lo stato subito prima del ripristino viene conservato anche come backup separato.
+L'app crea automaticamente backup una volta alla settimana e subito prima di un ripristino o di un'importazione (vengono conservati gli 8 più recenti). In Impostazioni → Backup e dati, scegli il backup del momento a cui vuoi tornare. Ciò che hai registrato o modificato dopo quel backup non viene recuperato. Lo stato subito prima del ripristino viene conservato anche come backup separato.
 
 ### Come disdico Premium?
 Nell'app Impostazioni dell'iPhone → il tuo nome → Abbonamenti. Eliminare l'app non disdice l'abbonamento. L'acquisto unico non si rinnova, quindi non c'è nulla da disdire.
@@ -50,13 +50,13 @@ Sì, in Impostazioni → Valuta. Cambiare valuta non converte le tue voci: i num
 Verifica che «Promemoria degli anniversari dell'oshi» sia attivo in Notifiche, nelle Impostazioni dell'app, e che le notifiche di Numaroku siano consentite nell'app Impostazioni dell'iPhone → Notifiche. I promemoria arrivano alle 9:00.
 
 ### Lo sviluppatore può vedere le mie voci?
-No. L'app non ha server dello sviluppatore e le tue voci non vengono mai inviate allo sviluppatore. Per i dettagli, consulta l'Informativa sulla privacy.
+No. L'app non ha server dello sviluppatore e le tue voci non vengono mai inviate allo sviluppatore. Se scrivi il contenuto delle tue voci in un'e-mail che ci invii o alleghi degli screenshot, lo sviluppatore vedrà solo ciò che invii. Per i dettagli, consulta l'Informativa sulla privacy.
 
 ### Dove vengono salvate le foto scattate con la fotocamera?
 Dalla versione 1.7 puoi fotografare scontrini e biglietti con «Scatta foto» nella schermata «Registra spesa». Dalla versione 1.8 puoi usare anche «Scansiona scontrino», oppure «Fotografa scontrino» dal Centro di Controllo, da Siri e simili. Le foto scattate con «Leggi solo lo scontrino» non vengono salvate dopo la lettura di importo e data. Le foto scattate non vengono salvate in Foto. Vengono salvate come foto della spesa su questo iPhone e nel tuo iCloud (se la sincronizzazione è attiva) e non vengono mai inviate allo sviluppatore. Anche la lettura di importo e data avviene solo sul tuo iPhone. Puoi modificare l'accesso alla fotocamera in Impostazioni → Numaroku → Fotocamera.
 
 ### Come registro una spesa da uno screenshot?
-Apra lo screenshot di un biglietto elettronico o di una conferma d'ordine, tocchi il pulsante Condividi e scelga Numaroku. Tocchi la notifica o apra Numaroku per vedere la schermata di registrazione con l'importo e la data suggeriti. Controlli il suggerimento prima di usarlo. La lettura avviene solo sul Suo iPhone. Se non trova Numaroku, cerchi in «Altro» alla fine dell'elenco.
+Apra lo screenshot di un biglietto elettronico o di una conferma d'ordine, tocchi il pulsante Condividi e scelga Numaroku. Tocchi la notifica o apra Numaroku per vedere la schermata di registrazione con l'importo e la data suggeriti. La lettura non è sempre esatta, quindi controlli il suggerimento prima di usarlo. La lettura avviene solo sul Suo iPhone. Se non trova Numaroku, cerchi in «Altro» alla fine dell'elenco.
 
 ## Contatti
 【要記入：問い合わせ先（メールアドレスまたは問い合わせフォームの URL）】
